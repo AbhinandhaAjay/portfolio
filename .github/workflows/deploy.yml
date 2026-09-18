@@ -1,6 +1,6 @@
 name: Deploy
 
-# main → production, pull requests → preview URL.
+# main (push or manual run) → production, pull requests → preview URL.
 # Vercel's own Git auto-deploy is switched off in vercel.json so this is the only pipeline.
 on:
   push:
@@ -38,12 +38,13 @@ jobs:
   deploy:
     needs: check
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
-      name: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && 'production' || 'preview' }}
+      name: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && 'production' || 'preview' }}
       url: ${{ steps.deploy.outputs.url }}
     env:
-      TARGET: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && 'production' || 'preview' }}
-      PROD_FLAG: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && '--prod' || '' }}
+      TARGET: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && 'production' || 'preview' }}
+      PROD_FLAG: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && '--prod' || '' }}
     steps:
       - uses: actions/checkout@v4
 
