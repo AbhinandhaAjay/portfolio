@@ -1,5 +1,6 @@
-# Vercel CLI project link
+# Vercel CLI project link and pulled env files
 .vercel
+.env*
 
 # Private resume source material, not part of the site
 huntd-build-dossier.md
