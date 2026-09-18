@@ -53,6 +53,18 @@ jobs:
             echo "::error::Add VERCEL_TOKEN, VERCEL_ORG_ID and VERCEL_PROJECT_ID under Settings → Secrets and variables → Actions."
             exit 1
           fi
+          case "$VERCEL_ORG_ID" in team_*) ;; *) echo "::error::VERCEL_ORG_ID should start with team_ (check it isn't swapped with the project id)"; exit 1;; esac
+          case "$VERCEL_PROJECT_ID" in prj_*) ;; *) echo "::error::VERCEL_PROJECT_ID should start with prj_"; exit 1;; esac
+          status=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            "https://api.vercel.com/v9/projects/$VERCEL_PROJECT_ID?teamId=$VERCEL_ORG_ID")
+          case "$status" in
+            200) echo "Token can see the project." ;;
+            401) echo "::error::VERCEL_TOKEN is invalid or expired. Create a new one at vercel.com/account/tokens."; exit 1 ;;
+            403) echo "::error::VERCEL_TOKEN can't access the Abhi team. Create a token with scope set to the Abhi team."; exit 1 ;;
+            404) echo "::error::Project not found in that team. Check VERCEL_ORG_ID / VERCEL_PROJECT_ID match .vercel/project.json."; exit 1 ;;
+            *)   echo "::error::Vercel API returned HTTP $status while checking the project."; exit 1 ;;
+          esac
 
       - uses: actions/setup-node@v4
         with:
