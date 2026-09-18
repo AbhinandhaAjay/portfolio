@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhinandha K — Forward Deployed Engineer</title>
+<meta name="description" content="Forward Deployed Engineer. I build the software sales teams log into — dashboards, AI enrichment, CRM integrations — and stay close to the people using it.">
+<meta name="author" content="Abhinandha K">
+<meta name="theme-color" content="#FFFBF6">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Abhinandha K — Forward Deployed Engineer">
+<meta property="og:description" content="I build the software sales teams log into, and stay close to the people using it.">
+<meta property="og:image" content="assets/work/huntd-explorer.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FE8D6F'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-weight='700' font-size='36' fill='%232F2B3A' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+
+<script>
+  // Theme before first paint (no flash), and a JS flag that gates every
+  // animation style so the page is fully visible if the script never runs.
+  (function () {
+    document.documentElement.classList.add("js");
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("is-loading");
+    }
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Preloader: the letters of "hello" bounce in, then the word flies into the sticker beside "I'm". -->
+<div class="pl" id="pl" aria-hidden="true">
+  <div class="pl__word" id="plWord"><span class="pl__l" style="--i:0">h</span><span class="pl__l" style="--i:1">e</span><span class="pl__l" style="--i:2">l</span><span class="pl__l" style="--i:3">l</span><span class="pl__l" style="--i:4">o</span></div>
+</div>
+
+<!-- Custom cursor (pointer: fine only; JS enables it) -->
+<div class="cur" id="cur" aria-hidden="true">
+  <div class="cur__dot"></div>
+  <div class="cur__ring"><span class="cur__label" id="curLabel"></span></div>
+</div>
+
+<div class="track" id="track" aria-hidden="true">
+  <div class="track__rails"></div>
+  <div class="rider" id="rider"><span class="rider__dot"></span><span class="rider__board"></span></div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="nav__mark" href="#top">Abhinandha&nbsp;K</a>
+    <nav class="nav__links" aria-label="Sections">
+      <a class="nl" href="#work" data-swap>Work</a>
+      <a class="nl" href="#customers" data-swap>Proof</a>
+      <a class="nl" href="#projects" data-swap>Side projects</a>
+      <a class="nl" href="#about" data-swap>About</a>
+    </nav>
+    <div class="nav__end">
+      <a class="btn btn--sm" href="#contact" data-magnet>
+        <span class="btn__t">Let's connect</span><span class="btn__a" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top" data-zone="a">
+  <div class="wrap">
+    <div class="scene" id="scene">
+
+      <div class="scene__copy">
+        <p class="hello">
+          <span class="tag tag--hi" id="hi" data-tint="3" style="--rot:-6deg; --depth:14"><span class="tag__t">hello</span></span>
+          <span class="eyebrow hello__im">I'm</span>
+        </p>
+
+        <h1 class="hero__name reveal" style="--d:1">
+          <span class="hero__first"><span data-split="chars">Abhinandha K</span>
+            <svg class="swash" viewBox="0 0 320 22" aria-hidden="true" focusable="false"><path d="M4 15 C 70 4, 150 3, 316 11"/></svg>
+          </span>
+        </h1>
+
+        <p class="rotline reveal" style="--d:2">
+          <span class="rotline__s">I build products that</span>
+          <span class="rot" id="rot" aria-live="off">
+            <span class="rot__w is-on">people log into daily.</span>
+            <span class="rot__w">ship the same week.</span>
+            <span class="rot__w">sync into the CRM.</span>
+            <span class="rot__w">stay honest in prod.</span>
+          </span>
+        </p>
+
+        <p class="bio reveal" style="--d:3">
+          Full-stack and AI engineer. At Huntd I owned the customer dashboard end to end, moved its
+          data layer with zero downtime, and built the CRM sync, signal and research systems around
+          it — working directly with the teams at Deepgram, Blitzy, HyperBound and Peec&nbsp;AI.
+        </p>
+
+        <ul class="pills reveal" style="--d:4">
+          <li>Full-stack</li><li>AI systems</li><li>CRM integrations</li><li>Data pipelines</li>
+        </ul>
+
+        <div class="hero__cta reveal" style="--d:5">
+          <a class="btn" href="#work" data-magnet><span class="btn__t">View my work</span><span class="btn__a" aria-hidden="true">→</span></a>
+          <a class="ul" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <figure class="scene__visual reveal" data-anim="up" style="--d:2">
+        <div class="tilt" id="tilt">
+          <div class="shot-card" data-shot data-cursor="Zoom" data-parallax="0.05">
+            <img src="assets/work/huntd-explorer.webp" width="1900" height="820"
+                 alt="The Huntd Data Explorer — the product customers log into"
+                 loading="eager" decoding="async">
+          </div>
+          <a class="tag tag--work" href="#work" data-tint="2" style="--rot:-6deg; --depth:34">
+            My work<span class="tag__face" aria-hidden="true">☺</span>
+          </a>
+          <span class="polaroid" style="--rot:7deg; --depth:22">
+            <img src="assets/work/portrait.webp" width="400" height="400"
+                 alt="Abhinandha K" loading="eager" decoding="async">
+          </span>
+        </div>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WORK ===================== -->
+<!--
+  Eight case studies as full-width chapters. Each article.case has a header
+  (a big faint number behind the title), two columns (.case__lead: the lede
+  and the outcome; .case__body: paragraphs and tags), 01's feature list
+  (.case__wide) and, optionally, one media figure that runs full width and
+  bleeds off the page edge (odd chapters right, even chapters left). Cases 04
+  to 07 carry a commented MEDIA SLOT with the filenames to use; uncomment it
+  once the files are in assets/work/. README, "Adding pictures and videos".
+-->
+<section class="section" id="work" data-zone="b">
+  <div class="wrap">
+    <header class="head">
+      <p class="eyebrow reveal">Selected work</p>
+      <h2 class="h-xl reveal" data-split="words" style="--d:1">Work.</h2>
+    </header>
+
+    <article class="case" id="case-01">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">01</span>
+        <h3 data-split="words" class="reveal">Customer dashboard</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">The product customers log into every day. I owned it end to end — interface, API and schema.</p>
+          <p class="case__out"><span>Outcome</span> One dashboard every customer works in daily, with search and filters over millions of leads that stay fast</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            Lead data used to arrive as CSV attachments, with no filtering and no sense of where a record
+            came from. Now customers search their own verified users across millions of rows, break them
+            down by source, save searches and export in a click. It's in daily use at Deepgram, Blitzy,
+            HyperBound and Peec&nbsp;AI.
+          </p>
+          <p>Around it, everything daily users asked for next:</p>
+        </div>
+      </div>
+      <div class="case__wide reveal" data-anim="rise" style="--d:3">
+        <ul class="facts">
+          <li><b>Google Sheets live sync</b> One workbook per org, updated on change instead of a 20-hour full rewrite.</li>
+          <li><b>Insights &amp; tiering</b> Learns each org's ideal customer and ranks every watched company A to D.</li>
+          <li><b>Visual Insights</b> Maps, company size, industry, seniority and top accounts at a glance.</li>
+          <li><b>Personas</b> Job titles sorted into levels, departments and functions, saved as one-click presets.</li>
+          <li><b>Public API &amp; webhooks</b> Keyed, rate-limited endpoints and signed signup events.</li>
+          <li><b>Team invites</b> Reusable org links and single-use email invites.</li>
+          <li><b>Infisical</b> One source of truth for config across five services; only what changed redeploys.</li>
+          <li><b>Admin CLI</b> 104 commands, dry-run by default, plus Claude Code skills to run production safely.</li>
+        </ul>
+        <ul class="chips">
+          <li>React</li><li>TypeScript</li><li>Node</li><li>Express</li><li>PostgreSQL</li><li>Supabase</li><li>Recharts</li><li>Leaflet</li><li>Infisical</li>
+        </ul>
+      </div>
+      <figure class="shot reveal" data-anim="rise" data-shot data-cursor="Zoom">
+        <div class="shot__frame" data-parallax="0.08">
+          <img src="assets/work/huntd-explorer-companies.webp" width="1896" height="826"
+               alt="The Data Explorer, companies view: 3,157 companies across seven sources with per-source usage ticks; company names and domains are blurred"
+               loading="lazy" decoding="async">
+        </div>
+      </figure>
+    </article>
+
+    <article class="case case--stack" id="case-02">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">02</span>
+        <h3 data-split="words" class="reveal">MongoDB to Postgres</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">The data layer under the dashboard, moved while customers kept using it.</p>
+          <p class="case__out"><span>Outcome</span> Zero downtime; every existing login kept working</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            Filtering millions of rows by title, seniority, industry and source had hit MongoDB's ceiling.
+            I streamed every collection into Postgres in 5,000-document chunks — smallest first, the
+            1.27M lead rows last — kept the old shapes so every other service carried on unchanged, and
+            brought password hashes across so nobody had to sign up again.
+          </p>
+          <p>
+            The real win was the read model: the dashboard now reads two slim, incrementally refreshed
+            tables instead of one heavy document, so filters and counts became index scans.
+          </p>
+          <p>
+            The database has since moved once more, from Supabase Cloud to a self-hosted Supabase on our
+            own server: the same schema, the migrations replayed, one connection string swapped.
+          </p>
+          <ul class="chips">
+            <li>MongoDB</li><li>pg-copy-streams</li><li>Supabase Postgres</li><li>JSONB</li><li>pg_trgm</li><li>SQL migrations</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="shot shot--flat reveal" data-anim="rise">
+        <div class="shot__frame shot__frame--dia">
+          <svg class="dia" viewBox="0 0 1200 620" role="img" aria-labelledby="migTitle migDesc">
+            <title id="migTitle">MongoDB to Postgres migration</title>
+            <desc id="migDesc">Sixteen MongoDB Atlas collections, about 3.8 million documents, streamed in 5,000-document chunks through a one-pass ETL into Supabase Postgres, collection by collection. Today the database is 21 GB on Postgres 17: 5.1 million typed action rows, 2.7 million lead rows, 1.5 million verifications, and a 2.4-million-row read model the dashboard reads. A second hop moved the whole database from Supabase Cloud to a self-hosted Supabase on our own server with a connection-string swap.</desc>
+            <defs>
+              <marker id="diaArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+            </defs>
+
+            <!-- threads row to row, behind the ETL cards -->
+            <g stroke-width="2" opacity=".55">
+              <path d="M356 168 L844 168" class="dia__thr dia__thr--mint"/>
+              <path d="M356 208 L844 208" class="dia__thr dia__thr--sky"/>
+              <path d="M356 248 L844 248" class="dia__thr dia__thr--yellow"/>
+              <path d="M356 288 L844 288" class="dia__thr"/>
+              <path d="M356 328 L844 328" class="dia__thr"/>
+              <path d="M356 368 L844 368" class="dia__thr"/>
+              <path d="M356 408 L844 408" class="dia__thr"/>
+            </g>
+
+            <!-- MongoDB, before -->
+            <text x="40" y="48" class="dia__h">MongoDB</text>
+            <text x="40" y="70" class="dia__k">BEFORE · ONE ATLAS CLUSTER</text>
+            <rect x="40" y="92" width="320" height="480" rx="18" class="dia__box dia__box--sky"/>
+            <g>
+              <circle cx="66" cy="168" r="6" class="dia__dot--mint"/><text x="82" y="172" class="dia__t">csvrows</text><text x="336" y="172" class="dia__num" text-anchor="end">1.27M</text>
+              <circle cx="66" cy="208" r="6" class="dia__dot--sky"/><text x="82" y="212" class="dia__t">classification.actions</text>
+              <circle cx="66" cy="248" r="6" class="dia__dot--yellow"/><text x="82" y="252" class="dia__t">test.user_verifications</text>
+              <circle cx="66" cy="288" r="5" class="dia__dot"/><text x="82" y="292" class="dia__t">csvmetadatas · csvdatas</text>
+              <circle cx="66" cy="328" r="5" class="dia__dot"/><text x="82" y="332" class="dia__t">company · linkedin caches</text>
+              <circle cx="66" cy="368" r="5" class="dia__dot"/><text x="82" y="372" class="dia__t">users · sessions</text>
+              <circle cx="66" cy="408" r="5" class="dia__dot"/><text x="82" y="412" class="dia__t">source_configs · dailyquotas</text>
+            </g>
+            <text x="64" y="128" class="dia__dim">16 collections · ~3.8M documents</text>
+            <line x1="64" y1="440" x2="336" y2="440" class="dia__rule"/>
+            <text x="64" y="470" class="dia__dim">One document shape per service,</text>
+            <text x="64" y="488" class="dia__dim">every read a full document.</text>
+            <text x="64" y="518" class="dia__dim">The ceiling: filtering millions of rows</text>
+            <text x="64" y="536" class="dia__dim">by title, seniority, industry and source.</text>
+
+            <!-- ETL, one pass -->
+            <text x="600" y="48" class="dia__h" text-anchor="middle">One-pass ETL</text>
+            <text x="600" y="70" class="dia__k" text-anchor="middle">SCRIPTS/ETL.TS · ~3.8M DOCUMENTS</text>
+            <path d="M362 318 L438 318" class="dia__arrow" marker-end="url(#diaArrow)"/>
+            <path d="M762 318 L838 318" class="dia__arrow" marker-end="url(#diaArrow)"/>
+            <g>
+              <rect x="446" y="136" width="308" height="60" rx="14" class="dia__card"/>
+              <text x="466" y="161" class="dia__t">1 · Stream</text><text x="466" y="181" class="dia__dim">5,000-document chunks per collection</text>
+              <path d="M600 196 L600 218" class="dia__arrow" marker-end="url(#diaArrow)"/>
+              <rect x="446" y="222" width="308" height="60" rx="14" class="dia__card"/>
+              <text x="466" y="247" class="dia__t">2 · Convert BSON → JSON-safe</text><text x="466" y="267" class="dia__dim">ObjectId · Decimal128 · Long · Binary · Date</text>
+              <path d="M600 282 L600 304" class="dia__arrow" marker-end="url(#diaArrow)"/>
+              <rect x="446" y="308" width="308" height="60" rx="14" class="dia__card"/>
+              <text x="466" y="333" class="dia__t">3 · COPY … FORMAT csv</text><text x="466" y="353" class="dia__dim">small collections first, csvrows last</text>
+              <path d="M600 368 L600 390" class="dia__arrow" marker-end="url(#diaArrow)"/>
+              <rect x="446" y="394" width="308" height="60" rx="14" class="dia__card"/>
+              <text x="466" y="419" class="dia__t">4 · Parity checks, then cut over</text><text x="466" y="439" class="dia__dim">counts and samples compared, reads flipped</text>
+            </g>
+            <text x="600" y="484" class="dia__dim" text-anchor="middle">bcrypt hashes carried over — every login kept working</text>
+
+            <!-- hop 2 -->
+            <rect x="446" y="504" width="308" height="68" rx="14" class="dia__card dia__card--dash"/>
+            <text x="466" y="527" class="dia__k">HOP 2 · SUPABASE CLOUD TO OUR OWN SERVER</text>
+            <text x="466" y="547" class="dia__dim">same schema, 140 migrations replayed,</text>
+            <text x="466" y="563" class="dia__dim">one connection string swapped</text>
+
+            <!-- Postgres, now -->
+            <text x="840" y="48" class="dia__h">Supabase Postgres</text>
+            <text x="840" y="70" class="dia__k">NOW · SELF-HOSTED · PG 17 · 21 GB</text>
+            <rect x="840" y="92" width="320" height="480" rx="18" class="dia__box dia__box--mint"/>
+            <text x="864" y="128" class="dia__dim">classification schema · 148 tables · 18 GB</text>
+            <g>
+              <circle cx="866" cy="168" r="6" class="dia__dot--mint"/><text x="882" y="172" class="dia__t">csvrows</text><text x="1136" y="172" class="dia__num" text-anchor="end">2.7M</text>
+              <circle cx="866" cy="208" r="6" class="dia__dot--sky"/><text x="882" y="212" class="dia__t">actions</text><text x="1136" y="212" class="dia__num" text-anchor="end">5.1M · typed</text>
+              <circle cx="866" cy="248" r="6" class="dia__dot--yellow"/><text x="882" y="252" class="dia__t">user_verifications</text><text x="1136" y="252" class="dia__num" text-anchor="end">1.5M</text>
+              <circle cx="866" cy="288" r="5" class="dia__dot"/><text x="882" y="292" class="dia__t">csvmetadatas</text><text x="1136" y="292" class="dia__dim" text-anchor="end">1.1k</text>
+              <circle cx="866" cy="328" r="5" class="dia__dot"/><text x="882" y="332" class="dia__t">linkedin_cache</text><text x="1136" y="332" class="dia__dim" text-anchor="end">75k</text>
+              <circle cx="866" cy="368" r="5" class="dia__dot"/><text x="882" y="372" class="dia__t">users · sessions</text><text x="1136" y="372" class="dia__dim" text-anchor="end">huntd_clients</text>
+              <circle cx="866" cy="408" r="5" class="dia__dot"/><text x="882" y="412" class="dia__t">source_configs · dailyquotas</text>
+            </g>
+            <rect x="856" y="432" width="288" height="88" rx="12" class="dia__box dia__box--yellow"/>
+            <text x="872" y="454" class="dia__k">READ MODEL · WHAT THE DASHBOARD READS</text>
+            <circle cx="878" cy="478" r="5" class="dia__ring"/><text x="892" y="482" class="dia__t">csvrow_display</text><text x="1128" y="482" class="dia__num" text-anchor="end">2.4M · 31 cols</text>
+            <circle cx="878" cy="504" r="5" class="dia__ring"/><text x="892" y="508" class="dia__t">csvrow_sources</text><text x="1128" y="508" class="dia__num" text-anchor="end">1.6M</text>
+            <text x="864" y="544" class="dia__dim">+ proximity · 20 tables · Warmest Path</text>
+            <text x="864" y="560" class="dia__dim">+ 140 more: signals, sync ledgers, caches</text>
+
+            <!-- legend -->
+            <g>
+              <circle cx="46" cy="600" r="5" class="dia__dot--sky"/><text x="58" y="604" class="dia__dim">typed columns</text>
+              <circle cx="180" cy="600" r="5" class="dia__dot--mint"/><text x="192" y="604" class="dia__dim">id + doc jsonb with generated columns</text>
+              <circle cx="470" cy="600" r="5" class="dia__ring"/><text x="482" y="604" class="dia__dim">projected read model</text>
+              <text x="1160" y="604" class="dia__dim" text-anchor="end">sizes from the production catalogue, Sep 2026</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>How the data moved: MongoDB Atlas → Supabase Postgres, then from Supabase Cloud to our own server.</figcaption>
+      </figure>
+    </article>
+
+    <article class="case" id="case-03">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">03</span>
+        <h3 data-split="words" class="reveal">CRM &amp; GTM integrations</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">The data was useful, but it lived in the wrong place. I built the bridge into customers' CRMs.</p>
+          <p class="case__out"><span>Outcome</span> Live in HubSpot, Salesforce and Google Sheets</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            A HubSpot app that syncs contacts and companies, creates its own custom fields and backfills
+            every existing record, with Salesforce mapped onto Contacts and Accounts. Teams that don't want
+            a CRM write get Google Sheets exports grouped by account instead.
+          </p>
+          <p>
+            Every record carries a content hash: unchanged ones are skipped, failures retry with backoff and
+            surface in the admin panel, and a contact the customer deleted is never recreated.
+          </p>
+          <ul class="chips">
+            <li>HubSpot OAuth</li><li>Salesforce</li><li>Sheets API</li><li>Public API</li><li>Webhooks</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="shot shot--two shot--flat reveal" data-anim="rise">
+        <div class="shot__frame" data-shot data-cursor="Zoom">
+          <img src="assets/work/huntd-integrations.webp" width="920" height="620"
+               alt="The Integrations tab of the dashboard settings: HubSpot and Salesforce connection cards"
+               loading="lazy" decoding="async">
+        </div>
+        <div class="shot__frame shot__frame--dia">
+          <svg class="dia" viewBox="0 0 920 620" role="img" aria-labelledby="crmTitle crmDesc">
+            <title id="crmTitle">How the CRM sync works</title>
+            <desc id="crmDesc">People a customer filters in the dashboard flow through one sync engine into HubSpot contacts and companies with custom fields, Salesforce contacts and accounts, or Google Sheets grouped by account. Every record carries a content hash so unchanged records are skipped; failures retry with backoff and surface in the admin panel; a contact the customer deleted is never recreated.</desc>
+            <defs>
+              <marker id="crmArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+            </defs>
+
+            <text x="40" y="48" class="dia__h">One engine, three destinations</text>
+            <text x="40" y="70" class="dia__k">WHAT HAPPENS TO EVERY RECORD</text>
+
+            <!-- source -->
+            <text x="40" y="112" class="dia__k">FROM THE DASHBOARD</text>
+            <rect x="40" y="124" width="200" height="150" rx="14" class="dia__box dia__box--sky"/>
+            <text x="58" y="152" class="dia__t">The people you filtered</text>
+            <text x="58" y="174" class="dia__dim">name · email · company</text>
+            <text x="58" y="192" class="dia__dim">title · seniority · source</text>
+            <text x="58" y="224" class="dia__dim">+ saved searches,</text>
+            <text x="58" y="240" class="dia__dim">   on a schedule</text>
+            <text x="58" y="258" class="dia__dim">+ one-click export</text>
+
+            <path d="M240 199 L262 199" class="dia__arrow" marker-end="url(#crmArrow)"/>
+
+            <!-- engine -->
+            <text x="270" y="112" class="dia__k">SYNC ENGINE</text>
+            <rect x="270" y="124" width="250" height="380" rx="14" class="dia__card"/>
+            <g>
+              <circle cx="294" cy="162" r="7" class="dia__dot--mint"/><text x="310" y="158" class="dia__t">Content hash per record</text><text x="310" y="175" class="dia__dim">unchanged → skipped</text>
+              <circle cx="294" cy="220" r="7" class="dia__dot--sky"/><text x="310" y="216" class="dia__t">Custom fields created</text><text x="310" y="233" class="dia__dim">source, tier, signal date</text>
+              <circle cx="294" cy="278" r="7" class="dia__dot--yellow"/><text x="310" y="274" class="dia__t">Retry with backoff</text><text x="310" y="291" class="dia__dim">failures land in admin</text>
+              <circle cx="294" cy="336" r="7" class="dia__dot--pink"/><text x="310" y="332" class="dia__t">Deleted stays deleted</text><text x="310" y="349" class="dia__dim">a removed contact is</text><text x="310" y="365" class="dia__dim">never recreated</text>
+              <circle cx="294" cy="410" r="7" class="dia__dot"/><text x="310" y="406" class="dia__t">Sync ledger</text><text x="310" y="423" class="dia__dim">what went where, and why</text>
+              <text x="310" y="464" class="dia__dim">Freshness in the dashboard:</text>
+              <text x="310" y="480" class="dia__dim">“Synced · 4 min ago”</text>
+            </g>
+
+            <!-- fan out -->
+            <g class="dia__arrow" marker-end="url(#crmArrow)">
+              <path d="M520 202 C 540 202, 540 172, 552 172"/>
+              <path d="M520 312 L552 312"/>
+              <path d="M520 422 C 540 422, 540 452, 552 452"/>
+            </g>
+
+            <!-- destinations -->
+            <text x="560" y="112" class="dia__k">INTO THE CUSTOMER'S TOOLS</text>
+            <rect x="560" y="124" width="320" height="96" rx="14" class="dia__box dia__box--coral"/>
+            <text x="578" y="152" class="dia__t">HubSpot</text>
+            <text x="578" y="172" class="dia__dim">contacts + companies · OAuth app</text>
+            <text x="578" y="188" class="dia__dim">custom properties it creates itself</text>
+            <text x="578" y="204" class="dia__dim">every existing record backfilled</text>
+
+            <rect x="560" y="264" width="320" height="96" rx="14" class="dia__box dia__box--sky"/>
+            <text x="578" y="292" class="dia__t">Salesforce</text>
+            <text x="578" y="312" class="dia__dim">Contacts + Accounts</text>
+            <text x="578" y="328" class="dia__dim">production or sandbox org</text>
+            <text x="578" y="344" class="dia__dim">field mapping per object</text>
+
+            <rect x="560" y="404" width="320" height="96" rx="14" class="dia__box dia__box--mint"/>
+            <text x="578" y="432" class="dia__t">Google Sheets</text>
+            <text x="578" y="452" class="dia__dim">one workbook per org, grouped by account</text>
+            <text x="578" y="468" class="dia__dim">updated on change, never rewritten</text>
+            <text x="578" y="484" class="dia__dim">for teams that don't want a CRM write</text>
+
+            <!-- footer -->
+            <text x="40" y="548" class="dia__k">ALSO</text>
+            <text x="40" y="570" class="dia__dim">A public API with keys and rate limits, and signed webhooks for signup events —</text>
+            <text x="40" y="588" class="dia__dim">for teams that would rather pull than be pushed to.</text>
+          </svg>
+        </div>
+        <figcaption>The Integrations settings page, and what the sync engine behind it does with every record.</figcaption>
+      </figure>
+    </article>
+
+    <article class="case" id="case-04">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">04</span>
+        <h3 data-split="words" class="reveal">Signup &amp; churn signals</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">The lead who wasn't a user last month might have signed up this week — the best moment for sales to call.</p>
+          <p class="case__out"><span>Outcome</span> A daily “just signed up” feed and Slack digest that sales teams act on</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            Re-checking everyone daily costs too much, so the system chooses who to re-check: it learns
+            each org's ideal customer, tiers companies A to D, and spends a daily budget on the leads most
+            likely to have changed.
+          </p>
+          <p>
+            Customers get a "Just signed up" feed, a watchlist, trends and a Slack digest. Churn runs on
+            the same engine in reverse.
+          </p>
+          <ul class="chips">
+            <li>Postgres</li><li>Inngest</li><li>Azure OpenAI</li><li>Zyte</li><li>Recharts</li><li>Slack</li>
+          </ul>
+        </div>
+      </div>
+      <!-- MEDIA SLOT 04 (sign-up and sign-in). Once the file(s) are in assets/work/, delete this line and the END line below.
+        <figure class="shot shot--two reveal" data-anim="rise">
+          <div class="shot__frame" data-shot data-cursor="Zoom"><img src="assets/work/signup.webp" width="1600" height="1000" alt="Signup signals: new signups surfaced for sales" loading="lazy" decoding="async"></div>
+          <div class="shot__frame" data-shot data-cursor="Zoom"><img src="assets/work/signin.webp" width="1600" height="1000" alt="Sign-in view of the signals dashboard" loading="lazy" decoding="async"></div>
+        </figure>
+      END MEDIA SLOT 04 -->
+    </article>
+
+    <article class="case" id="case-05">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">05</span>
+        <h3 data-split="words" class="reveal">Detector &amp; Doctor</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">Failures were silent — one vendor produced nothing for weeks while its log said "ok".</p>
+          <p class="case__out"><span>Outcome</span> Silent failures now reach Slack within minutes, with a checked explanation</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            Detector checks the pipeline, the integrations and every customer-facing surface every few
+            minutes, runs a daily known-answer test through each vendor, and posts to Slack only when
+            something newly breaks — with a model-written explanation that's checked so it can't invent details.
+          </p>
+          <p>
+            Doctor is a read-only Claude Agent SDK agent that investigates an open case against the code and
+            proposes the fix: requeue, run a runbook, or open a draft PR. It never merges or deploys.
+          </p>
+          <ul class="chips">
+            <li>Claude Agent SDK</li><li>Azure OpenAI</li><li>Slack Bolt</li><li>Sentry</li><li>Postgres</li><li>Ofelia cron</li>
+          </ul>
+        </div>
+      </div>
+      <!-- MEDIA SLOT 05 (detector and doctor). Once the file(s) are in assets/work/, delete this line and the END line below.
+        <figure class="shot shot--two reveal" data-anim="rise">
+          <div class="shot__frame" data-shot data-cursor="Zoom"><img src="assets/work/detector.webp" width="1600" height="1000" alt="Detector: a Slack alert with its explanation" loading="lazy" decoding="async"></div>
+          <div class="shot__frame" data-shot data-cursor="Zoom"><img src="assets/work/doctor.webp" width="1600" height="1000" alt="Doctor: an investigated case with a proposed fix" loading="lazy" decoding="async"></div>
+        </figure>
+      END MEDIA SLOT 05 -->
+    </article>
+
+    <article class="case" id="case-06">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">06</span>
+        <h3 data-split="words" class="reveal">Web research agent</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">Ask a question about a company in plain English; get the answer from its own website, with the page it came from.</p>
+          <p class="case__out"><span>Outcome</span> Every answer arrives with a verbatim quote, a source page and a confidence</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            Three depths — Instant reads the landing page, Thinking ranks and reads up to 25 pages,
+            Exhaustive covers up to 500 — and Auto picks one by where the answer is likely to live. Every
+            answer carries a verbatim quote and a confidence, never a guess.
+          </p>
+          <p>
+            Early stopping keeps it affordable: when one page can settle the question, the first conclusive
+            page ends the run.
+          </p>
+          <ul class="chips">
+            <li>TypeScript</li><li>Inngest → BullMQ</li><li>Firecrawl</li><li>Evomi</li><li>Zyte</li><li>Apify</li><li>Azure OpenAI</li><li>Gemini</li><li>Postgres</li>
+          </ul>
+        </div>
+      </div>
+      <!-- MEDIA SLOT 06 (web search agent). Once the file(s) are in assets/work/, delete this line and the END line below.
+        <figure class="shot reveal" data-anim="rise">
+          <div class="shot__frame" data-shot data-cursor="Zoom"><img src="assets/work/web-search-agent.webp" width="1600" height="1000" alt="The web research agent answering a question with its source" loading="lazy" decoding="async"></div>
+        </figure>
+      END MEDIA SLOT 06 -->
+    </article>
+
+    <article class="case" id="case-07">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">07</span>
+        <h3 data-split="words" class="reveal">Building Clay</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">The workspace around the agent: upload a CSV, add a column, describe what you want, get sourced answers.</p>
+          <p class="case__out"><span>Outcome</span> Spike: an in-house Clay — upload a lead list, add a column, and every row comes back enriched with a sourced answer</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            Each enrichment column is a prompt with a schema you can preview and edit before it runs. Runs
+            can be paused, resumed or reverted, and every cell has a trace showing exactly what the model
+            read and what it cost.
+          </p>
+          <p>
+            Plus the spreadsheet basics — edit, dedupe, saved views, full version history — and a public API
+            and MCP server so other agents can use it.
+          </p>
+          <ul class="chips">
+            <li>React</li><li>Vite</li><li>Tailwind</li><li>Express</li><li>Cloudflare R2</li><li>Supabase Postgres</li><li>Redis</li><li>Firecrawl</li><li>Zyte</li><li>Apify</li><li>GPT</li><li>Gemini</li>
+          </ul>
+        </div>
+      </div>
+      <!-- MEDIA SLOT 07 (web searches). Once the file(s) are in assets/work/, delete this line and the END line below.
+        <figure class="shot reveal" data-anim="rise">
+          <div class="shot__frame" data-shot data-cursor="Zoom"><img src="assets/work/web-searches.webp" width="1600" height="1000" alt="Web search enrichment columns in the Clay workspace" loading="lazy" decoding="async"></div>
+        </figure>
+      END MEDIA SLOT 07 -->
+    </article>
+
+    <article class="case" id="case-08">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">08</span>
+        <h3 data-split="words" class="reveal">Warmest Path</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">An intro finder: shared history goes in, a warm introduction comes out.</p>
+          <p class="case__out"><span>Outcome</span> Tells a sales team which of their own people should reach out to each target account, and why</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            A LinkedIn connection isn't a relationship. Shared history is — the same team in the same
+            years, the same cohort, the same small company.
+          </p>
+          <p>
+            Give it a list of target accounts and it pulls our team's roster alongside every target's
+            career history, finds the places where two careers genuinely overlapped, and weighs each
+            overlap by how small that group was. Two people out of roughly 120 in EY's consulting unit
+            counts for far more than two out of EY's 406,000.
+          </p>
+          <p>
+            Paths go up to three hops, with the last hop always inside the target's own company, and
+            every path arrives with the evidence behind it. Scoring is a pure function — no network
+            calls, no LLM — covered by 993 tests.
+          </p>
+          <ul class="chips">
+            <li>TypeScript</li><li>Node</li><li>Postgres</li><li>Apify</li><li>vitest</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="shot shot--flat reveal" data-anim="rise">
+        <div class="shot__frame shot__frame--dia">
+          <svg class="dia" viewBox="0 0 1200 620" role="img" aria-labelledby="warmTitle warmDesc">
+            <title id="warmTitle">Warmest Path run graph</title>
+            <desc id="warmDesc">Our roster on the left, target accounts on the right. Nine signals such as shared employers, GitHub collaboration, co-authored patents, the same investor or the same community become weighted edges; a three-stage search finds paths of up to three hops from one of our people to someone inside each target company, the last hop always inside the target, and scores each path. The result names who should reach out to which account and why.</desc>
+
+            <!-- title row -->
+            <text x="40" y="48" class="dia__h">Who should reach out, and why</text>
+            <text x="40" y="70" class="dia__k">A RUN GRAPH · 9 SIGNALS · 3 STAGES · NO LLM IN THE SCORING</text>
+
+            <!-- stages -->
+            <g>
+              <rect x="40" y="92" width="340" height="52" rx="14" class="dia__box dia__box--sky"/>
+              <text x="58" y="114" class="dia__k">STAGE 1</text><text x="58" y="132" class="dia__dim">shared history becomes weighted edges</text>
+              <rect x="430" y="92" width="340" height="52" rx="14" class="dia__box dia__box--yellow"/>
+              <text x="448" y="114" class="dia__k">STAGE 2</text><text x="448" y="132" class="dia__dim">search from both ends · K paths · ≤ 3 hops</text>
+              <rect x="820" y="92" width="340" height="52" rx="14" class="dia__box dia__box--mint"/>
+              <text x="838" y="114" class="dia__k">STAGE 3</text><text x="838" y="132" class="dia__dim">independent paths combine into one score</text>
+            </g>
+
+            <!-- unreached, faint -->
+            <g class="dia__faint">
+              <path d="M170 330 C 420 220, 720 190, 1000 220"/><path d="M230 280 C 500 320, 760 500, 1010 528"/>
+              <path d="M240 430 C 500 390, 700 250, 940 244"/><path d="M180 340 C 500 470, 740 560, 1060 490"/>
+              <path d="M300 350 C 560 260, 780 320, 1080 290"/><path d="M200 300 C 480 340, 700 430, 930 380"/>
+              <path d="M280 450 C 520 500, 820 400, 1100 444"/><path d="M160 310 C 380 370, 640 280, 900 350"/>
+            </g>
+
+            <!-- our roster -->
+            <text x="150" y="200" class="dia__k">OUR ROSTER</text>
+            <g class="dia__net">
+              <path d="M160 310 L205 345 L245 300"/><path d="M205 345 L185 388 L222 462"/><path d="M245 300 L255 248"/><path d="M290 440 L270 382 L300 340"/>
+            </g>
+            <g class="dia__sat">
+              <circle cx="160" cy="310" r="3.5"/><circle cx="205" cy="345" r="3.5"/><circle cx="245" cy="300" r="3.5"/><circle cx="185" cy="388" r="3.5"/>
+              <circle cx="270" cy="382" r="3.5"/><circle cx="222" cy="462" r="3.5"/><circle cx="290" cy="440" r="3.5"/><circle cx="140" cy="360" r="3.5"/>
+              <circle cx="255" cy="248" r="3.5"/><circle cx="318" cy="310" r="3.5"/>
+            </g>
+            <circle cx="200" cy="272" r="8" class="dia__champ"/>
+            <circle cx="300" cy="340" r="8" class="dia__champ"/>
+            <circle cx="230" cy="418" r="8" class="dia__champ"/>
+
+            <!-- warm paths -->
+            <g fill="none" stroke-width="3" stroke-linecap="round">
+              <path d="M200 272 C 480 160, 760 150, 980 216" class="dia__path--mint"/>
+              <path d="M300 340 C 560 260, 820 260, 1060 280" class="dia__path--sky"/>
+              <path d="M230 418 C 520 430, 800 430, 940 382" class="dia__path--yellow"/>
+              <path d="M300 340 C 600 410, 860 550, 1012 538" class="dia__path--pink"/>
+            </g>
+            <!-- signal names, on the curves -->
+            <g>
+              <text x="564" y="170" class="dia__sig" text-anchor="middle">same team, same years · weight 0.20</text>
+              <text x="641" y="262" class="dia__sig" text-anchor="middle">reviewed each other's PRs · GitHub</text>
+              <text x="596" y="448" class="dia__sig" text-anchor="middle">same cohort · education</text>
+              <text x="712" y="486" class="dia__sig" text-anchor="middle">shared investor · 2 hops</text>
+            </g>
+
+            <!-- target accounts -->
+            <text x="1020" y="176" class="dia__k" text-anchor="middle">TARGET ACCOUNTS</text>
+            <g class="dia__net"><path d="M980 216 L960 196 M980 216 L1004 200 M980 216 L1002 236 M980 216 L964 242"/></g>
+            <g class="dia__sat"><circle cx="960" cy="196" r="3"/><circle cx="1004" cy="200" r="3"/><circle cx="1002" cy="236" r="3"/><circle cx="964" cy="242" r="3"/></g>
+            <circle cx="980" cy="216" r="7" class="dia__bridge"/>
+            <text x="1022" y="212" class="dia__t">Northwind</text><text x="1022" y="234" class="dia__score">0.80</text>
+
+            <g class="dia__net"><path d="M1060 280 L1040 262 M1060 280 L1084 268 M1060 280 L1082 302 M1060 280 L1042 306"/></g>
+            <g class="dia__sat"><circle cx="1040" cy="262" r="3"/><circle cx="1084" cy="268" r="3"/><circle cx="1082" cy="302" r="3"/><circle cx="1042" cy="306" r="3"/></g>
+            <circle cx="1060" cy="280" r="7" class="dia__bridge"/>
+            <text x="1102" y="276" class="dia__t">Globex</text><text x="1102" y="298" class="dia__score">0.57</text>
+
+            <g class="dia__net"><path d="M940 382 L920 364 M940 382 L962 368 M940 382 L960 404 M940 382 L918 406"/></g>
+            <g class="dia__sat"><circle cx="920" cy="364" r="3"/><circle cx="962" cy="368" r="3"/><circle cx="960" cy="404" r="3"/><circle cx="918" cy="406" r="3"/></g>
+            <circle cx="940" cy="382" r="7" class="dia__bridge"/>
+            <text x="982" y="378" class="dia__t">Initech</text><text x="982" y="400" class="dia__score">0.35</text>
+
+            <g class="dia__net"><path d="M1012 538 L992 520 M1012 538 L1036 524 M1012 538 L1034 558 M1012 538 L994 562"/></g>
+            <g class="dia__sat"><circle cx="992" cy="520" r="3"/><circle cx="1036" cy="524" r="3"/><circle cx="1034" cy="558" r="3"/><circle cx="994" cy="562" r="3"/></g>
+            <circle cx="1012" cy="538" r="7" class="dia__bridge"/>
+            <text x="1054" y="534" class="dia__t">Contoso</text><text x="1054" y="556" class="dia__score">0.28</text>
+
+            <g class="dia__net"><path d="M1130 444 L1112 426 M1130 444 L1150 430 M1130 444 L1148 464"/></g>
+            <g class="dia__sat"><circle cx="1130" cy="444" r="4"/><circle cx="1112" cy="426" r="2.5"/><circle cx="1150" cy="430" r="2.5"/><circle cx="1148" cy="464" r="2.5"/></g>
+            <text x="1130" y="486" class="dia__dim" text-anchor="middle">Vandelay · no path yet</text>
+
+            <!-- safeguards -->
+            <rect x="40" y="500" width="380" height="72" rx="14" class="dia__box dia__box--pink"/>
+            <text x="58" y="522" class="dia__k">SAFEGUARDS</text>
+            <text x="58" y="542" class="dia__dim">Recruiters and bots never act as a bridge. A giant employer</text>
+            <text x="58" y="558" class="dia__dim">counts for less than a 120-person team. Tenants never mix.</text>
+
+            <!-- legend -->
+            <g>
+              <circle cx="470" cy="600" r="6" class="dia__champ"/><text x="484" y="604" class="dia__dim">one of our people</text>
+              <circle cx="640" cy="600" r="6" class="dia__bridge"/><text x="654" y="604" class="dia__dim">a bridge inside the target</text>
+              <circle cx="850" cy="600" r="3.5" class="dia__sat"/><text x="862" y="604" class="dia__dim">unreached</text>
+              <text x="1160" y="604" class="dia__dim" text-anchor="end">names and scores illustrative</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>A run graph: who on our side is closest to each target account, through which shared history, and how warm the path is.</figcaption>
+      </figure>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== CUSTOMER PROOF ===================== -->
+<section class="section" id="customers" data-zone="c">
+  <div class="wrap">
+    <header class="head">
+      <p class="eyebrow reveal">The part that isn't code</p>
+      <h2 class="h-xl reveal" data-split="words" style="--d:1">Working with customers.</h2>
+      <p class="head__sub reveal" style="--d:2">
+        I worked directly with customers in shared Slack channels — debugging inside their CRMs,
+        recommending approaches and shipping what we agreed.
+      </p>
+    </header>
+
+    <article class="feature reveal" data-anim="up">
+      <div class="feature__text">
+        <p class="eyebrow">Customer collaboration</p>
+        <h3 data-split="words" class="reveal">Protecting Deepgram's lead attribution</h3>
+        <p>
+          While rolling out lead-source tracking in Deepgram's CRM sync, I found forty contacts that
+          already carried attribution from Deepgram's own campaigns.
+        </p>
+        <p>
+          Instead of overwriting that history, I raised it with their team, outlined the options and
+          shipped the approach they chose.
+        </p>
+      </div>
+      <figure class="feature__shot" data-shot data-cursor="Zoom">
+        <img src="assets/work/slack/forty-contacts.webp" width="859" height="733"
+             alt="Slack thread with Deepgram about preserving existing lead attribution"
+             loading="lazy" decoding="async">
+      </figure>
+    </article>
+
+    <ul class="tiles">
+      <li class="tile tile--wide reveal" data-anim="up" data-shot data-cursor="Zoom">
+        <img src="assets/work/slack/deepgram-call.webp" width="1880" height="735"
+             alt="Video call with Deepgram's team, configuring their CRM sync"
+             loading="lazy" decoding="async">
+        <p><b>Deepgram · CRM working session</b> Configured the CRM sync live with Deepgram's team over video.</p>
+      </li>
+      <li class="tile tile--wide reveal" data-anim="up" style="--d:1" data-shot data-cursor="Zoom">
+        <img src="assets/work/slack/hyperbound-call.webp" width="1920" height="1080"
+             alt="Video call onboarding HyperBound's team on the Data Explorer, with prospect details blurred"
+             loading="lazy" decoding="async">
+        <p><b>HyperBound · Onboarding</b> Walked HyperBound's team through the Data Explorer on a shared screen; prospect details are blurred.</p>
+      </li>
+      <li class="tile reveal" data-anim="fan" style="--d:2" data-shot data-cursor="Zoom">
+        <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
+             alt="Slack thread with Blitzy: a signup alert for a target account, met with thanks"
+             loading="lazy" decoding="async">
+        <p><b>Blitzy · Signup alerts</b> Flagged a new signup at one of Blitzy's target accounts ahead of the feature's launch. <em>“This is amazing thank you.”</em></p>
+      </li>
+      <li class="tile reveal" data-anim="fan" style="--d:3" data-shot data-cursor="Zoom">
+        <img src="assets/work/slack/salesforce-live.webp" width="874" height="781"
+             alt="Slack thread with Deepgram: the Salesforce integration live, with thanks for the troubleshooting"
+             loading="lazy" decoding="async">
+        <p><b>Deepgram · Salesforce integration</b> Took the integration live on Contact and Account objects after troubleshooting it with their team. <em>“Thank you for the support with the troubleshooting.”</em></p>
+      </li>
+      <li class="tile reveal" data-anim="fan" style="--d:4" data-shot data-cursor="Zoom">
+        <img src="assets/work/slack/cross-sell.webp" width="688" height="364"
+             alt="Slack thread with HyperBound: recommending a workflow built for another customer"
+             loading="lazy" decoding="async">
+        <p><b>HyperBound · Workflow recommendation</b> Spotted a workflow built for another customer that fit HyperBound's process and proposed extending it to them. <em>“Agreed. Let us get back to you.”</em></p>
+      </li>
+      <li class="tile reveal" data-anim="fan" style="--d:5" data-shot data-cursor="Zoom">
+        <img src="assets/work/slack/hubspot-spec.webp" width="1042" height="798"
+             alt="Slack thread: specifying and backfilling a HubSpot classification property"
+             loading="lazy" decoding="async">
+        <p><b>HubSpot · Classification property</b> Specified the property, coordinated its setup with the customer and backfilled every existing record. <em>“All set ✅”</em></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== WALKTHROUGH ===================== -->
+<section class="section" id="demo" data-zone="d">
+  <div class="wrap">
+    <header class="head">
+      <p class="eyebrow reveal">Walkthrough</p>
+      <h2 class="h-xl reveal" data-split="words" style="--d:1">Me, explaining it.</h2>
+    </header>
+
+    <!--
+      SWAP THE RECORDING HERE. data-loom holds the Loom share id. The player only
+      loads on click, so nothing inside the recording loads on page view.
+    -->
+    <div class="video reveal" data-anim="up" id="video" data-embed data-title="Product walkthrough by Abhinandha K" data-loom="3a11377e0be14cd6b2c03886d635a498" data-cursor="Play">
+      <button class="video__play" type="button" id="videoPlay">
+        <span class="video__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+        </span>
+        <span class="video__label">
+          <strong>Play the walkthrough</strong>
+          <em>Loads the Loom player</em>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SIDE PROJECTS ===================== -->
+<section class="section" id="projects" data-zone="e">
+  <div class="wrap">
+    <header class="head">
+      <p class="eyebrow reveal">Built on my own time</p>
+      <h2 class="h-xl reveal" data-split="words" style="--d:1">Side projects.</h2>
+    </header>
+
+    <div class="cards train">
+      <article class="card reveal" data-anim="train">
+        <p class="card__k">Generative AI</p>
+        <h3>AI Fashion Platform</h3>
+        <p class="card__sum">Turns one photo into a digital avatar and dresses it from a text prompt.</p>
+        <div class="card__body" id="sp-fashion">
+          <div class="card__inner">
+            <p>Stable Diffusion XL generates the avatar from a single photo, and CLIP retrieval finds outfits that match what you describe.</p>
+            <ul class="chips"><li>React</li><li>SDXL</li><li>CLIP</li><li>OpenRouter</li></ul>
+          </div>
+        </div>
+        <div class="card__foot">
+          <button class="card__more" type="button" aria-expanded="false" aria-controls="sp-fashion"><span class="card__more-t">Read more</span><span class="card__plus" aria-hidden="true"></span></button>
+          <a class="ul" href="https://github.com/AbhinandhaAjay" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="card reveal" data-anim="train" style="--d:1">
+        <p class="card__k">Computer vision</p>
+        <h3>Accident Detection</h3>
+        <p class="card__sum">Spots collisions on live CCTV and alerts responders in real time.</p>
+        <div class="card__body" id="sp-accident">
+          <div class="card__inner">
+            <p>YOLOv8 watches the feed. When it sees a crash, agents estimate speed, read the licence plate, write an incident summary with an LLM, and notify the nearest hospital and police station.</p>
+            <figure class="card__shot" data-shot data-cursor="Zoom">
+              <img src="assets/work/accident-detection.webp" width="684" height="399" alt="Real-time accident detection architecture: monitoring feed, detection and vehicle identification agents, speed agent, licence-plate extraction, summarisation and response-mode agents notifying hospitals and police, logging to a database" loading="lazy" decoding="async">
+            </figure>
+            <ul class="chips"><li>YOLOv8</li><li>Kafka</li><li>Flask</li><li>Docker</li></ul>
+          </div>
+        </div>
+        <div class="card__foot">
+          <button class="card__more" type="button" aria-expanded="false" aria-controls="sp-accident"><span class="card__more-t">Read more</span><span class="card__plus" aria-hidden="true"></span></button>
+          <a class="ul" href="https://github.com/AbhinandhaAjay" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="card reveal" data-anim="train" style="--d:2">
+        <p class="card__k">Multi-agent</p>
+        <h3>Personal AI Assistant</h3>
+        <p class="card__sum">A team of AI agents behind one chat box.</p>
+        <div class="card__body" id="sp-assistant">
+          <div class="card__inner">
+            <p>A supervisor routes each question to a specialist agent instead of asking one model to do everything, with retrieval over your uploaded documents through FAISS.</p>
+            <ul class="chips"><li>FastAPI</li><li>Gemini 2.0</li><li>FAISS</li><li>MongoDB</li></ul>
+          </div>
+        </div>
+        <div class="card__foot">
+          <button class="card__more" type="button" aria-expanded="false" aria-controls="sp-assistant"><span class="card__more-t">Read more</span><span class="card__plus" aria-hidden="true"></span></button>
+          <a class="ul" href="https://github.com/AbhinandhaAjay" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="card reveal" data-anim="train" style="--d:3">
+        <p class="card__k">AI recovery engine</p>
+        <h3>LostNFound</h3>
+        <p class="card__sum">A lost-and-found that helps items find their owners, instead of just logging them.</p>
+        <div class="card__body" id="sp-lnf">
+          <div class="card__inner">
+            <p>It asks owners follow-up questions to build a profile of what they lost, matches it against found items using text and image embeddings, and shows a recovery probability that updates over time. Pickups are QR-verified, with fraud checks on every claim.</p>
+            <figure class="card__shot" data-shot data-cursor="Zoom">
+              <img src="assets/work/lostnfound.webp" width="723" height="299" alt="LostNFound architecture: memory reconstruction, semantic matching, recovery probability, fraud detection and QR verification" loading="lazy" decoding="async">
+            </figure>
+            <ul class="chips"><li>React</li><li>Tailwind</li><li>Flask</li><li>FastAPI</li><li>SQLite</li><li>SDXL</li><li>BLIP</li><li>CLIP</li><li>MiniLM</li><li>ChromaDB</li><li>Gemini</li><li>XGBoost</li></ul>
+          </div>
+        </div>
+        <div class="card__foot">
+          <button class="card__more" type="button" aria-expanded="false" aria-controls="sp-lnf"><span class="card__more-t">Read more</span><span class="card__plus" aria-hidden="true"></span></button>
+          <a class="ul" href="https://github.com/AbhinandhaAjay/LostNFound" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="card reveal" data-anim="train" style="--d:4">
+        <p class="card__k">Community platform</p>
+        <h3>Inkling</h3>
+        <p class="card__sum">A community platform built for thoughtful conversation over shallow engagement.</p>
+        <div class="card__body" id="sp-inkling">
+          <div class="card__inner">
+            <p>Email-verified accounts, user-created Spaces, likes that persist properly, threaded comments and public profiles — a React and TypeScript front end on Node, Express and MongoDB.</p>
+            <figure class="card__shot" data-shot data-cursor="Zoom">
+              <img src="assets/work/inkling.webp" width="673" height="404" alt="Inkling architecture: React front end, Express API gateway, authentication, community, social and profile agents over MongoDB, with Nodemailer SMTP" loading="lazy" decoding="async">
+            </figure>
+            <ul class="chips"><li>React</li><li>TypeScript</li><li>Vite</li><li>Framer Motion</li><li>Node</li><li>Express</li><li>MongoDB</li><li>Nodemailer</li></ul>
+          </div>
+        </div>
+        <div class="card__foot">
+          <button class="card__more" type="button" aria-expanded="false" aria-controls="sp-inkling"><span class="card__more-t">Read more</span><span class="card__plus" aria-hidden="true"></span></button>
+          <a class="ul" href="https://github.com/AbhinandhaAjay/Multiuser_Blogging_Platform" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section" id="about" data-zone="f">
+  <div class="wrap">
+    <div class="about">
+      <header class="head">
+        <p class="eyebrow reveal">About</p>
+        <h2 class="h-xl reveal" data-split="words" style="--d:1">A bit about me.</h2>
+      </header>
+      <div class="about__text reveal" style="--d:2">
+        <p>
+          I'm happiest building things that get used the same week they ship. At Huntd that meant
+          owning a dashboard end to end, then sitting in the customer's Slack while they used it.
+        </p>
+        <p>Outside work: dance, the odd hackathon, and chess — which I am actually good at.</p>
+      </div>
+    </div>
+
+    <div class="stack reveal" style="--d:3">
+      <div><h4>Interfaces</h4><p>React · TypeScript · Tailwind · Framer Motion</p></div>
+      <div><h4>Backend &amp; data</h4><p>Node · Python · FastAPI · PostgreSQL · Supabase · MongoDB · Kafka</p></div>
+      <div><h4>AI systems</h4><p>LLM orchestration · RAG · FAISS · CLIP · SDXL · YOLOv8 · Firecrawl</p></div>
+      <div><h4>Integrations</h4><p>HubSpot OAuth · Salesforce · Sheets API · Webhooks · Docker</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== CONTACT ===================== -->
+<footer class="foot" id="contact" data-zone="foot">
+  <div class="wrap">
+    <p class="eyebrow reveal">Let's talk</p>
+    <h2 class="foot__h reveal" data-split="words" style="--d:1">If you're building something customers touch, I'd like to hear about it.</h2>
+    <div class="foot__links reveal" style="--d:2">
+      <a class="btn btn--light" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=abhi.k.ajay05@gmail.com" target="_blank" rel="noopener" data-magnet><span class="btn__t">Email me</span><span class="btn__a" aria-hidden="true">→</span></a>
+      <button class="ul ul--light copy" type="button" id="copyEmail" data-email="abhi.k.ajay05@gmail.com" title="Click to copy"><span class="copy__addr">abhi.k.ajay05@gmail.com</span><span class="copy__tip" aria-live="polite"></span></button>
+      <a class="ul ul--light" href="tel:+919381741053">+91 93817 41053</a>
+      <a class="ul ul--light" href="https://github.com/AbhinandhaAjay" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="ul ul--light" href="https://www.linkedin.com/in/abhinandha-k-06a727305/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <p class="foot__end">Abhinandha K — Forward Deployed Engineer</p>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged screenshot" hidden>
+  <button class="lb__x" id="lbClose" type="button" aria-label="Close">&times;</button>
+  <img id="lbImg" alt="">
+</div>
+
+<script src="scripts/main.js" defer></script>
+</body>
+</html>

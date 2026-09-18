@@ -1,0 +1,9 @@
+# Vercel CLI project link
+.vercel
+
+# Private resume source material, not part of the site
+huntd-build-dossier.md
+
+# OS noise
+.DS_Store
+Thumbs.db
