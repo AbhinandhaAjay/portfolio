@@ -2,6 +2,7 @@ name: Deploy
 
 # main (push or manual run) → production, pull requests → preview URL.
 # Vercel's own Git auto-deploy is switched off in vercel.json so this is the only pipeline.
+# Files are uploaded and built on Vercel (not --prebuilt) so Web Analytics is attached.
 on:
   push:
     branches: [main]
@@ -74,15 +75,10 @@ jobs:
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
-      - name: Pull Vercel project settings
-        run: vercel pull --yes --environment=$TARGET --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Build
-        run: vercel build $PROD_FLAG --token=${{ secrets.VERCEL_TOKEN }}
-
       - name: Deploy
         id: deploy
         run: |
-          url=$(vercel deploy --prebuilt $PROD_FLAG --token=${{ secrets.VERCEL_TOKEN }})
+          vercel deploy $PROD_FLAG --yes --token=${{ secrets.VERCEL_TOKEN }} | tee deploy.log
+          url=$(grep -oE 'https://[a-z0-9-]+\.vercel\.app' deploy.log | head -1)
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "Deployed to $url" >> "$GITHUB_STEP_SUMMARY"
