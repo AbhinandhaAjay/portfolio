@@ -434,6 +434,26 @@
     });
   });
 
+  // A scroll frame is still a picture: a click opens it full size, while a drag
+  // on its scrollbar (or a scroll) must not be mistaken for that click.
+  document.querySelectorAll(".scrollshot").forEach(function (box) {
+    var img = box.querySelector("img");
+    if (!img) return;
+    var dx = 0, dy = 0, onBar = false;
+    box.addEventListener("pointerdown", function (e) {
+      dx = e.clientX; dy = e.clientY;
+      onBar = e.offsetX > box.clientWidth || e.offsetY > box.clientHeight;
+    });
+    box.addEventListener("click", function (e) {
+      if (onBar) return;
+      if (Math.abs(e.clientX - dx) > 6 || Math.abs(e.clientY - dy) > 6) return;
+      openLb(img);
+    });
+    box.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") { e.preventDefault(); openLb(img); }
+    });
+  });
+
   document.querySelectorAll("[data-shot] img").forEach(function (img) {
     img.setAttribute("tabindex", "0");
     img.setAttribute("role", "button");

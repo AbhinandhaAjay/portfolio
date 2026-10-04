@@ -401,6 +401,18 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 .case__cols > .shot { display: flow-root; width: 42%; margin: 24px 0 0; }
 .case:nth-of-type(even) .case__cols > .shot { margin-left: auto; }
 .case__lead { margin-bottom: 18px; }
+.case--pair .case__cols {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.28fr);
+  column-gap: clamp(28px, 3.4vw, 52px); align-items: center;
+}
+.case--pair .case__media { float: none; width: 100%; margin: 0; grid-column: 2; grid-row: 1 / span 2; }
+.case--pair .case__lead { grid-column: 1; grid-row: 1; align-self: end; margin-bottom: 0; }
+.case--pair .case__body { grid-column: 1; grid-row: 2; align-self: start; padding-top: 16px; }
+.case--pair:nth-of-type(even) .case__cols { grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr); }
+.case--pair:nth-of-type(even) .case__media { grid-column: 1; }
+.case--pair:nth-of-type(even) .case__lead,
+.case--pair:nth-of-type(even) .case__body { grid-column: 2; }
+.case--pair .case__body .chips { clear: none; }
 .case__wide { clear: both; }
 .case__cols::after { content: ""; display: block; clear: both; }
 .case__lead .lede { font-size: 1.3rem; line-height: 1.45; font-weight: 500; color: var(--ink); }
@@ -519,9 +531,11 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
 .feature__quote { color: var(--accent-ink); font-style: italic; }
 
 /* a flat highlighter band, so the customer names read first */
+/* the words themselves carry it — weight and ink, no label behind them */
 .hl {
-  background: var(--yellow); color: var(--ink); font-weight: 600;
-  padding: 2px 6px; border-radius: 6px; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+  font-weight: 700; color: var(--ink);
+  border-bottom: 2px solid var(--coral); padding-bottom: 1px;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
 }
 
 /* a long screenshot you read by scrolling inside it, the way it looked in Slack,
@@ -799,7 +813,8 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
   .nav__in { height: 64px; }
   .polaroid { width: 96px; }
   .head::before { left: -24px; }
-  .case__cols { display: block; }
+  .case__cols, .case--pair .case__cols { display: block; }
+  .case--pair .case__media, .case--pair .case__lead, .case--pair .case__body { grid-column: auto; }
   .case__media { float: none; width: 100%; margin: 0 0 24px; }
   .case:nth-of-type(even) .case__media { float: none; margin: 0 0 24px; }
   .case__head { padding: 36px 0 0 16px; }

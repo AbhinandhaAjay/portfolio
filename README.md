@@ -60,10 +60,16 @@ work out the heights (`span × track width ÷ aspect ratio`) and pick spans that
 or the row ends ragged. CSS `columns` was worse: it fills one column at a time and left a hole
 beside the tallest tile.
 
+**Chapters with two visuals** carry `case--pair`, which swaps the float for a two-column grid with
+the text vertically centred against the media stack. With two pictures and short copy the float
+left all the leftover space pooled under the text; centring splits it above and below, where it
+reads as margin.
+
 **Long Slack threads** go in a `.scrollshot` — a frame with `max-height` and `overflow: auto`, so
 the thread is read by scrolling inside it at a readable size rather than shrunk to a thumbnail you
-have to open. A short image keeps its own height, so the same class is safe anywhere. The drawn
-cursor shows "Scroll" over them (`data-cursor`).
+have to open. A short image keeps its own height, so the same class is safe anywhere. A click still opens
+the full image in the lightbox — `main.js` ignores the click when it lands on the scrollbar or when
+the pointer moved more than a few px, so dragging to scroll never zooms.
 
 **The Detector chapter's Slack image** (`detector-digest.webp`) is rebuilt, not captured: same
 Slack styling and the same message format the Detector really posts, but the all-clear version,
