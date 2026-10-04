@@ -400,7 +400,10 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 .case .chips li { background: var(--surface); }
 
 /* media: full width of the column, under the text */
-.case > .shot { margin-top: clamp(28px, 4vw, 52px); }
+.case > .shot { margin-top: clamp(24px, 3.2vw, 40px); max-width: 940px; margin-inline: auto; }
+.case > .shot--flat { max-width: 900px; }           /* diagrams carry their own margins */
+.case > .shot--narrow { max-width: 620px; }        /* a supporting screenshot, not the headline */
+.case > .shot + .shot { margin-top: clamp(18px, 2.4vw, 28px); }
 .shot--two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .shot--two figcaption { grid-column: 1 / -1; }
 
@@ -412,8 +415,11 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
   transition: box-shadow .7s var(--ease);
 }
 .shot:hover .shot__frame { box-shadow: var(--shadow-lg); }
-.shot__frame img { width: 100%; height: auto; will-change: transform; transform: scale(1.06); }
-.feature__shot, .video, .tile--wide { transform: perspective(1200px) rotateX(var(--lean, 0deg)); will-change: transform; }
+.shot__frame img {
+  width: 100%; height: auto; max-height: 440px; object-fit: cover; object-position: 50% 0;
+  will-change: transform; transform: scale(1.06);
+}
+.feature__shot, .video { transform: perspective(1200px) rotateX(var(--lean, 0deg)); will-change: transform; }
 
 .chips { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .chips li {
@@ -479,23 +485,26 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 
 /* ---------- customers ---------- */
 .feature {
-  display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
-  gap: clamp(24px, 4vw, 56px); align-items: center;
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  gap: clamp(20px, 3vw, 36px); align-items: center;
   background: var(--surface); border: var(--border); border-radius: var(--r-lg);
-  padding: clamp(24px, 3.2vw, 44px); margin-bottom: 28px; box-shadow: var(--shadow);
+  padding: clamp(18px, 2.2vw, 28px); margin-bottom: 20px; box-shadow: var(--shadow);
 }
-.feature__text h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); margin: 12px 0 14px; }
-.feature__text p { color: var(--ink-2); font-size: 15.5px; }
+.feature__text h3 { font-size: clamp(1.25rem, 1.9vw, 1.6rem); margin: 10px 0 10px; }
+.feature__text p { color: var(--ink-2); font-size: 14.5px; }
 .feature__text .eyebrow { font-size: 9.5px; color: var(--accent-ink); }
 .feature__text p + p { margin-top: 12px; }
-.feature__shot img { width: 100%; height: auto; border-radius: var(--r-sm); border: var(--border); }
+.feature__shot img {
+  width: 100%; height: auto; max-height: 300px; object-fit: cover; object-position: 50% 0;
+  border-radius: var(--r-sm); border: var(--border);
+}
 
-.tiles { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 28px; perspective: 1400px; }   /* masonry: short and tall threads pack without holes */
+.tiles { list-style: none; padding: 0; margin: 0; columns: 3; column-gap: 20px; perspective: 1400px; }   /* masonry: short and tall threads pack without holes */
 .tile {
   position: relative; overflow: hidden;
   background: var(--surface); border: var(--border); border-radius: var(--r-lg); box-shadow: var(--shadow);
-  padding: 18px 14px 14px; display: flex; flex-direction: column; gap: 14px;
-  break-inside: avoid; margin-bottom: 28px;
+  padding: 12px 10px 10px; display: flex; flex-direction: column; gap: 10px;
+  break-inside: avoid; margin-bottom: 20px;
   transition: transform .5s var(--ease), box-shadow .5s ease;
   transform-style: preserve-3d;
 }
@@ -505,11 +514,13 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 }
 .tile:nth-child(6n+1) { --edge: var(--pink); }  .tile:nth-child(6n+2) { --edge: var(--coral); } .tile:nth-child(6n+3) { --edge: var(--yellow); }
 .tile:nth-child(6n+4) { --edge: var(--lime); }  .tile:nth-child(6n+5) { --edge: var(--mint); }  .tile:nth-child(6n+6) { --edge: var(--sky); }
-.tile img { width: 100%; height: auto; border-radius: var(--r-sm); border: var(--border); }
-.tile p { padding: 2px 6px 6px; font-size: 14px; color: var(--ink-2); line-height: 1.55; }
+.tile img {
+  width: 100%; height: auto; max-height: 190px; object-fit: cover; object-position: 50% 0;
+  border-radius: var(--r-sm); border: var(--border);
+}
+.tile p { padding: 2px 4px 4px; font-size: 13px; color: var(--ink-2); line-height: 1.5; }
 .tile b { display: block; margin-bottom: 3px; color: var(--ink); font-weight: 600; }
 .tile em { font-style: italic; color: var(--accent-ink); }
-.tile--wide { column-span: all; }
 
 /* ---------- video ---------- */
 .video {
@@ -531,6 +542,25 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 .video__label { text-align: left; display: grid; }
 .video__label strong { font-family: var(--display); font-size: 1.25rem; font-weight: 400; }
 .video__label em { font-style: normal; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+
+/* while the Loom player boots: a spinner over the iframe, and after a few
+   seconds a way out to the original recording */
+.video__wait {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  background: var(--bg-2); color: var(--ink-2); text-align: center; padding: 20px;
+}
+.video__spin {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 3px solid var(--coral-t); border-top-color: var(--coral);
+  animation: video-spin .9s linear infinite;
+}
+.video__wait-t { font-size: 14px; font-weight: 500; }
+.video__alt {
+  font-size: 13px; color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px;
+  opacity: 0; pointer-events: none; transition: opacity .4s ease;
+}
+.video__wait.is-slow .video__alt { opacity: 1; pointer-events: auto; }
+@keyframes video-spin { to { transform: rotate(360deg); } }
 
 /* ---------- side projects ---------- */
 .train { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; perspective: 1400px; }
@@ -557,8 +587,6 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 .card__k { font-family: var(--pixel); font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); line-height: 1.8; }
 .card h3 { margin-top: 12px; font-size: 1.55rem; }
 .card > p:not(.card__k) { margin-top: 12px; font-size: 14.5px; color: var(--ink-2); }
-.card__shot { margin: 18px 0 0; }
-.card__shot img { width: 100%; height: auto; border-radius: var(--r-sm); border: var(--border); box-shadow: var(--shadow-sm); cursor: zoom-in; }
 .card .chips { margin-top: auto; padding-top: 20px; }
 .card .ul { margin-top: 18px; font-size: 14px; align-self: flex-start; }
 .card__sum { font-size: 15px !important; }
@@ -568,7 +596,6 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 .card__inner { min-height: 0; overflow: hidden; }
 .card__inner > p { margin-top: 14px; font-size: 14.5px; color: var(--ink-2); }
 .card__inner .chips { margin-top: 16px; padding-top: 0; }
-.card__inner .card__shot { margin-top: 16px; }
 .card__foot {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line-2);
@@ -699,6 +726,7 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
   .tag--work { left: 12px; top: -18px; }
   .polaroid { right: 8px; bottom: -24px; }
   .feature { grid-template-columns: 1fr; }
+  .tiles { columns: 2; }
   .train { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .about { grid-template-columns: 1fr; }
   .stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -734,12 +762,16 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
   .js .reveal, .js [data-anim], .w__i, .c, .rot__w, .nl .c-nav, .btn, .btn__a, .ul::before, .ul::after, .tile, .card, .chips li, .pills li, .stack > div, .case__n, .shot__frame {
     transition: none !important; animation: none !important; transform: none !important; opacity: 1 !important; filter: none !important;
   }
-  .shot-card img, .shot__frame img, .feature__shot, .video, .tile--wide, .shot { transform: none !important; opacity: 1 !important; }
+  .shot-card img, .shot__frame img, .feature__shot, .video, .shot { transform: none !important; opacity: 1 !important; }
   .tag, .tilt, .polaroid, .swash path, .lb, .lb img, .card__body, .card__plus::after { animation: none !important; transition: none !important; }
   .swash path { stroke-dashoffset: 0; }
   .shot__frame, .tile img, .feature__shot img { clip-path: none !important; }
   .shot__frame img, .tile img, .feature__shot img { transform: none !important; }
   .cur, .pl { display: none !important; }
+  /* the rotation is off here (main.js), so only the live line may show —
+     without this the blanket opacity above stacks all four on top of each other */
+  .rot__w { opacity: 0 !important; }
+  .rot__w.is-on { opacity: 1 !important; }
 }
 @media print {
   .nav, .video, .lb, .cur, .pl, .track { display: none !important; }

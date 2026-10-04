@@ -139,7 +139,7 @@
   var links = Array.prototype.slice.call(document.querySelectorAll(".nav__links a"));
   var targets = links.map(function (a) { return document.querySelector(a.getAttribute("href")); }).filter(Boolean);
   var paras = Array.prototype.slice.call(document.querySelectorAll("[data-parallax]"));
-  var leaners = Array.prototype.slice.call(document.querySelectorAll(".shot:not(.shot--flat) > .shot__frame, .feature__shot, .video, .tile--wide"));
+  var leaners = Array.prototype.slice.call(document.querySelectorAll(".shot:not(.shot--flat) > .shot__frame, .feature__shot, .video"));
   var zones = Array.prototype.slice.call(document.querySelectorAll("[data-zone]"));
   var track = document.getElementById("track");
   var lastScroll = 0, boostTimer = null;
@@ -416,18 +416,49 @@
   document.querySelectorAll("[data-embed]").forEach(function (box) {
     var btn = box.querySelector(".video__play");
     if (!btn) return;
+
+    // Warm the connection on intent, so the click isn't also paying for DNS + TLS.
+    var warmed = false;
+    function warm() {
+      if (warmed) return; warmed = true;
+      ["https://www.loom.com", "https://cdn.loom.com"].forEach(function (href) {
+        var l = document.createElement("link");
+        l.rel = "preconnect"; l.href = href; l.crossOrigin = "";
+        document.head.appendChild(l);
+      });
+    }
+    btn.addEventListener("pointerenter", warm);
+    btn.addEventListener("focus", warm);
+
     btn.addEventListener("click", function () {
-      var loom = box.getAttribute("data-loom"), yt = box.getAttribute("data-youtube"), src = null;
-      if (loom) src = "https://www.loom.com/embed/" + loom + "?autoplay=1";
-      else if (yt) src = "https://www.youtube-nocookie.com/embed/" + yt + "?autoplay=1&rel=0";
+      var loom = box.getAttribute("data-loom"), yt = box.getAttribute("data-youtube"), src = null, href = null;
+      if (loom) { src = "https://www.loom.com/embed/" + loom + "?autoplay=1"; href = "https://www.loom.com/share/" + loom; }
+      else if (yt) { src = "https://www.youtube-nocookie.com/embed/" + yt + "?autoplay=1&rel=0"; href = "https://youtu.be/" + yt; }
       if (!src) return;
+
       var frame = document.createElement("iframe");
       frame.src = src;
       frame.title = box.getAttribute("data-title") || "Video";
       frame.setAttribute("allow", "autoplay; fullscreen; picture-in-picture");
       frame.setAttribute("allowfullscreen", "");
+
+      // The player takes a few seconds to come up, and an empty black box
+      // reads as broken: hold a spinner over it until the iframe loads, and
+      // offer the original link if it is taking unusually long.
+      var wait = document.createElement("div");
+      wait.className = "video__wait";
+      wait.innerHTML = '<span class="video__spin" aria-hidden="true"></span>' +
+                       '<span class="video__wait-t">Loading the recording…</span>' +
+                       '<a class="video__alt" href="' + href + '" target="_blank" rel="noopener">Open it on Loom ↗</a>';
       box.innerHTML = "";
       box.appendChild(frame);
+      box.appendChild(wait);
+
+      var done = false;
+      function clear() { if (done) return; done = true; if (wait.parentNode) wait.parentNode.removeChild(wait); }
+      frame.addEventListener("load", function () { setTimeout(clear, 400); });
+      setTimeout(function () { wait.classList.add("is-slow"); }, 4000);   // reveals the fallback link
+      setTimeout(clear, 20000);                                           // never leave the overlay stuck
     });
   });
 })();

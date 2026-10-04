@@ -51,22 +51,31 @@ after `/share/`). **The current recording shows real customer email addresses.**
 player is click-to-load so nothing loads for a visitor who doesn't press play, but swap
 it before sharing the site widely.
 
+**Page order.** Hero → Working with customers (`#customers`) → Work (`#work`) → walkthrough →
+side projects → about. The customer proof runs first, deliberately: it is the part that isn't code.
+The `data-zone` letters must stay in page order (hero `a`, customers `b`, work `c`, …) because the
+background colour morphs to the zone of the section under the reading line, and the nav links are a
+table of contents, so they follow the same order.
+
 **The Work section.** Eight full-width chapters (`article.case`). Each has a header with a
 huge faint number behind the title (`.case__n`), two columns — `.case__lead` (the lede and
 the one-line **Outcome** pill) and `.case__body` (paragraphs and tags) — 01's feature list
 (`.case__wide`) full width, and, where there is one, a media figure the full width of the column.
 No index. 01 shows the Data Explorer companies view (`huntd-explorer-companies.webp`, company
-names and domains blurred); 02, 03 and 08 carry inline SVG diagrams drawn in the site's own style
-(`svg.dia`: Lilita headings, Rubik text, tint panels, coral arrows; `.shot--flat` so they get no 3D lean); 03 pairs the cropped Integrations
-settings page with the sync diagram (`.shot--two`).
+names and domains blurred); 02, 03, 04, 05 and 08 carry inline SVG diagrams drawn in the site's own
+style (`svg.dia`: Lilita headings, Rubik text, tint panels, coral arrows; `.shot--flat` so they get
+no 3D lean). 03, 04 and 05 pair their diagram with a real screenshot underneath it — a supporting
+screenshot gets `.shot--narrow` (620px) so it does not compete with the diagram. Pixel-font text
+(`.dia__k`) has no arrow glyph, so write "FALSE TO TRUE" there rather than "FALSE → TRUE".
 
-**Adding pictures and videos.** Cases 04–07 each carry a commented `MEDIA SLOT` block in
+Work media is capped: figures are 940px wide (900 for diagrams, 620 for `.shot--narrow`) and
+`img` is `max-height: 440px` with `object-fit: cover`, so no single screenshot owns a chapter.
+
+**Adding pictures and videos.** Cases 06 and 07 still carry a commented `MEDIA SLOT` block in
 `index.html` with the filenames already filled in:
 
 | case | files |
 |---|---|
-| 04 Signup & churn signals | `assets/work/signup.webp`, `assets/work/signin.webp` (two-up) |
-| 05 Detector & Doctor | `assets/work/detector.webp`, `assets/work/doctor.webp` (two-up) |
 | 06 Web research agent | `assets/work/web-search-agent.webp` |
 | 07 Building Clay | `assets/work/web-searches.webp` |
 
@@ -82,13 +91,15 @@ the `<img>` inside its `shot__frame` with:
 
 Nothing loads until play. For a Loom or YouTube recording, give the `shot__frame` the classes
 `shot__frame embed` plus `data-embed data-loom="<share id>"` (or `data-youtube`) and copy the
-play button from `#video`; the iframe is injected on click only.
+play button from `#video`; the iframe is injected on click only. On click the loader also holds a
+spinner (`.video__wait`) over the iframe until it fires `load`, reveals an "open it on Loom" link
+after 4s and clears itself after 20s, because the Loom player takes a few seconds to boot and an
+empty black box reads as broken. Hovering the play button preconnects to Loom.
 
 **Project repo links.** LostNFound and Inkling link to their repos; the other three cards
 still point at the GitHub profile root — search `class="ul"` inside `.card` and swap in the
-individual repo URLs. Card images: `lostnfound.webp` (architecture diagram, cropped inside the slide's
-dashed border so the slide title is gone), `inkling.webp` and `accident-detection.webp` (architecture diagrams as
-supplied). Cards run three across on desktop in this order: AI Fashion Platform, Accident
+individual repo URLs. The cards carry no images: not every project had an architecture diagram, so
+the GitHub link does that job. Cards run three across on desktop in this order: AI Fashion Platform, Accident
 Detection, Personal AI Assistant, LostNFound, Inkling; **Read more** opens each one.
 
 **The rotating headline.** The four lines under "Software that" live in `#rot`. Keep them
