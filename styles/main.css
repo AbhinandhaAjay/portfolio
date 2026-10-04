@@ -397,9 +397,7 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 }
 .case__media .shot { margin: 0; max-width: none; }
 .case__media .shot + .shot { margin-top: 18px; }
-.case__media .shot--narrow { width: 82%; margin-inline: auto; }
-/* a supporting screenshot sits under the text, in the column the float leaves
-   free, instead of letting that column trail off into blank page */
+.case__media .shot--narrow { width: 72%; margin-inline: auto; }   /* the supporting shot, kept small */
 .case__cols > .shot { display: flow-root; width: 42%; margin: 24px 0 0; }
 .case:nth-of-type(even) .case__cols > .shot { margin-left: auto; }
 .case__lead { margin-bottom: 18px; }
@@ -409,7 +407,7 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 .case__body p { color: var(--ink-2); }
 .case__body p + p { margin-top: 14px; }
 .case__body em { font-style: italic; color: var(--ink); }
-.case__body .chips { margin-top: 20px; }
+.case__body .chips { margin-top: 20px; clear: both; }
 .case__wide { margin-top: clamp(24px, 3vw, 40px); }
 .case__out {                     /* the one-line result */
   display: flex;                 /* block-level, so a long one wraps beside the picture
@@ -520,13 +518,30 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
 }
 .feature__quote { color: var(--accent-ink); font-style: italic; }
 
-/* the company, named where someone would look for it */
-.about__site { margin-top: 22px; font-size: 14px; color: var(--muted); }
-.about__site a {
-  font-family: var(--display); font-size: 1.15rem; color: var(--accent-ink);
-  border-bottom: 2px solid var(--coral-t); padding-bottom: 2px; transition: border-color .3s ease;
+/* a flat highlighter band, so the customer names read first */
+.hl {
+  background: var(--yellow); color: var(--ink); font-weight: 600;
+  padding: 2px 6px; border-radius: 6px; box-decoration-break: clone; -webkit-box-decoration-break: clone;
 }
-.about__site a:hover { border-color: var(--coral); }
+
+/* a long screenshot you read by scrolling inside it, the way it looked in Slack,
+   instead of a shrunken thumbnail you have to open to read */
+.scrollshot {
+  display: block; overflow: auto; overscroll-behavior: contain;
+  max-height: var(--scroll-h, 320px);          /* a short image keeps its own height */
+  background: #1A1D21;
+  border-radius: var(--r-sm); border: var(--border);
+  scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, .28) transparent;
+}
+.scrollshot::-webkit-scrollbar { width: 9px; height: 9px; }
+.scrollshot::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, .25); border-radius: 999px; }
+.scrollshot::-webkit-scrollbar-track { background: transparent; }
+.scrollshot img { display: block; width: 100%; height: auto; max-height: none; border: 0; border-radius: 0; }
+.scrollshot:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
+.feature__shot.scrollshot { --scroll-h: 300px; }
+.tile .scrollshot { --scroll-h: 300px; }
+.case__media .scrollshot { --scroll-h: 300px; }
+.case__cols > .shot .scrollshot { --scroll-h: 260px; }
 
 .tiles {                          /* six tracks, so a wide shot can take more of the row than a square one */
   list-style: none; padding: 0; margin: 0; perspective: 1400px;

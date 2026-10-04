@@ -105,7 +105,8 @@
         <p class="bio reveal" style="--d:3">
           Forward-deployed engineer. At Huntd I owned the customer dashboard end to end, moved its
           data layer with zero downtime, and built the CRM sync, signal and research systems around
-          it — working directly with the teams at Deepgram, Blitzy, HyperBound and Peec&nbsp;AI.
+          it — working directly with the teams at
+          <span class="hl">Deepgram, Blitzy, HyperBound and Peec&nbsp;AI.</span>
         </p>
 
         <ul class="pills reveal" style="--d:4">
@@ -156,15 +157,12 @@
         <p class="eyebrow">Customer collaboration</p>
         <h3 data-split="words" class="reveal">Taking Deepgram's Salesforce integration live</h3>
         <p>
-          I worked the field mapping out with Deepgram's team in their own Slack, fixed what the
-          first pass got wrong, and took the integration live across their Contact and Account
-          objects.
-        </p>
-        <p class="feature__quote">
-          “No worries at all, thank you for the support with the troubleshooting.”
+          I worked the field mapping out with Deepgram's team in their own Slack, and took the
+          integration live on their Contact and Account objects.
         </p>
       </div>
-      <figure class="feature__shot" data-shot data-cursor="Zoom">
+      <figure class="feature__shot scrollshot" data-cursor="Scroll" tabindex="0"
+              aria-label="Slack thread with Deepgram, scrollable">
         <img src="assets/work/slack/salesforce-live.webp" width="874" height="781"
              alt="Slack thread with Deepgram: the Salesforce integration is live on Contact and Account objects, with thanks for the troubleshooting"
              loading="lazy" decoding="async">
@@ -176,37 +174,37 @@
         <img src="assets/work/slack/deepgram-call.webp" width="1880" height="735"
              alt="Video call with Deepgram's team, configuring their CRM sync"
              loading="lazy" decoding="async">
-        <p><b>Deepgram · CRM working session</b> Configured the CRM sync live with Deepgram's team over video.</p>
+        <p><b>Deepgram · CRM working session</b> Configured the sync over video with Delano Fernando, who owns Salesforce at Deepgram, and his team.</p>
       </li>
-      <li class="tile reveal" data-anim="fan" style="--span: 2; --d:1" data-shot data-cursor="Zoom">
-        <img src="assets/work/slack/forty-contacts.webp" width="859" height="733"
+      <li class="tile reveal" data-anim="fan" style="--span: 2; --d:1" data-cursor="Scroll">
+        <span class="scrollshot" tabindex="0"><img src="assets/work/slack/forty-contacts-v2.webp" width="859" height="733"
              alt="Slack thread with Deepgram about preserving existing lead attribution; their campaign names are blurred"
-             loading="lazy" decoding="async">
-        <p><b>Deepgram · Lead attribution</b> Found forty contacts already carrying attribution from Deepgram's own campaigns, raised it instead of overwriting, and shipped the option they chose.</p>
+             loading="lazy" decoding="async"></span>
+        <p><b>Deepgram · Lead attribution</b> Found a case where our sync would have overwritten attribution their team relied on. Raised it before shipping and built the option they picked.</p>
       </li>
       <li class="tile reveal" data-anim="fan" style="--span: 4; --d:2" data-shot data-cursor="Zoom">
         <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
              alt="Slack thread with Blitzy: a signup alert for a target account, met with thanks"
              loading="lazy" decoding="async">
-        <p><b>Blitzy · Signup alerts</b> Flagged a new signup at one of Blitzy's target accounts ahead of the feature's launch. <em>“This is amazing thank you.”</em></p>
+        <p><b>Blitzy · Signup alerts</b> Flagged a new signup at one of their target accounts, before the feature had launched.</p>
       </li>
-      <li class="tile reveal" data-anim="fan" style="--span: 2; --d:0" data-shot data-cursor="Zoom">
-        <img src="assets/work/slack/hubspot-spec.webp" width="1042" height="798"
+      <li class="tile reveal" data-anim="fan" style="--span: 2; --d:0" data-cursor="Scroll">
+        <span class="scrollshot" tabindex="0"><img src="assets/work/slack/hubspot-spec.webp" width="1042" height="798"
              alt="Slack thread: specifying and backfilling a HubSpot classification property"
-             loading="lazy" decoding="async">
-        <p><b>HubSpot · Classification property</b> Specified the property, coordinated its setup with the customer and backfilled every existing record. <em>“All set ✅”</em></p>
+             loading="lazy" decoding="async"></span>
+        <p><b>HubSpot · Classification property</b> Specified the property, coordinated its setup with the customer and backfilled every existing record.</p>
       </li>
       <li class="tile reveal" data-anim="fan" style="--span: 3; --d:1" data-shot data-cursor="Zoom">
         <img src="assets/work/slack/hyperbound-call.webp" width="1920" height="1080"
              alt="Video call onboarding HyperBound's team on the Data Explorer, with prospect details blurred"
              loading="lazy" decoding="async">
-        <p><b>HyperBound · Onboarding</b> Walked HyperBound's team through the Data Explorer on a shared screen; prospect details are blurred.</p>
+        <p><b>HyperBound · Onboarding</b> Walked their team through the Data Explorer on a shared screen; prospect details are blurred.</p>
       </li>
       <li class="tile reveal" data-anim="fan" style="--span: 3; --d:2" data-shot data-cursor="Zoom">
         <img src="assets/work/slack/cross-sell.webp" width="688" height="364"
              alt="Slack thread with HyperBound: recommending a workflow built for another customer"
              loading="lazy" decoding="async">
-        <p><b>HyperBound · Workflow recommendation</b> Spotted a workflow built for another customer that fit HyperBound's process and proposed extending it to them. <em>“Agreed. Let us get back to you.”</em></p>
+        <p><b>HyperBound · Workflow recommendation</b> Spotted a workflow built for another customer that fit their process, and proposed extending it to them.</p>
       </li>
     </ul>
   </div>
@@ -490,6 +488,14 @@
           </div>
           <figcaption>What the sync engine does with every record.</figcaption>
         </figure>
+        <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
+          <div class="shot__frame">
+            <img src="assets/work/huntd-integrations.webp" width="920" height="620"
+                 alt="The Integrations tab of the dashboard settings: HubSpot and Salesforce connection cards"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption>The Integrations settings page customers connect their CRM from.</figcaption>
+        </figure>
         </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
           <p class="lede">The data was useful, but it lived in the wrong place. I built the bridge into customers' CRMs.</p>
@@ -509,14 +515,6 @@
             <li>HubSpot OAuth</li><li>Salesforce</li><li>Sheets API</li><li>Public API</li><li>Webhooks</li>
           </ul>
         </div>
-        <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
-          <div class="shot__frame">
-            <img src="assets/work/huntd-integrations.webp" width="920" height="620"
-                 alt="The Integrations tab of the dashboard settings: HubSpot and Salesforce connection cards"
-                 loading="lazy" decoding="async">
-          </div>
-          <figcaption>The Integrations settings page customers connect their CRM from.</figcaption>
-        </figure>
       </div>
 
     </article>
@@ -596,6 +594,14 @@
           </div>
           <figcaption>One budget, spent where a flip is most likely — and the same engine run backwards for churn.</figcaption>
         </figure>
+        <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
+          <div class="shot__frame">
+            <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
+                 alt="Slack thread: a signup alert for a target account, met with thanks from the customer"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption>The end of that pipeline: a new signup at one of a customer's target accounts, in their Slack.</figcaption>
+        </figure>
         </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
           <p class="lede">The lead who wasn't a user last month might have signed up this week — the best moment for sales to call.</p>
@@ -615,14 +621,6 @@
             <li>Postgres</li><li>Inngest</li><li>Azure OpenAI</li><li>Zyte</li><li>Recharts</li><li>Slack</li>
           </ul>
         </div>
-        <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
-          <div class="shot__frame">
-            <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
-                 alt="Slack thread: a signup alert for a target account, met with thanks from the customer"
-                 loading="lazy" decoding="async">
-          </div>
-          <figcaption>The end of that pipeline: a new signup at one of a customer's target accounts, in their Slack.</figcaption>
-        </figure>
       </div>
 
     </article>
@@ -703,44 +701,13 @@
           </div>
           <figcaption>From a silent failure to a Slack message a human can act on — and an agent that may only propose the fix.</figcaption>
         </figure>
-        <figure class="shot shot--flat reveal" data-anim="rise">
-          <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1200 520" role="img" aria-labelledby="digTitle digDesc">
-              <title id="digTitle">The daily digest on an all-clear day</title>
-              <desc id="digDesc">An illustration of the message the Detector posts to Slack each morning when nothing is wrong: a bottom line saying everything is running, then six all-clear lines covering the vendor checkers and their known-answer test, the pipeline queue, the customer digests, the CRM sync, the Sheets export, and the dashboard, API and webhooks. Below them, one watch item that needs no action: a source draining more slowly than usual. On a day something does break, the same message leads with what to fix.</desc>
-
-              <text x="40" y="44" class="dia__h">A quiet day, reported anyway</text>
-              <text x="40" y="68" class="dia__k">WHAT LANDS IN SLACK WHEN NOTHING IS WRONG</text>
-
-              <rect x="40" y="92" width="1120" height="268" rx="18" class="dia__card"/>
-              <circle cx="70" cy="122" r="8" class="dia__dot--mint"/>
-              <text x="90" y="126" class="dia__k">DETECTOR · DAILY SUMMARY · LAST 24 HOURS</text>
-              <text x="68" y="160" class="dia__t">Bottom line: everything is running. No checker is broken, no queue is stalled.</text>
-              <line x1="68" y1="182" x2="1132" y2="182" class="dia__rule"/>
-
-              <circle cx="76" cy="214" r="6" class="dia__dot--mint"/>
-              <text x="94" y="210" class="dia__t">Vendor checkers</text><text x="94" y="229" class="dia__dim">every one passed its known-answer test</text>
-              <circle cx="76" cy="266" r="6" class="dia__dot--mint"/>
-              <text x="94" y="262" class="dia__t">Pipeline queue</text><text x="94" y="281" class="dia__dim">draining on schedule, nothing stranded</text>
-              <circle cx="76" cy="318" r="6" class="dia__dot--mint"/>
-              <text x="94" y="314" class="dia__t">Customer digests</text><text x="94" y="333" class="dia__dim">all delivered this morning</text>
-
-              <circle cx="620" cy="214" r="6" class="dia__dot--mint"/>
-              <text x="638" y="210" class="dia__t">CRM sync</text><text x="638" y="229" class="dia__dim">HubSpot and Salesforce fresh, minutes old</text>
-              <circle cx="620" cy="266" r="6" class="dia__dot--mint"/>
-              <text x="638" y="262" class="dia__t">Sheets export</text><text x="638" y="281" class="dia__dim">every workbook up to date</text>
-              <circle cx="620" cy="318" r="6" class="dia__dot--mint"/>
-              <text x="638" y="314" class="dia__t">Dashboard, API, webhooks</text><text x="638" y="333" class="dia__dim">responding; no failed deliveries</text>
-
-              <rect x="40" y="384" width="1120" height="92" rx="16" class="dia__box dia__box--yellow"/>
-              <text x="68" y="414" class="dia__k">WATCH &#8212; 1 · HERE SO YOU KNOW, NOT SOMETHING TO ACT ON</text>
-              <text x="68" y="440" class="dia__t">One source is draining more slowly than usual.</text>
-              <text x="68" y="464" class="dia__dim">Leads still get processed, just slower. No action unless it keeps growing.</text>
-
-              <text x="40" y="506" class="dia__k">AN ILLUSTRATION OF THE DIGEST FORMAT · ON A DAY SOMETHING DOES BREAK, THE SAME MESSAGE LEADS WITH WHAT TO FIX</text>
-            </svg>
+        <figure class="shot reveal" data-anim="rise">
+          <div class="shot__frame scrollshot" data-cursor="Scroll" tabindex="0" aria-label="The Detector's daily summary in Slack, scrollable">
+            <img src="assets/work/slack/detector-digest.webp" width="1323" height="461"
+                 alt="The Detector's daily summary in Slack: everything running, six all-clear lines covering the vendor checkers, the queue, the CRM sync, the Sheets export, the customer digests and the dashboard, and one watch item that needs no action"
+                 loading="lazy" decoding="async">
           </div>
-          <figcaption>The all-clear version of the morning digest. Quiet by default is the point — a message means something precisely because most mornings it says this.</figcaption>
+          <figcaption>The daily summary it posts to Slack — the all-clear version, which is most mornings.</figcaption>
         </figure>
         </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
@@ -1232,10 +1199,7 @@
           <a href="https://gethuntd.com" target="_blank" rel="noopener">Huntd</a> that meant
           owning a dashboard end to end, then sitting in the customer's Slack while they used it.
         </p>
-        <p>Outside work: dance, the odd hackathon, and chess — which I am actually good at.</p>
-        <p class="about__site">
-          The product — <a href="https://gethuntd.com" target="_blank" rel="noopener">gethuntd.com&nbsp;↗</a>
-        </p>
+        <p>Outside work: dance, hackathons, and chess — which only I say I'm good at.</p>
       </div>
     </div>
 

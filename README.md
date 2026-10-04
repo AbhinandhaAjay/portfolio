@@ -60,6 +60,17 @@ work out the heights (`span × track width ÷ aspect ratio`) and pick spans that
 or the row ends ragged. CSS `columns` was worse: it fills one column at a time and left a hole
 beside the tallest tile.
 
+**Long Slack threads** go in a `.scrollshot` — a frame with `max-height` and `overflow: auto`, so
+the thread is read by scrolling inside it at a readable size rather than shrunk to a thumbnail you
+have to open. A short image keeps its own height, so the same class is safe anywhere. The drawn
+cursor shows "Scroll" over them (`data-cursor`).
+
+**The Detector chapter's Slack image** (`detector-digest.webp`) is rebuilt, not captured: same
+Slack styling and the same message format the Detector really posts, but the all-clear version,
+with no vendor or customer names in it. `scripts/` has no generator for it — it was rendered with
+Pillow from the original screenshot's palette and avatar. If you ever swap it for a real capture,
+blur the vendor names first.
+
 **Blurring.** Anything a customer would call theirs gets blurred before it goes in: vendor names,
 campaign names, prospect rows, email addresses. `forty-contacts.webp` has Deepgram's campaign
 names blurred; `huntd-explorer-companies.webp` has company names and domains blurred. The
@@ -124,7 +135,9 @@ play button preconnects to Loom.
 
 **Cache.** `index.html` loads `styles/main.css?v=…` and `scripts/main.js?v=…`; the deploy
 workflow stamps the commit sha onto both before uploading, and `vercel.json` sends
-`max-age=0, must-revalidate` for css/js and the page. Without that a browser will happily keep
+`max-age=0, must-revalidate` for css, js, images and the page. Images are cached by URL, so when
+you change what an image *contains* (a new blur, say), **rename the file** — that is why the
+Deepgram thread is `forty-contacts-v2.webp`. Without that a browser will happily keep
 yesterday's stylesheet, and the site looks unchanged after a deploy. If you preview locally with
 `python -m http.server`, still hard-reload (Ctrl+Shift+R) after editing CSS.
 
