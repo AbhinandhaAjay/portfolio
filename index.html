@@ -284,32 +284,68 @@
         <div class="case__media">
         <figure class="shot shot--flat reveal" data-anim="rise">
           <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1100 392" role="img" aria-labelledby="migTitle migDesc">
+            <svg class="dia" viewBox="0 0 1200 520" role="img" aria-labelledby="migTitle migDesc">
     <title id="migTitle">Moving the database with the product still running</title>
-    <desc id="migDesc">The old database held millions of lead records in one shape per service. Every record was copied across in batches, converted, then counted and compared against the original before anything was switched over. The new database holds the same data in tables the dashboard can filter. Customers kept working throughout, passwords came across so existing logins still worked, and the filters that used to crawl became instant.</desc>
+    <desc id="migDesc">On the left, the old database: millions of lead records held as documents, one shape per service. In the middle, a single pass that carries them across in batches of five thousand — each batch converted, then counted and compared against the original before anything is switched over. On the right, the new database: the same records as rows the dashboard can filter. Customers kept working the whole way through, and because the passwords came across too, every existing login still worked.</desc>
     <defs>
-      <marker id="arw-mig" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+      <marker id="migArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
     </defs>
+
     <text x="40" y="46" class="dia__h">Moving the database with the product still running</text>
-    <text x="40" y="70" class="dia__k">ONE PASS, CHECKED BEFORE ANYTHING WAS SWITCHED OVER</text>
-    <rect x="40" y="100" width="302" height="156" rx="16" class="dia__box dia__box--sky"/>
-    <text x="62" y="142" class="dia__t">The old database</text>
-    <text x="62" y="172" class="dia__dim">millions of lead records,</text>
-    <text x="62" y="194" class="dia__dim">one shape per service</text>
-    <path d="M348 178 L392 178" class="dia__arrow" marker-end="url(#arw-mig)"/>
-    <rect x="398" y="100" width="302" height="156" rx="16" class="dia__card"/>
-    <text x="420" y="142" class="dia__t">Copied across in batches</text>
-    <text x="420" y="172" class="dia__dim">every record converted, then</text>
-    <text x="420" y="194" class="dia__dim">counted and compared against</text>
-    <text x="420" y="216" class="dia__dim">the original</text>
-    <path d="M706 178 L750 178" class="dia__arrow" marker-end="url(#arw-mig)"/>
-    <rect x="756" y="100" width="302" height="156" rx="16" class="dia__box dia__box--mint"/>
-    <text x="778" y="142" class="dia__t">The new database</text>
-    <text x="778" y="172" class="dia__dim">the same data, in tables</text>
-    <text x="778" y="194" class="dia__dim">the dashboard can filter</text>
-    <rect x="40" y="292" width="1020" height="76" rx="16" class="dia__box dia__box--yellow"/>
-    <text x="62" y="328" class="dia__t">Nobody had to stop working, or sign up again.</text>
-    <text x="62" y="354" class="dia__dim">Passwords came across, so every existing login still worked — and the filters that used to crawl became instant.</text>
+    <text x="40" y="70" class="dia__k">ONE PASS · EVERY BATCH CHECKED BEFORE ANYTHING WAS SWITCHED OVER</text>
+
+    <!-- before -->
+    <text x="40" y="112" class="dia__k">BEFORE</text>
+    <rect x="40" y="124" width="300" height="250" rx="18" class="dia__box dia__box--sky"/>
+    <g>
+      <rect x="74" y="156" width="214" height="54" rx="10" class="dia__card"/>
+      <line x1="92" y1="176" x2="250" y2="176" class="dia__rule"/><line x1="92" y1="192" x2="214" y2="192" class="dia__rule"/>
+      <rect x="86" y="178" width="214" height="54" rx="10" class="dia__card"/>
+      <line x1="104" y1="198" x2="262" y2="198" class="dia__rule"/><line x1="104" y1="214" x2="226" y2="214" class="dia__rule"/>
+      <rect x="98" y="200" width="214" height="54" rx="10" class="dia__card"/>
+      <line x1="116" y1="220" x2="274" y2="220" class="dia__rule"/><line x1="116" y1="236" x2="238" y2="236" class="dia__rule"/>
+    </g>
+    <text x="64" y="296" class="dia__t">Documents</text>
+    <text x="64" y="320" class="dia__dim">millions of lead records,</text>
+    <text x="64" y="340" class="dia__dim">one shape per service</text>
+
+    <!-- the pass -->
+    <text x="600" y="112" class="dia__k" text-anchor="middle">COPIED ACROSS IN BATCHES</text>
+    <path d="M348 250 L852 250" class="dia__arrow" marker-end="url(#migArrow)"/>
+    <g>
+      <rect x="376" y="226" width="96" height="48" rx="12" class="dia__card"/>
+      <circle cx="400" cy="250" r="7" class="dia__dot--mint"/><text x="414" y="255" class="dia__dim">5,000</text>
+      <rect x="500" y="226" width="96" height="48" rx="12" class="dia__card"/>
+      <circle cx="524" cy="250" r="7" class="dia__dot--mint"/><text x="538" y="255" class="dia__dim">5,000</text>
+      <rect x="624" y="226" width="96" height="48" rx="12" class="dia__card"/>
+      <circle cx="648" cy="250" r="7" class="dia__dot--mint"/><text x="662" y="255" class="dia__dim">5,000</text>
+      <rect x="748" y="226" width="96" height="48" rx="12" class="dia__card dia__card--dash"/>
+      <text x="772" y="255" class="dia__dim">next…</text>
+    </g>
+    <text x="600" y="316" class="dia__t" text-anchor="middle">converted · counted · compared</text>
+    <text x="600" y="340" class="dia__dim" text-anchor="middle">a batch only counts as done once it matches the original</text>
+
+    <!-- after -->
+    <text x="860" y="112" class="dia__k">AFTER</text>
+    <rect x="860" y="124" width="300" height="250" rx="18" class="dia__box dia__box--mint"/>
+    <g>
+      <rect x="888" y="152" width="244" height="150" rx="10" class="dia__card"/>
+      <line x1="888" y1="182" x2="1132" y2="182" class="dia__rule"/>
+      <line x1="888" y1="212" x2="1132" y2="212" class="dia__rule"/>
+      <line x1="888" y1="242" x2="1132" y2="242" class="dia__rule"/>
+      <line x1="888" y1="272" x2="1132" y2="272" class="dia__rule"/>
+      <line x1="970" y1="152" x2="970" y2="302" class="dia__rule"/>
+      <line x1="1050" y1="152" x2="1050" y2="302" class="dia__rule"/>
+      <rect x="892" y="186" width="74" height="22" rx="6" class="dia__box dia__box--yellow"/>
+      <rect x="1054" y="216" width="74" height="22" rx="6" class="dia__box dia__box--sky"/>
+    </g>
+    <text x="884" y="330" class="dia__t">Rows</text>
+    <text x="884" y="354" class="dia__dim">the same records, in tables the dashboard can filter</text>
+
+    <!-- what it meant -->
+    <rect x="40" y="404" width="1120" height="76" rx="16" class="dia__box dia__box--yellow"/>
+    <text x="64" y="438" class="dia__t">Nobody had to stop working, and nobody had to sign up again.</text>
+    <text x="64" y="464" class="dia__dim">Passwords came across with everything else, so every existing login still worked the next morning.</text>
   </svg>
           </div>
           <figcaption>The move, start to finish — with the product still running the whole way through.</figcaption>
@@ -327,12 +363,8 @@
             brought password hashes across so nobody had to sign up again.
           </p>
           <p>
-            The real win was the read model: the dashboard now reads two slim, incrementally refreshed
-            tables instead of one heavy document, so filters and counts became index scans.
-          </p>
-          <p>
-            The database has since moved once more, from Supabase Cloud to a self-hosted Supabase on our
-            own server: the same schema, the migrations replayed, one connection string swapped.
+            The move was only half of it. I also reshaped what the dashboard actually reads, so a filter
+            across millions of rows went from a query that crawled to one that returns while you type.
           </p>
           <ul class="chips">
             <li>MongoDB</li><li>pg-copy-streams</li><li>Supabase Postgres</li><li>JSONB</li><li>pg_trgm</li><li>SQL migrations</li>
@@ -350,42 +382,67 @@
         <div class="case__media">
         <figure class="shot shot--flat reveal" data-anim="rise">
           <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1100 518" role="img" aria-labelledby="crmTitle crmDesc">
-    <title id="crmTitle">Where the data goes</title>
-    <desc id="crmDesc">The people a customer filters in the dashboard — name, company, title, seniority and where they came from — go into HubSpot as contacts and companies with the fields it needs created for them, into Salesforce as contacts, accounts and leads, or into Google Sheets as one workbook per team grouped by account. Only what changed is sent, a failure retries and shows up in the admin panel, and a record the customer deleted is never put back.</desc>
+            <svg class="dia" viewBox="0 0 1200 540" role="img" aria-labelledby="crmTitle crmDesc">
+    <title id="crmTitle">Where a filtered list ends up</title>
+    <desc id="crmDesc">A customer filters people in the dashboard and exports them. The same list arrives in HubSpot as contacts and companies, with the fields it needs created for them; in Salesforce as contacts, accounts and leads; or in Google Sheets as one workbook per team, grouped by account. Only what changed is sent, a failure retries and shows up in the admin panel, and a record the customer deleted is never put back.</desc>
     <defs>
-      <marker id="arw-crm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+      <marker id="crmArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
     </defs>
-    <text x="40" y="46" class="dia__h">Where the data goes</text>
-    <text x="40" y="70" class="dia__k">FROM THE DASHBOARD INTO THE TOOLS A SALES TEAM ALREADY LIVES IN</text>
-    <rect x="40" y="126" width="300" height="152" rx="16" class="dia__box dia__box--sky"/>
-    <text x="62" y="168" class="dia__t">The people you filtered</text>
-    <text x="62" y="198" class="dia__dim">name, company, title,</text>
-    <text x="62" y="220" class="dia__dim">seniority, and where</text>
-    <text x="62" y="242" class="dia__dim">they came from</text>
-    <rect x="500" y="100" width="560" height="90" rx="16" class="dia__box dia__box--coral"/>
-    <text x="522" y="142" class="dia__t">HubSpot</text>
-    <text x="522" y="172" class="dia__dim">contacts and companies, with the fields</text>
-    <text x="522" y="194" class="dia__dim">it needs created for you</text>
-    <path d="M306 202 C 430 202, 440 145, 492 145" class="dia__arrow" marker-end="url(#arw-crm)"/>
-    <rect x="500" y="206" width="560" height="90" rx="16" class="dia__box dia__box--sky"/>
-    <text x="522" y="248" class="dia__t">Salesforce</text>
-    <text x="522" y="278" class="dia__dim">contacts, accounts and leads</text>
-    <path d="M306 202 C 430 202, 440 251, 492 251" class="dia__arrow" marker-end="url(#arw-crm)"/>
-    <rect x="500" y="312" width="560" height="90" rx="16" class="dia__box dia__box--mint"/>
-    <text x="522" y="354" class="dia__t">Google Sheets</text>
-    <text x="522" y="384" class="dia__dim">one workbook per team, grouped by account</text>
-    <path d="M306 202 C 430 202, 440 357, 492 357" class="dia__arrow" marker-end="url(#arw-crm)"/>
-    <rect x="40" y="424" width="1020" height="76" rx="16" class="dia__box dia__box--yellow"/>
-    <text x="62" y="460" class="dia__t">Written carefully, every time.</text>
-    <text x="62" y="486" class="dia__dim">Only what changed is sent, a failure retries and shows up in the admin panel, and a record the customer deleted is never put back.</text>
+
+    <text x="40" y="46" class="dia__h">Where a filtered list ends up</text>
+    <text x="40" y="70" class="dia__k">THE DASHBOARD IS OURS · THE TOOLS ON THE RIGHT ARE THEIRS</text>
+
+    <!-- the dashboard -->
+    <text x="40" y="116" class="dia__k">IN THE DASHBOARD</text>
+    <rect x="40" y="128" width="360" height="252" rx="18" class="dia__card"/>
+    <rect x="40" y="128" width="360" height="40" rx="18" class="dia__box dia__box--sky"/>
+    <text x="64" y="154" class="dia__t">The people you filtered</text>
+    <g>
+      <line x1="64" y1="196" x2="376" y2="196" class="dia__rule"/>
+      <line x1="64" y1="232" x2="376" y2="232" class="dia__rule"/>
+      <line x1="64" y1="268" x2="376" y2="268" class="dia__rule"/>
+      <line x1="64" y1="304" x2="376" y2="304" class="dia__rule"/>
+      <circle cx="78" cy="214" r="6" class="dia__dot--mint"/><text x="96" y="219" class="dia__dim">name · company · title</text>
+      <circle cx="78" cy="250" r="6" class="dia__dot--sky"/><text x="96" y="255" class="dia__dim">seniority</text>
+      <circle cx="78" cy="286" r="6" class="dia__dot--yellow"/><text x="96" y="291" class="dia__dim">where they came from</text>
+    </g>
+    <rect x="64" y="322" width="110" height="34" rx="10" class="dia__box dia__box--coral"/>
+    <text x="84" y="344" class="dia__t">Export</text>
+
+    <!-- the three destinations -->
+    <text x="640" y="116" class="dia__k">IN THE CUSTOMER'S OWN TOOLS</text>
+    <g class="dia__arrow" marker-end="url(#crmArrow)">
+      <path d="M404 254 C 520 254, 520 172, 632 172"/>
+      <path d="M404 254 C 520 254, 520 254, 632 254"/>
+      <path d="M404 254 C 520 254, 520 336, 632 336"/>
+    </g>
+
+    <rect x="640" y="128" width="520" height="88" rx="16" class="dia__box dia__box--coral"/>
+    <text x="664" y="160" class="dia__t">HubSpot</text>
+    <text x="664" y="184" class="dia__dim">contacts and companies — and the custom fields</text>
+    <text x="664" y="204" class="dia__dim">it needs are created for you, then backfilled</text>
+
+    <rect x="640" y="210" width="520" height="88" rx="16" class="dia__box dia__box--sky"/>
+    <text x="664" y="242" class="dia__t">Salesforce</text>
+    <text x="664" y="266" class="dia__dim">contacts, accounts and leads</text>
+    <text x="664" y="286" class="dia__dim">production org or a sandbox first</text>
+
+    <rect x="640" y="292" width="520" height="88" rx="16" class="dia__box dia__box--mint"/>
+    <text x="664" y="324" class="dia__t">Google Sheets</text>
+    <text x="664" y="348" class="dia__dim">one workbook per team, grouped by account —</text>
+    <text x="664" y="368" class="dia__dim">for teams who would rather we did not touch the CRM</text>
+
+    <rect x="40" y="406" width="1120" height="94" rx="16" class="dia__box dia__box--yellow"/>
+    <text x="64" y="440" class="dia__t">Writing into someone else's CRM is a trust exercise.</text>
+    <text x="64" y="466" class="dia__dim">Only what actually changed is sent. A failure retries and shows up in the admin panel instead of going quiet.</text>
+    <text x="64" y="486" class="dia__dim">A record the customer deleted is never put back.</text>
   </svg>
           </div>
           <figcaption>Where a filtered list ends up, and how carefully it is written.</figcaption>
         </figure>
         <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
           <div class="shot__frame">
-            <img src="assets/work/huntd-integrations.webp" width="920" height="620"
+            <img src="assets/work/huntd-integrations-v2.webp" width="834" height="292"
                  alt="The Integrations tab of the dashboard settings: HubSpot and Salesforce connection cards"
                  loading="lazy" decoding="async">
           </div>
@@ -423,34 +480,58 @@
         <div class="case__media">
         <figure class="shot shot--flat reveal" data-anim="rise">
           <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1100 388" role="img" aria-labelledby="sigTitle sigDesc">
+            <svg class="dia" viewBox="0 0 1200 520" role="img" aria-labelledby="sigTitle sigDesc">
     <title id="sigTitle">Spotting the moment a lead becomes a user</title>
-    <desc id="sigDesc">Leads that were checked before, along with the answer the customer was last given, go into a nightly pass that picks the companies that look most like that customer's real users, oldest answers first. Those are checked again inside a fixed daily budget. A lead that has started using the product shows up in the just-signed-up feed, the daily Slack digest and a webhook; one that has stopped is churn, the same machinery run in reverse on a slower cycle.</desc>
+    <desc id="sigDesc">A lead checked in March came back as not a user. Checking everyone again every day would cost too much, so each night the system picks the leads most likely to have changed — the companies that look like this customer's real users, oldest answers first — and re-checks only those. When one of them comes back as a user, the flip becomes a just-signed-up entry in the feed, a line in the daily Slack digest and a webhook, while the sales team still has a reason to call. The same machinery run in reverse catches customers who have stopped using a tool.</desc>
     <defs>
-      <marker id="arw-sig" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+      <marker id="sigArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
     </defs>
+
     <text x="40" y="46" class="dia__h">Spotting the moment a lead becomes a user</text>
-    <text x="40" y="70" class="dia__k">RE-CHECKING EVERYONE EVERY DAY WOULD COST TOO MUCH, SO IT CHOOSES</text>
-    <rect x="40" y="100" width="302" height="156" rx="16" class="dia__box dia__box--sky"/>
-    <text x="62" y="142" class="dia__t">Leads checked before</text>
-    <text x="62" y="172" class="dia__dim">and the answer the customer</text>
-    <text x="62" y="194" class="dia__dim">was given last time</text>
-    <path d="M348 178 L392 178" class="dia__arrow" marker-end="url(#arw-sig)"/>
-    <rect x="398" y="100" width="302" height="156" rx="16" class="dia__card"/>
-    <text x="420" y="142" class="dia__t">Each night, pick a few</text>
-    <text x="420" y="172" class="dia__dim">the companies that look like</text>
-    <text x="420" y="194" class="dia__dim">this customer's real users,</text>
-    <text x="420" y="216" class="dia__dim">oldest answers first</text>
-    <path d="M706 178 L750 178" class="dia__arrow" marker-end="url(#arw-sig)"/>
-    <rect x="756" y="100" width="302" height="156" rx="16" class="dia__card"/>
-    <text x="778" y="142" class="dia__t">Check those again</text>
-    <text x="778" y="172" class="dia__dim">inside a fixed daily budget</text>
-    <rect x="40" y="292" width="492" height="80" rx="16" class="dia__box dia__box--mint"/>
-    <text x="62" y="328" class="dia__t">Signed up</text>
-    <text x="62" y="354" class="dia__dim">in the “just signed up” feed, the daily Slack digest and a webhook</text>
-    <rect x="568" y="292" width="492" height="80" rx="16" class="dia__box dia__box--coral"/>
-    <text x="590" y="328" class="dia__t">Stopped using it</text>
-    <text x="590" y="354" class="dia__dim">churn — the same machinery, run in reverse on a slower cycle</text>
+    <text x="40" y="70" class="dia__k">THE FLIP IS THE PRODUCT — A LEAD THAT WAS NOT A USER, AND NOW IS</text>
+
+    <!-- the timeline -->
+    <line x1="80" y1="250" x2="1120" y2="250" class="dia__rule"/>
+    <g class="dia__sat">
+      <circle cx="200" cy="250" r="4"/><circle cx="380" cy="250" r="4"/><circle cx="560" cy="250" r="4"/>
+      <circle cx="740" cy="250" r="4"/><circle cx="920" cy="250" r="4"/>
+    </g>
+
+    <!-- checked once, negative -->
+    <rect x="96" y="150" width="230" height="76" rx="14" class="dia__box dia__box--sky"/>
+    <text x="118" y="180" class="dia__t">Checked in March</text>
+    <text x="118" y="204" class="dia__dim">not a user — so we said so</text>
+    <path d="M200 230 L200 244" class="dia__arrow"/>
+
+    <!-- the nightly pass -->
+    <rect x="420" y="290" width="360" height="118" rx="16" class="dia__card"/>
+    <circle cx="448" cy="322" r="8" class="dia__dot--yellow"/>
+    <text x="468" y="327" class="dia__k">EVERY NIGHT</text>
+    <text x="444" y="356" class="dia__t">Who is worth asking again?</text>
+    <text x="444" y="380" class="dia__dim">companies that look like this customer's real</text>
+    <text x="444" y="398" class="dia__dim">users, oldest answers first, inside a daily budget</text>
+    <path d="M560 286 L560 256" class="dia__arrow" marker-end="url(#sigArrow)"/>
+
+    <!-- the flip -->
+    <circle cx="740" cy="250" r="12" class="dia__champ"/>
+    <rect x="620" y="140" width="240" height="86" rx="14" class="dia__box dia__box--mint"/>
+    <text x="642" y="170" class="dia__t">Signed up</text>
+    <text x="642" y="194" class="dia__dim">the answer changed, and</text>
+    <text x="642" y="212" class="dia__dim">that is worth a phone call</text>
+    <path d="M740 232 L740 244" class="dia__arrow"/>
+
+    <!-- what the customer gets -->
+    <path d="M764 250 L906 250" class="dia__arrow" marker-end="url(#sigArrow)"/>
+    <rect x="920" y="150" width="240" height="200" rx="16" class="dia__card"/>
+    <text x="944" y="182" class="dia__k">THE SAME MORNING</text>
+    <circle cx="952" cy="214" r="6" class="dia__dot--mint"/><text x="970" y="219" class="dia__dim">in the “just signed up” feed</text>
+    <circle cx="952" cy="254" r="6" class="dia__dot--sky"/><text x="970" y="259" class="dia__dim">in the Slack digest</text>
+    <circle cx="952" cy="294" r="6" class="dia__dot--yellow"/><text x="970" y="299" class="dia__dim">and on a webhook, if they</text>
+    <text x="970" y="316" class="dia__dim">would rather pull it</text>
+
+    <rect x="40" y="432" width="1120" height="68" rx="16" class="dia__box dia__box--coral"/>
+    <text x="64" y="464" class="dia__t">Run the same thing backwards and you get churn.</text>
+    <text x="64" y="488" class="dia__dim">A user who stops being one is the same flip in the other direction, on a slower cycle.</text>
   </svg>
           </div>
           <figcaption>How a signup gets spotted, and what the customer sees when it does.</figcaption>
@@ -495,34 +576,54 @@
         <div class="case__media">
         <figure class="shot shot--flat reveal" data-anim="rise">
           <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1100 392" role="img" aria-labelledby="detTitle detDesc">
+            <svg class="dia" viewBox="0 0 1200 540" role="img" aria-labelledby="detTitle detDesc">
     <title id="detTitle">The pipeline watches itself</title>
-    <desc id="detDesc">Checks run every few minutes across every vendor, every sync and every customer-facing page. A problem is announced only when it is new, so one already reported is not repeated. What reaches Slack names the thing, the real error and what to do about it. An agent then takes the first look: it reads the code, works out the cause and proposes a fix — a requeue, a runbook, or a draft pull request — but never merges and never deploys.</desc>
+    <desc id="detDesc">Every stage of the pipeline is watched: leads coming in, each vendor check, the classifier, the CRM and Sheets syncs, the dashboard and the customer digests. Most stages are fine. When one stops producing what it should, a message reaches Slack within minutes naming the thing, the real error and what to do about it — and only when the problem is new, so an ongoing one is not announced twice. An agent then takes the first look: it reads the codebase, works out the cause and comes back with a fix to approve, such as requeuing stuck work or a draft pull request.</desc>
     <defs>
-      <marker id="arw-det" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+      <marker id="detArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
     </defs>
+
     <text x="40" y="46" class="dia__h">The pipeline watches itself</text>
-    <text x="40" y="70" class="dia__k">QUIET BY DEFAULT — IT SPEAKS UP ONLY WHEN SOMETHING IS NEWLY WRONG</text>
-    <rect x="40" y="100" width="302" height="156" rx="16" class="dia__box dia__box--sky"/>
-    <text x="62" y="142" class="dia__t">Checks every few minutes</text>
-    <text x="62" y="172" class="dia__dim">every vendor, every sync,</text>
-    <text x="62" y="194" class="dia__dim">every customer-facing page</text>
-    <path d="M348 178 L392 178" class="dia__arrow" marker-end="url(#arw-det)"/>
-    <rect x="398" y="100" width="302" height="156" rx="16" class="dia__card"/>
-    <text x="420" y="142" class="dia__t">Is this new?</text>
-    <text x="420" y="172" class="dia__dim">a problem already reported</text>
-    <text x="420" y="194" class="dia__dim">is not announced twice</text>
-    <path d="M706 178 L750 178" class="dia__arrow" marker-end="url(#arw-det)"/>
-    <rect x="756" y="100" width="302" height="156" rx="16" class="dia__box dia__box--yellow"/>
-    <text x="778" y="142" class="dia__t">A message you can act on</text>
-    <text x="778" y="172" class="dia__dim">the thing, the real error,</text>
-    <text x="778" y="194" class="dia__dim">and what to do about it</text>
-    <rect x="40" y="292" width="1020" height="76" rx="16" class="dia__box dia__box--mint"/>
-    <text x="62" y="328" class="dia__t">Then an agent takes the first look.</text>
-    <text x="62" y="354" class="dia__dim">It reads the code, works out the cause and proposes the fix — a requeue, a runbook, or a draft pull request. It never merges and never deploys.</text>
+    <text x="40" y="70" class="dia__k">A FAILURE USED TO BE SOMETHING THE CUSTOMER TOLD US ABOUT</text>
+
+    <!-- the pipeline -->
+    <rect x="40" y="128" width="1120" height="86" rx="18" class="dia__box dia__box--sky"/>
+    <g>
+      <circle cx="140" cy="171" r="9" class="dia__dot--mint"/><text x="140" y="238" class="dia__dim" text-anchor="middle">leads in</text>
+      <circle cx="330" cy="171" r="9" class="dia__dot--mint"/><text x="330" y="238" class="dia__dim" text-anchor="middle">vendor checks</text>
+      <circle cx="520" cy="171" r="9" class="dia__dot--mint"/><text x="520" y="238" class="dia__dim" text-anchor="middle">classify</text>
+      <circle cx="710" cy="171" r="11" class="dia__champ"/><text x="710" y="238" class="dia__dim" text-anchor="middle">CRM &amp; Sheets sync</text>
+      <circle cx="900" cy="171" r="9" class="dia__dot--mint"/><text x="900" y="238" class="dia__dim" text-anchor="middle">dashboard</text>
+      <circle cx="1070" cy="171" r="9" class="dia__dot--mint"/><text x="1070" y="238" class="dia__dim" text-anchor="middle">digests</text>
+      <line x1="140" y1="171" x2="1070" y2="171" class="dia__net"/>
+    </g>
+    <text x="64" y="112" class="dia__k">CHECKED EVERY FEW MINUTES</text>
+
+    <!-- the alert -->
+    <path d="M710 252 L710 290" class="dia__arrow" marker-end="url(#detArrow)"/>
+    <rect x="300" y="296" width="430" height="150" rx="16" class="dia__card"/>
+    <circle cx="328" cy="328" r="8" class="dia__dot--pink"/>
+    <text x="348" y="333" class="dia__k">IN SLACK, WITHIN MINUTES</text>
+    <text x="324" y="364" class="dia__t">The one that stopped, and why</text>
+    <text x="324" y="390" class="dia__dim">the thing, the real error, and what to do about it</text>
+    <text x="324" y="412" class="dia__dim">only when it is new — an ongoing problem is</text>
+    <text x="324" y="430" class="dia__dim">not announced twice</text>
+
+    <path d="M738 370 L786 370" class="dia__arrow" marker-end="url(#detArrow)"/>
+
+    <!-- the agent -->
+    <rect x="794" y="296" width="366" height="150" rx="16" class="dia__box dia__box--mint"/>
+    <text x="818" y="328" class="dia__k">THEN AN AGENT LOOKS FIRST</text>
+    <text x="818" y="358" class="dia__t">A cause, and a fix to approve</text>
+    <text x="818" y="384" class="dia__dim">it reads the codebase, works out what</text>
+    <text x="818" y="402" class="dia__dim">actually broke, and comes back with</text>
+    <text x="818" y="420" class="dia__dim">the stuck work requeued or a draft PR</text>
+
+    <text x="40" y="492" class="dia__k">THE REST OF THE TIME</text>
+    <text x="40" y="518" class="dia__dim">It says nothing at all — which is the point. A message from it means something.</text>
   </svg>
           </div>
-          <figcaption>From a silent failure to a Slack message a human can act on — and an agent that may only propose the fix.</figcaption>
+          <figcaption>From a failure nobody would have noticed to a message someone can act on, within minutes.</figcaption>
         </figure>
         <figure class="shot reveal" data-anim="rise">
           <div class="shot__frame scrollshot" data-cursor="Zoom" tabindex="0" aria-label="The Detector's daily summary in Slack, scrollable">
@@ -544,8 +645,9 @@
             something newly breaks — with a model-written explanation that's checked so it can't invent details.
           </p>
           <p>
-            Doctor is a read-only Claude Agent SDK agent that investigates an open case against the code and
-            proposes the fix: requeue, run a runbook, or open a draft PR. It never merges or deploys.
+            Doctor takes the first look at an open case: it reads the codebase, works out what actually
+            caused the failure, and comes back with a fix to approve — requeue the stuck work, run a
+            runbook, or a draft pull request waiting for review.
           </p>
           <ul class="chips">
             <li>Claude Agent SDK</li><li>Azure OpenAI</li><li>Slack Bolt</li><li>Sentry</li><li>Postgres</li><li>Ofelia cron</li>
@@ -564,33 +666,78 @@
         <div class="case__media">
         <figure class="shot shot--flat reveal" data-anim="rise">
           <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1100 392" role="img" aria-labelledby="webTitle webDesc">
-    <title id="webTitle">From a question to an answer you can check</title>
-    <desc id="webDesc">A question asked in plain English runs once per row of a list. The company's site is mapped and only the pages likely to hold the answer are read. The answer comes back with the sentence it came from and the page it was on. Depending on the question it reads one page, a few, or the whole site, stopping as soon as the answer is settled, and it says how sure it is instead of guessing.</desc>
-    <defs>
-      <marker id="arw-web" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-    </defs>
-    <text x="40" y="46" class="dia__h">From a question to an answer you can check</text>
-    <text x="40" y="70" class="dia__k">ASKED IN PLAIN ENGLISH, ANSWERED FROM THE COMPANY'S OWN WEBSITE</text>
-    <rect x="40" y="100" width="302" height="156" rx="16" class="dia__box dia__box--sky"/>
-    <text x="62" y="142" class="dia__t">Ask in plain English</text>
-    <text x="62" y="172" class="dia__dim">“Do they sell to enterprises?”</text>
-    <text x="62" y="194" class="dia__dim">asked once per row of your list</text>
-    <path d="M348 178 L392 178" class="dia__arrow" marker-end="url(#arw-web)"/>
-    <rect x="398" y="100" width="302" height="156" rx="16" class="dia__card"/>
-    <text x="420" y="142" class="dia__t">Read only what can answer</text>
-    <text x="420" y="172" class="dia__dim">the site is mapped, then the</text>
-    <text x="420" y="194" class="dia__dim">pages likely to hold the answer</text>
-    <text x="420" y="216" class="dia__dim">are read first</text>
-    <path d="M706 178 L750 178" class="dia__arrow" marker-end="url(#arw-web)"/>
-    <rect x="756" y="100" width="302" height="156" rx="16" class="dia__box dia__box--mint"/>
-    <text x="778" y="142" class="dia__t">Answer, with its evidence</text>
-    <text x="778" y="172" class="dia__dim">the value, the sentence it came</text>
-    <text x="778" y="194" class="dia__dim">from, and the page</text>
-    <rect x="40" y="292" width="1020" height="76" rx="16" class="dia__box dia__box--yellow"/>
-    <text x="62" y="328" class="dia__t">One page, a few, or the whole site — the question decides.</text>
-    <text x="62" y="354" class="dia__dim">It stops as soon as the answer is settled, and says how sure it is instead of guessing.</text>
-  </svg>
+            <svg class="dia" viewBox="0 0 1200 580" role="img" aria-labelledby="webTitle webDesc">
+              <title id="webTitle">How the web research agent answers a question</title>
+              <desc id="webDesc">A question asked in plain English is first turned into a typed output schema. Firecrawl maps the company's site, with sitemap and navigation fallbacks and a cached map per project. An AI pass ranks and prunes the mapped URLs down to the pages likely to hold the answer. Pages are scraped in waves of five through a proxy, with browser rendering for bot-walled pages and page text cached in Postgres, then each page is read for a value, a verbatim quote and a confidence. Depth is capped by mode: Instant reads one page, Thinking up to twenty-five, Exhaustive up to five hundred, and Auto picks one. An early-stop classifier decides per question whether the run can finish on the first positive page, on the first counterexample, or must scan everything, which is what questions that count or list require.</desc>
+              <defs>
+                <marker id="webArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+              </defs>
+
+              <text x="40" y="44" class="dia__h">One question, the fewest pages that answer it</text>
+              <text x="40" y="68" class="dia__k">ASKED IN PLAIN ENGLISH · ANSWERED FROM THE COMPANY'S OWN SITE</text>
+
+              <text x="40" y="92" class="dia__k">THE ASK</text>
+              <rect x="40" y="104" width="250" height="170" rx="16" class="dia__box dia__box--sky"/>
+              <text x="62" y="134" class="dia__t">“Do they sell to</text>
+              <text x="62" y="156" class="dia__t">enterprises?”</text>
+              <line x1="62" y1="178" x2="268" y2="178" class="dia__rule"/>
+              <text x="62" y="202" class="dia__dim">one question, run once</text>
+              <text x="62" y="222" class="dia__dim">per row of the sheet</text>
+              <text x="62" y="248" class="dia__dim">the prompt itself infers</text>
+              <text x="62" y="268" class="dia__dim">the typed answer schema</text>
+              <path d="M296 189 L336 189" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+              <text x="340" y="92" class="dia__k">THE CHAIN, ONE PHASE PER STEP</text>
+              <rect x="340" y="104" width="380" height="96" rx="16" class="dia__card"/>
+              <text x="362" y="134" class="dia__t">1 · Map the site</text>
+              <text x="362" y="158" class="dia__dim">hundreds of URLs in seconds, with sitemap</text>
+              <text x="362" y="178" class="dia__dim">and nav fallbacks; the map is cached per project</text>
+              <path d="M530 204 L530 222" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+              <rect x="340" y="226" width="380" height="96" rx="16" class="dia__card"/>
+              <text x="362" y="256" class="dia__t">2 · Rank, then prune</text>
+              <text x="362" y="280" class="dia__dim">a model orders the candidates by where the</text>
+              <text x="362" y="300" class="dia__dim">answer is likely to live, and drops the rest</text>
+              <path d="M530 326 L530 344" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+              <rect x="340" y="348" width="380" height="96" rx="16" class="dia__card"/>
+              <text x="362" y="378" class="dia__t">3 · Scrape in waves of five</text>
+              <text x="362" y="402" class="dia__dim">proxy first, browser rendering for bot-walled</text>
+              <text x="362" y="422" class="dia__dim">pages; page text and PDFs cached in Postgres</text>
+              <path d="M530 448 L530 466" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+              <rect x="340" y="470" width="380" height="96" rx="16" class="dia__card"/>
+              <text x="362" y="500" class="dia__t">4 · Read each page for evidence</text>
+              <text x="362" y="524" class="dia__dim">a value, a verbatim quote from that page</text>
+              <text x="362" y="544" class="dia__dim">and a confidence — never a guess</text>
+
+              <g class="dia__arrow" marker-end="url(#webArrow)">
+                <path d="M724 152 L766 152"/>
+                <path d="M724 274 C 748 274, 748 300, 766 300"/>
+              </g>
+
+              <text x="770" y="92" class="dia__k">WHAT KEEPS IT AFFORDABLE</text>
+              <rect x="770" y="104" width="390" height="140" rx="16" class="dia__box dia__box--yellow"/>
+              <text x="794" y="134" class="dia__t">How deep to go</text>
+              <text x="794" y="160" class="dia__dim">Instant · the landing page alone</text>
+              <text x="794" y="182" class="dia__dim">Thinking · up to 25 ranked pages</text>
+              <text x="794" y="204" class="dia__dim">Exhaustive · up to 500</text>
+              <text x="794" y="226" class="dia__dim">Auto · picks one from the question</text>
+
+              <rect x="770" y="258" width="390" height="180" rx="16" class="dia__box dia__box--mint"/>
+              <text x="794" y="288" class="dia__t">When it may stop early</text>
+              <text x="794" y="314" class="dia__dim">A classifier reads the question first:</text>
+              <circle cx="800" cy="338" r="5" class="dia__dot--mint"/><text x="814" y="342" class="dia__dim">settle on the first positive page</text>
+              <circle cx="800" cy="364" r="5" class="dia__dot--sky"/><text x="814" y="368" class="dia__dim">settle on the first counterexample</text>
+              <circle cx="800" cy="390" r="5" class="dia__dot--pink"/><text x="814" y="394" class="dia__dim">scan everything</text>
+              <text x="794" y="422" class="dia__dim">Only counts, lists and superlatives scan.</text>
+
+              <rect x="770" y="452" width="390" height="114" rx="16" class="dia__card"/>
+              <text x="794" y="482" class="dia__k">WHAT COMES BACK</text>
+              <text x="794" y="508" class="dia__t">value · quote · confidence</text>
+              <text x="794" y="534" class="dia__dim">plus the page it came from, so an answer</text>
+              <text x="794" y="554" class="dia__dim">can be checked rather than trusted</text>
+            </svg>
           </div>
           <figcaption>How one question gets answered without reading the whole site.</figcaption>
         </figure>
@@ -626,32 +773,64 @@
         <div class="case__media">
         <figure class="shot shot--flat reveal" data-anim="rise">
           <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1100 392" role="img" aria-labelledby="clayTitle clayDesc">
+            <svg class="dia" viewBox="0 0 1200 540" role="img" aria-labelledby="clayTitle clayDesc">
     <title id="clayTitle">Upload a list, add a column, get answers</title>
-    <desc id="clayDesc">A CSV is uploaded and worked in like a spreadsheet: edit, dedupe, saved views. Adding an enrichment column means describing what you want to know, and the shape of the answer is settled before the run starts. Every row is then answered, filling in as results land, each with its source. A run can be paused, resumed or undone, and any cell can be opened to see what was read and what it cost.</desc>
+    <desc id="clayDesc">A spreadsheet of companies with a new column added. The column is described in plain English — does this company sell to enterprises? — and every row is then answered from that company's own website, filling in as the results land. Each answer carries the sentence it came from and the page it was on, so a cell can be checked rather than trusted. A run can be paused, resumed or undone, and any cell shows what was read and what it cost.</desc>
     <defs>
-      <marker id="arw-clay" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+      <marker id="clayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
     </defs>
+
     <text x="40" y="46" class="dia__h">Upload a list, add a column, get answers</text>
-    <text x="40" y="70" class="dia__k">THE SPREADSHEET PART OF THE PRODUCT, WITH THE RESEARCH BEHIND IT</text>
-    <rect x="40" y="100" width="302" height="156" rx="16" class="dia__box dia__box--sky"/>
-    <text x="62" y="142" class="dia__t">Your list</text>
-    <text x="62" y="172" class="dia__dim">upload a CSV and work in it:</text>
-    <text x="62" y="194" class="dia__dim">edit, dedupe, saved views</text>
-    <path d="M348 178 L392 178" class="dia__arrow" marker-end="url(#arw-clay)"/>
-    <rect x="398" y="100" width="302" height="156" rx="16" class="dia__card"/>
-    <text x="420" y="142" class="dia__t">Add a column</text>
-    <text x="420" y="172" class="dia__dim">describe what you want to know;</text>
-    <text x="420" y="194" class="dia__dim">the shape of the answer is</text>
-    <text x="420" y="216" class="dia__dim">settled before it runs</text>
-    <path d="M706 178 L750 178" class="dia__arrow" marker-end="url(#arw-clay)"/>
-    <rect x="756" y="100" width="302" height="156" rx="16" class="dia__box dia__box--mint"/>
-    <text x="778" y="142" class="dia__t">Every row answered</text>
-    <text x="778" y="172" class="dia__dim">filling in as results land,</text>
-    <text x="778" y="194" class="dia__dim">each with its source</text>
-    <rect x="40" y="292" width="1020" height="76" rx="16" class="dia__box dia__box--yellow"/>
-    <text x="62" y="328" class="dia__t">You stay in control of the run.</text>
-    <text x="62" y="354" class="dia__dim">Pause it, resume it or undo it — and open any cell to see what was read and what it cost.</text>
+    <text x="40" y="70" class="dia__k">THE COLUMN IS A QUESTION — EVERY ROW IS AN ANSWER WITH ITS SOURCE</text>
+
+    <!-- the sheet -->
+    <rect x="40" y="150" width="760" height="270" rx="16" class="dia__card"/>
+    <rect x="40" y="150" width="760" height="44" rx="16" class="dia__box dia__box--sky"/>
+    <text x="64" y="178" class="dia__t">Company</text>
+    <text x="260" y="178" class="dia__t">Website</text>
+    <text x="470" y="178" class="dia__t">Sells to enterprises?</text>
+    <line x1="240" y1="150" x2="240" y2="420" class="dia__rule"/>
+    <line x1="450" y1="150" x2="450" y2="420" class="dia__rule"/>
+    <g>
+      <line x1="40" y1="238" x2="800" y2="238" class="dia__rule"/>
+      <line x1="40" y1="283" x2="800" y2="283" class="dia__rule"/>
+      <line x1="40" y1="328" x2="800" y2="328" class="dia__rule"/>
+      <line x1="40" y1="373" x2="800" y2="373" class="dia__rule"/>
+    </g>
+    <g>
+      <text x="64" y="223" class="dia__dim">Northwind</text><text x="260" y="223" class="dia__dim">northwind.com</text>
+      <circle cx="476" cy="218" r="6" class="dia__dot--mint"/><text x="494" y="223" class="dia__dim">yes · “built for large teams”</text>
+      <text x="64" y="268" class="dia__dim">Globex</text><text x="260" y="268" class="dia__dim">globex.io</text>
+      <circle cx="476" cy="263" r="6" class="dia__dot--mint"/><text x="494" y="268" class="dia__dim">no · “plans from $9 a month”</text>
+      <text x="64" y="313" class="dia__dim">Initech</text><text x="260" y="313" class="dia__dim">initech.com</text>
+      <circle cx="476" cy="308" r="6" class="dia__dot--mint"/><text x="494" y="313" class="dia__dim">yes · “enterprise security”</text>
+      <text x="64" y="358" class="dia__dim">Contoso</text><text x="260" y="358" class="dia__dim">contoso.co</text>
+      <circle cx="476" cy="353" r="6" class="dia__ring"/><text x="494" y="358" class="dia__dim">reading its site…</text>
+      <text x="64" y="403" class="dia__dim">Vandelay</text><text x="260" y="403" class="dia__dim">vandelay.com</text>
+      <circle cx="476" cy="398" r="6" class="dia__sat"/><text x="494" y="403" class="dia__dim">queued</text>
+    </g>
+
+    <!-- what you typed to make the column -->
+    <rect x="470" y="96" width="330" height="40" rx="12" class="dia__box dia__box--yellow"/>
+    <text x="490" y="122" class="dia__dim">“Do they sell to enterprises?”</text>
+    <path d="M560 140 L560 150" class="dia__arrow" marker-end="url(#clayArrow)"/>
+
+    <!-- the cell, opened -->
+    <path d="M806 218 L856 218" class="dia__arrow" marker-end="url(#clayArrow)"/>
+    <rect x="864" y="150" width="296" height="160" rx="16" class="dia__box dia__box--mint"/>
+    <text x="888" y="182" class="dia__k">ANY CELL, OPENED</text>
+    <text x="888" y="212" class="dia__t">yes</text>
+    <text x="888" y="240" class="dia__dim">“Built for large teams and the</text>
+    <text x="888" y="258" class="dia__dim">security reviews that come with them”</text>
+    <text x="888" y="286" class="dia__dim">northwind.com/pricing · what it cost</text>
+
+    <rect x="864" y="328" width="296" height="92" rx="16" class="dia__card"/>
+    <text x="888" y="360" class="dia__k">WHILE IT RUNS</text>
+    <text x="888" y="388" class="dia__dim">pause it, resume it,</text>
+    <text x="888" y="406" class="dia__dim">or undo the whole run</text>
+
+    <rect x="40" y="452" width="1120" height="60" rx="16" class="dia__box dia__box--yellow"/>
+    <text x="64" y="490" class="dia__dim">Upload a CSV, add as many of these columns as you like, and the sheet fills itself in — every cell traceable back to the page it came from.</text>
   </svg>
           </div>
           <figcaption>From a list to answered rows, with the source behind every one.</figcaption>
@@ -687,33 +866,101 @@
         <div class="case__media">
         <figure class="shot shot--flat reveal" data-anim="rise">
           <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1100 392" role="img" aria-labelledby="warmTitle warmDesc">
-    <title id="warmTitle">Who should make the introduction</title>
-    <desc id="warmDesc">Target accounts go in on one side and the team's own career history on the other. The system looks for places where two careers genuinely overlapped — the same team in the same years, the same course, the same small company — and returns ranked introduction paths, each with the overlap behind it. How much an overlap counts depends on how small the group was: two people on a 120-person team is a relationship, two people at a 400,000-person employer is a coincidence.</desc>
-    <defs>
-      <marker id="arw-warm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-    </defs>
-    <text x="40" y="46" class="dia__h">Who should make the introduction</text>
-    <text x="40" y="70" class="dia__k">A CONNECTION IS NOT A RELATIONSHIP — SHARED HISTORY IS</text>
-    <rect x="40" y="100" width="302" height="156" rx="16" class="dia__box dia__box--sky"/>
-    <text x="62" y="142" class="dia__t">Your target accounts</text>
-    <text x="62" y="172" class="dia__dim">the companies you want</text>
-    <text x="62" y="194" class="dia__dim">to reach</text>
-    <path d="M348 178 L392 178" class="dia__arrow" marker-end="url(#arw-warm)"/>
-    <rect x="398" y="100" width="302" height="156" rx="16" class="dia__card"/>
-    <text x="420" y="142" class="dia__t">Where careers overlapped</text>
-    <text x="420" y="172" class="dia__dim">the same team in the same</text>
-    <text x="420" y="194" class="dia__dim">years, the same course,</text>
-    <text x="420" y="216" class="dia__dim">the same small company</text>
-    <path d="M706 178 L750 178" class="dia__arrow" marker-end="url(#arw-warm)"/>
-    <rect x="756" y="100" width="302" height="156" rx="16" class="dia__box dia__box--mint"/>
-    <text x="778" y="142" class="dia__t">Who to ask, and why</text>
-    <text x="778" y="172" class="dia__dim">ranked paths, each with the</text>
-    <text x="778" y="194" class="dia__dim">overlap behind it</text>
-    <rect x="40" y="292" width="1020" height="76" rx="16" class="dia__box dia__box--yellow"/>
-    <text x="62" y="328" class="dia__t">Size is what makes an overlap mean something.</text>
-    <text x="62" y="354" class="dia__dim">Two people on a 120-person team is a relationship. Two people at a 400,000-person employer is a coincidence, and is scored like one.</text>
-  </svg>
+            <svg class="dia" viewBox="0 0 1200 620" role="img" aria-labelledby="warmTitle warmDesc">
+              <title id="warmTitle">Warmest Path run graph</title>
+              <desc id="warmDesc">Our roster on the left, target accounts on the right. Eleven kinds of shared history — the same team, the same cohort, a shared accelerator batch, a co-authored patent, the same investor — become weighted edges; a three-stage search finds paths of up to three hops from one of our people to someone inside each target company, the last hop always inside the target, and scores each path. The result names who should reach out to which account and why.</desc>
+
+              <!-- title row -->
+              <text x="40" y="48" class="dia__h">Who should reach out, and why</text>
+              <text x="40" y="70" class="dia__k">ONE RUN · WHO ON YOUR SIDE CAN OPEN A DOOR AT EACH ACCOUNT</text>
+
+              <!-- stages -->
+              <g>
+                <rect x="40" y="92" width="340" height="52" rx="14" class="dia__box dia__box--sky"/>
+                <text x="58" y="114" class="dia__k">FIRST</text><text x="58" y="132" class="dia__dim">shared history becomes a link worth something</text>
+                <rect x="430" y="92" width="340" height="52" rx="14" class="dia__box dia__box--yellow"/>
+                <text x="448" y="114" class="dia__k">THEN</text><text x="448" y="132" class="dia__dim">look for a route from your people into each account</text>
+                <rect x="820" y="92" width="340" height="52" rx="14" class="dia__box dia__box--mint"/>
+                <text x="838" y="114" class="dia__k">FINALLY</text><text x="838" y="132" class="dia__dim">the strongest routes rise to the top</text>
+              </g>
+
+              <!-- unreached, faint -->
+              <g class="dia__faint">
+                <path d="M170 330 C 420 220, 720 190, 1000 220"/><path d="M230 280 C 500 320, 760 500, 1010 528"/>
+                <path d="M240 430 C 500 390, 700 250, 940 244"/><path d="M180 340 C 500 470, 740 560, 1060 490"/>
+                <path d="M300 350 C 560 260, 780 320, 1080 290"/><path d="M200 300 C 480 340, 700 430, 930 380"/>
+                <path d="M280 450 C 520 500, 820 400, 1100 444"/><path d="M160 310 C 380 370, 640 280, 900 350"/>
+              </g>
+
+              <!-- our roster -->
+              <text x="150" y="200" class="dia__k">OUR ROSTER</text>
+              <g class="dia__net">
+                <path d="M160 310 L205 345 L245 300"/><path d="M205 345 L185 388 L222 462"/><path d="M245 300 L255 248"/><path d="M290 440 L270 382 L300 340"/>
+              </g>
+              <g class="dia__sat">
+                <circle cx="160" cy="310" r="3.5"/><circle cx="205" cy="345" r="3.5"/><circle cx="245" cy="300" r="3.5"/><circle cx="185" cy="388" r="3.5"/>
+                <circle cx="270" cy="382" r="3.5"/><circle cx="222" cy="462" r="3.5"/><circle cx="290" cy="440" r="3.5"/><circle cx="140" cy="360" r="3.5"/>
+                <circle cx="255" cy="248" r="3.5"/><circle cx="318" cy="310" r="3.5"/>
+              </g>
+              <circle cx="200" cy="272" r="8" class="dia__champ"/>
+              <circle cx="300" cy="340" r="8" class="dia__champ"/>
+              <circle cx="230" cy="418" r="8" class="dia__champ"/>
+
+              <!-- warm paths -->
+              <g fill="none" stroke-width="3" stroke-linecap="round">
+                <path d="M200 272 C 480 160, 760 150, 980 216" class="dia__path--mint"/>
+                <path d="M300 340 C 560 260, 820 260, 1060 280" class="dia__path--sky"/>
+                <path d="M230 418 C 520 430, 800 430, 940 382" class="dia__path--yellow"/>
+                <path d="M300 340 C 600 410, 860 550, 1012 538" class="dia__path--pink"/>
+              </g>
+              <!-- signal names, on the curves -->
+              <g>
+                <text x="564" y="170" class="dia__sig" text-anchor="middle">same team, same years</text>
+                <text x="641" y="262" class="dia__sig" text-anchor="middle">a patent written together</text>
+                <text x="596" y="448" class="dia__sig" text-anchor="middle">same course, same year</text>
+                <text x="712" y="486" class="dia__sig" text-anchor="middle">a shared investor</text>
+              </g>
+
+              <!-- target accounts -->
+              <text x="1020" y="176" class="dia__k" text-anchor="middle">TARGET ACCOUNTS</text>
+              <g class="dia__net"><path d="M980 216 L960 196 M980 216 L1004 200 M980 216 L1002 236 M980 216 L964 242"/></g>
+              <g class="dia__sat"><circle cx="960" cy="196" r="3"/><circle cx="1004" cy="200" r="3"/><circle cx="1002" cy="236" r="3"/><circle cx="964" cy="242" r="3"/></g>
+              <circle cx="980" cy="216" r="7" class="dia__bridge"/>
+              <text x="1022" y="212" class="dia__t">Northwind</text><text x="1022" y="234" class="dia__score">0.80</text>
+
+              <g class="dia__net"><path d="M1060 280 L1040 262 M1060 280 L1084 268 M1060 280 L1082 302 M1060 280 L1042 306"/></g>
+              <g class="dia__sat"><circle cx="1040" cy="262" r="3"/><circle cx="1084" cy="268" r="3"/><circle cx="1082" cy="302" r="3"/><circle cx="1042" cy="306" r="3"/></g>
+              <circle cx="1060" cy="280" r="7" class="dia__bridge"/>
+              <text x="1102" y="276" class="dia__t">Globex</text><text x="1102" y="298" class="dia__score">0.57</text>
+
+              <g class="dia__net"><path d="M940 382 L920 364 M940 382 L962 368 M940 382 L960 404 M940 382 L918 406"/></g>
+              <g class="dia__sat"><circle cx="920" cy="364" r="3"/><circle cx="962" cy="368" r="3"/><circle cx="960" cy="404" r="3"/><circle cx="918" cy="406" r="3"/></g>
+              <circle cx="940" cy="382" r="7" class="dia__bridge"/>
+              <text x="982" y="378" class="dia__t">Initech</text><text x="982" y="400" class="dia__score">0.35</text>
+
+              <g class="dia__net"><path d="M1012 538 L992 520 M1012 538 L1036 524 M1012 538 L1034 558 M1012 538 L994 562"/></g>
+              <g class="dia__sat"><circle cx="992" cy="520" r="3"/><circle cx="1036" cy="524" r="3"/><circle cx="1034" cy="558" r="3"/><circle cx="994" cy="562" r="3"/></g>
+              <circle cx="1012" cy="538" r="7" class="dia__bridge"/>
+              <text x="1054" y="534" class="dia__t">Contoso</text><text x="1054" y="556" class="dia__score">0.28</text>
+
+              <g class="dia__net"><path d="M1130 444 L1112 426 M1130 444 L1150 430 M1130 444 L1148 464"/></g>
+              <g class="dia__sat"><circle cx="1130" cy="444" r="4"/><circle cx="1112" cy="426" r="2.5"/><circle cx="1150" cy="430" r="2.5"/><circle cx="1148" cy="464" r="2.5"/></g>
+              <text x="1130" y="486" class="dia__dim" text-anchor="middle">Vandelay · no path yet</text>
+
+              <!-- safeguards -->
+              <rect x="40" y="500" width="380" height="72" rx="14" class="dia__box dia__box--pink"/>
+              <text x="58" y="522" class="dia__k">SAFEGUARDS</text>
+              <text x="58" y="542" class="dia__dim">Recruiters and bots never count as a bridge, and a giant</text>
+              <text x="58" y="558" class="dia__dim">employer counts for far less than a 120-person team.</text>
+
+              <!-- legend -->
+              <g>
+                <circle cx="470" cy="600" r="6" class="dia__champ"/><text x="484" y="604" class="dia__dim">one of our people</text>
+                <circle cx="640" cy="600" r="6" class="dia__bridge"/><text x="654" y="604" class="dia__dim">a bridge inside the target</text>
+                <circle cx="850" cy="600" r="3.5" class="dia__sat"/><text x="862" y="604" class="dia__dim">unreached</text>
+                <text x="1160" y="604" class="dia__dim" text-anchor="end">names and scores illustrative</text>
+              </g>
+            </svg>
           </div>
           <figcaption>Target accounts in, warm introductions out — each with the shared history behind it.</figcaption>
         </figure>
@@ -728,15 +975,13 @@
             years, the same cohort, the same small company.
           </p>
           <p>
-            Give it a list of target accounts and it pulls our team's roster alongside every target's
-            career history, finds the places where two careers genuinely overlapped, and weighs each
-            overlap by how small that group was. Two people out of roughly 120 in EY's consulting unit
-            counts for far more than two out of EY's 406,000.
+            Give it a list of target accounts and it reads your team's history against every target's,
+            finds the places where two careers genuinely overlapped, and ranks what it finds — so a
+            rep opens the list and sees who on their own side can make the introduction, and why.
           </p>
           <p>
-            Paths go up to three hops, with the last hop always inside the target's own company, and
-            every path arrives with the evidence behind it. Scoring is a pure function — no network
-            calls, no LLM — covered by 993 tests.
+            A shared employer of 400,000 people proves nothing; the same team in the same years does.
+            That difference is the whole product.
           </p>
           <ul class="chips">
             <li>TypeScript</li><li>Node</li><li>Postgres</li><li>Apify</li><li>vitest</li>

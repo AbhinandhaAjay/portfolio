@@ -60,12 +60,13 @@ work out the heights (`span × track width ÷ aspect ratio`) and pick spans that
 or the row ends ragged. CSS `columns` was worse: it fills one column at a time and left a hole
 beside the tallest tile.
 
-**The diagrams are generated.** Every `svg.dia` in the work section comes from one small builder
-(kept with the session notes, not in the repo): a title, a kicker, a three-card chain with arrows,
-and at most one tinted strip of consequence underneath. Keep that shape when you edit them — they
-are for a reader who does not know the internals, so no table names, no queue names, no internal
-counts. If you change a card's height or add a row, bump the `viewBox` height to match or the last
-box will collide with the strip.
+**The diagrams are drawings, not flowcharts.** Each `svg.dia` shows the thing itself — documents
+becoming rows, a sheet filling in a column, a timeline where a lead flips, a pipeline with one stage
+gone quiet, a run graph of who can reach whom. A three-box chain was tried and rejected: it was
+accurate and told the reader nothing. Two rules hold them together: they are for someone who does
+not know the internals (no table names, no queue names, no scoring constants), and every one ends
+with a line saying what it meant. If you change a box's height, bump the `viewBox` to match or the
+last row will collide with the strip underneath.
 
 **Chapters with two visuals** carry `case--pair`, which swaps the float for a two-column grid with
 the text vertically centred against the media stack. With two pictures and short copy the float
