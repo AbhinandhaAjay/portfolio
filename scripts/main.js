@@ -299,12 +299,21 @@
       if (!label && t) { var p = t.closest("[data-cursor]"); label = p && p.getAttribute("data-cursor"); }
       cur.classList.toggle("is-label", !!label);
       cur.classList.toggle("is-hover", !!t && !label);
+      cur.classList.toggle("is-dark", !!(e.target.closest && e.target.closest(".foot")));
       if (curLabel && label) curLabel.textContent = label;
     }, { passive: true });
 
     window.addEventListener("pointerdown", function () { cur.classList.add("is-down"); });
     window.addEventListener("pointerup", function () { cur.classList.remove("is-down"); });
     document.addEventListener("pointerleave", function () { cur.classList.add("is-off"); });
+
+    // An iframe swallows pointer events, so the drawn cursor used to freeze on
+    // top of the player — a dead "PLAY" disc until you clicked again. Hide it
+    // the moment the pointer crosses into one; the next move brings it back.
+    document.addEventListener("pointerover", function (e) {
+      if (e.target && e.target.tagName === "IFRAME") cur.classList.add("is-off");
+    }, true);
+    window.addEventListener("blur", function () { cur.classList.add("is-off"); });
   }
 
   /* ---------- magnetic buttons ---------- */
@@ -380,6 +389,8 @@
     lastFocus = document.activeElement;
     lbImg.src = img.currentSrc || img.src;
     lbImg.alt = img.alt;
+    lbImg.hidden = false;
+    if (lbDia) { lbDia.hidden = true; lbDia.innerHTML = ""; }
     lb.hidden = false;
     document.body.style.overflow = "hidden";
     if (lbClose) lbClose.focus();
@@ -389,9 +400,39 @@
     if (!lb) return;
     lb.hidden = true;
     lbImg.removeAttribute("src");
+    if (lbDia) { lbDia.hidden = true; lbDia.innerHTML = ""; }
     document.body.style.overflow = "";
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
+
+  var lbDia = document.getElementById("lbDia");
+
+  function openLbDia(svg) {
+    if (!lb || !lbDia) return;
+    lastFocus = document.activeElement;
+    lbDia.innerHTML = "";
+    lbDia.appendChild(svg.cloneNode(true));
+    lbDia.hidden = false;
+    if (lbImg) lbImg.hidden = true;
+    lb.hidden = false;
+    document.body.style.overflow = "hidden";
+    if (lbClose) lbClose.focus();
+  }
+
+  // Diagrams sit small in the page; this is how they are read.
+  document.querySelectorAll(".shot__frame--dia").forEach(function (box) {
+    var svg = box.querySelector("svg.dia");
+    if (!svg) return;
+    box.setAttribute("tabindex", "0");
+    box.setAttribute("role", "button");
+    box.setAttribute("data-cursor", "Zoom");
+    var title = svg.querySelector("title");
+    box.setAttribute("aria-label", "Enlarge diagram" + (title ? ": " + title.textContent : ""));
+    box.addEventListener("click", function () { openLbDia(svg); });
+    box.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLbDia(svg); }
+    });
+  });
 
   document.querySelectorAll("[data-shot] img").forEach(function (img) {
     img.setAttribute("tabindex", "0");
@@ -451,6 +492,7 @@
                        '<span class="video__wait-t">Loading the recording…</span>' +
                        '<a class="video__alt" href="' + href + '" target="_blank" rel="noopener">Open it on Loom ↗</a>';
       box.innerHTML = "";
+      box.removeAttribute("data-cursor");
       box.appendChild(frame);
       box.appendChild(wait);
 

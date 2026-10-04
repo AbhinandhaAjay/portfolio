@@ -51,6 +51,17 @@ after `/share/`). **The current recording shows real customer email addresses.**
 player is click-to-load so nothing loads for a visitor who doesn't press play, but swap
 it before sharing the site widely.
 
+**The proof section.** One `article.feature` at the top (the Salesforce thread, the strongest
+single screenshot) and then `ul.tiles` — a **grid**, three across, every image forced to the same
+`16 / 10` shape. It used to be CSS `columns`, which fills one column at a time and left a hole
+beside the tallest tile. Keep it a grid, and keep tile count a multiple of three if you can.
+
+**Blurring.** Anything a customer would call theirs gets blurred before it goes in: vendor names,
+campaign names, prospect rows, email addresses. `forty-contacts.webp` has Deepgram's campaign
+names blurred; `huntd-explorer-companies.webp` has company names and domains blurred. The
+Detector chapter deliberately carries a *drawn* all-clear digest rather than a real alert
+screenshot, so the page never implies a customer's pipeline was broken.
+
 **Page order.** Hero → Working with customers (`#customers`) → Work (`#work`) → walkthrough →
 side projects → about. The customer proof runs first, deliberately: it is the part that isn't code.
 The `data-zone` letters must stay in page order (hero `a`, customers `b`, work `c`, …) because the
@@ -62,26 +73,24 @@ huge faint number behind the title (`.case__n`), two columns — `.case__lead` (
 the one-line **Outcome** pill) and `.case__body` (paragraphs and tags) — 01's feature list
 (`.case__wide`) full width, and, where there is one, a media figure the full width of the column.
 No index. 01 shows the Data Explorer companies view (`huntd-explorer-companies.webp`, company
-names and domains blurred); 02, 03, 04, 05 and 08 carry inline SVG diagrams drawn in the site's own
+names and domains blurred); 02 through 08 all carry inline SVG diagrams drawn in the site's own
 style (`svg.dia`: Lilita headings, Rubik text, tint panels, coral arrows; `.shot--flat` so they get
-no 3D lean). 03, 04 and 05 pair their diagram with a real screenshot underneath it — a supporting
-screenshot gets `.shot--narrow` (620px) so it does not compete with the diagram. Pixel-font text
+no 3D lean). 03 and 04 pair their diagram with a real screenshot underneath it — a supporting
+screenshot gets `.shot--narrow` so it does not compete with the diagram. Pixel-font text
 (`.dia__k`) has no arrow glyph, so write "FALSE TO TRUE" there rather than "FALSE → TRUE".
 
-Work media is capped: figures are 940px wide (900 for diagrams, 620 for `.shot--narrow`) and
-`img` is `max-height: 440px` with `object-fit: cover`, so no single screenshot owns a chapter.
+Work media is deliberately small: figures are 720px wide (820 for diagrams, 520 for
+`.shot--narrow`) and `img` is `max-height: 320px` with `object-fit: cover`. Diagrams would be
+unreadable at that size on their own, so **every `.shot__frame--dia` opens full size in the
+lightbox on click** (wired in `main.js`, rendered into `#lbDia`); that is how they are meant to be
+read. 06 and 07 were drawn from the enrichment repo itself — depth caps (1 / 25 / 500 pages), the
+early-stop classes and the three-service queue flow all come from that code, so check there before
+changing a number in them.
 
-**Adding pictures and videos.** Cases 06 and 07 still carry a commented `MEDIA SLOT` block in
-`index.html` with the filenames already filled in:
-
-| case | files |
-|---|---|
-| 06 Web research agent | `assets/work/web-search-agent.webp` |
-| 07 Building Clay | `assets/work/web-searches.webp` |
-
-Drop the files in, delete the `MEDIA SLOT` and `END MEDIA SLOT` comment lines around the
-figure, and set each `<img>`'s real `width`/`height`. For a video instead of a picture, replace
-the `<img>` inside its `shot__frame` with:
+**Adding pictures and videos.** Every chapter now has its media. To add a screenshot to one,
+copy a `figure.shot` from 03 or 04, drop the file in `assets/work/`, and set the `<img>`'s real
+`width`/`height`. For a video instead of a picture, replace the `<img>` inside its
+`shot__frame` with:
 
 ```html
 <video controls preload="none" playsinline poster="assets/work/signup-poster.webp">
@@ -96,10 +105,18 @@ spinner (`.video__wait`) over the iframe until it fires `load`, reveals an "open
 after 4s and clears itself after 20s, because the Loom player takes a few seconds to boot and an
 empty black box reads as broken. Hovering the play button preconnects to Loom.
 
+**The drawn cursor.** `#cur` follows the pointer and `cursor: none` hides the real one. Two
+things it must keep doing: it hides itself when the pointer crosses into an `<iframe>` (an iframe
+eats pointer events, so it used to freeze as a dead "PLAY" disc over the Loom player), and it
+switches to `.is-dark` over the footer, where the ink dot and hairline ring would otherwise be
+invisible on the dark panel.
+
 **Project repo links.** LostNFound and Inkling link to their repos; the other three cards
 still point at the GitHub profile root — search `class="ul"` inside `.card` and swap in the
 individual repo URLs. The cards carry no images: not every project had an architecture diagram, so
-the GitHub link does that job. Cards run three across on desktop in this order: AI Fashion Platform, Accident
+the GitHub link does that job. The grid has six tracks and each card spans two, so the fourth
+card can start at track 2 and the last two sit centred under the first three — if you add a sixth
+card, drop that `nth-child(4)` rule. Cards run three across on desktop in this order: AI Fashion Platform, Accident
 Detection, Personal AI Assistant, LostNFound, Inkling; **Read more** opens each one.
 
 **The rotating headline.** The four lines under "Software that" live in `#rot`. Keep them

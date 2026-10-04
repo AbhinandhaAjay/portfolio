@@ -154,19 +154,19 @@
     <article class="feature reveal" data-anim="up">
       <div class="feature__text">
         <p class="eyebrow">Customer collaboration</p>
-        <h3 data-split="words" class="reveal">Protecting Deepgram's lead attribution</h3>
+        <h3 data-split="words" class="reveal">Taking Deepgram's Salesforce integration live</h3>
         <p>
-          While rolling out lead-source tracking in Deepgram's CRM sync, I found forty contacts that
-          already carried attribution from Deepgram's own campaigns.
+          I worked the field mapping out with Deepgram's team in their own Slack, fixed what the
+          first pass got wrong, and took the integration live across their Contact and Account
+          objects.
         </p>
-        <p>
-          Instead of overwriting that history, I raised it with their team, outlined the options and
-          shipped the approach they chose.
+        <p class="feature__quote">
+          “No worries at all, thank you for the support with the troubleshooting.”
         </p>
       </div>
       <figure class="feature__shot" data-shot data-cursor="Zoom">
-        <img src="assets/work/slack/forty-contacts.webp" width="859" height="733"
-             alt="Slack thread with Deepgram about preserving existing lead attribution"
+        <img src="assets/work/slack/salesforce-live.webp" width="874" height="781"
+             alt="Slack thread with Deepgram: the Salesforce integration is live on Contact and Account objects, with thanks for the troubleshooting"
              loading="lazy" decoding="async">
       </figure>
     </article>
@@ -191,10 +191,10 @@
         <p><b>Blitzy · Signup alerts</b> Flagged a new signup at one of Blitzy's target accounts ahead of the feature's launch. <em>“This is amazing thank you.”</em></p>
       </li>
       <li class="tile reveal" data-anim="fan" style="--d:3" data-shot data-cursor="Zoom">
-        <img src="assets/work/slack/salesforce-live.webp" width="874" height="781"
-             alt="Slack thread with Deepgram: the Salesforce integration live, with thanks for the troubleshooting"
+        <img src="assets/work/slack/forty-contacts.webp" width="859" height="733"
+             alt="Slack thread with Deepgram about preserving existing lead attribution; their campaign names are blurred"
              loading="lazy" decoding="async">
-        <p><b>Deepgram · Salesforce integration</b> Took the integration live on Contact and Account objects after troubleshooting it with their team. <em>“Thank you for the support with the troubleshooting.”</em></p>
+        <p><b>Deepgram · Lead attribution</b> Found forty contacts already carrying attribution from Deepgram's own campaigns, raised it instead of overwriting, and shipped the option they chose.</p>
       </li>
       <li class="tile reveal" data-anim="fan" style="--d:4" data-shot data-cursor="Zoom">
         <img src="assets/work/slack/cross-sell.webp" width="688" height="364"
@@ -217,10 +217,10 @@
   Eight case studies as full-width chapters. Each article.case has a header
   (a big faint number behind the title), two columns (.case__lead: the lede
   and the outcome; .case__body: paragraphs and tags), 01's feature list
-  (.case__wide) and, optionally, one media figure that runs full width and
-  bleeds off the page edge (odd chapters right, even chapters left). Cases 04
-  to 07 carry a commented MEDIA SLOT with the filenames to use; uncomment it
-  once the files are in assets/work/. README, "Adding pictures and videos".
+  (.case__wide) and media under it: a diagram (svg.dia in .shot--flat, click to
+  enlarge) and/or a screenshot (.shot--narrow when it only supports the diagram).
+  Media is deliberately small here — the chapter is the text. README, "Adding
+  pictures and videos".
 -->
 <section class="section" id="work" data-zone="c">
   <div class="wrap">
@@ -714,13 +714,44 @@
         <figcaption>From a silent failure to a Slack message a human can act on — and an agent that may only propose the fix.</figcaption>
       </figure>
 
-      <figure class="shot reveal" data-anim="rise" data-shot data-cursor="Zoom">
-        <div class="shot__frame">
-          <img src="assets/work/slack/detector-summary.webp" width="1323" height="578"
-               alt="The Detector's daily summary in Slack: a bottom line, two broken vendor checkers under “fix now” with their known-answer test scores, and six items under “watch” with no action needed; vendor names are blurred"
-               loading="lazy" decoding="async">
+      <figure class="shot shot--flat reveal" data-anim="rise">
+        <div class="shot__frame shot__frame--dia">
+          <svg class="dia" viewBox="0 0 1200 520" role="img" aria-labelledby="digTitle digDesc">
+            <title id="digTitle">The daily digest on an all-clear day</title>
+            <desc id="digDesc">An illustration of the message the Detector posts to Slack each morning when nothing is wrong: a bottom line saying everything is running, then six all-clear lines covering the vendor checkers and their known-answer test, the pipeline queue, the customer digests, the CRM sync, the Sheets export, and the dashboard, API and webhooks. Below them, one watch item that needs no action: a source draining more slowly than usual. On a day something does break, the same message leads with what to fix.</desc>
+
+            <text x="40" y="44" class="dia__h">A quiet day, reported anyway</text>
+            <text x="40" y="68" class="dia__k">WHAT LANDS IN SLACK WHEN NOTHING IS WRONG</text>
+
+            <rect x="40" y="92" width="1120" height="268" rx="18" class="dia__card"/>
+            <circle cx="70" cy="122" r="8" class="dia__dot--mint"/>
+            <text x="90" y="126" class="dia__k">DETECTOR · DAILY SUMMARY · LAST 24 HOURS</text>
+            <text x="68" y="160" class="dia__t">Bottom line: everything is running. No checker is broken, no queue is stalled.</text>
+            <line x1="68" y1="182" x2="1132" y2="182" class="dia__rule"/>
+
+            <circle cx="76" cy="214" r="6" class="dia__dot--mint"/>
+            <text x="94" y="210" class="dia__t">Vendor checkers</text><text x="94" y="229" class="dia__dim">every one passed its known-answer test</text>
+            <circle cx="76" cy="266" r="6" class="dia__dot--mint"/>
+            <text x="94" y="262" class="dia__t">Pipeline queue</text><text x="94" y="281" class="dia__dim">draining on schedule, nothing stranded</text>
+            <circle cx="76" cy="318" r="6" class="dia__dot--mint"/>
+            <text x="94" y="314" class="dia__t">Customer digests</text><text x="94" y="333" class="dia__dim">all delivered this morning</text>
+
+            <circle cx="620" cy="214" r="6" class="dia__dot--mint"/>
+            <text x="638" y="210" class="dia__t">CRM sync</text><text x="638" y="229" class="dia__dim">HubSpot and Salesforce fresh, minutes old</text>
+            <circle cx="620" cy="266" r="6" class="dia__dot--mint"/>
+            <text x="638" y="262" class="dia__t">Sheets export</text><text x="638" y="281" class="dia__dim">every workbook up to date</text>
+            <circle cx="620" cy="318" r="6" class="dia__dot--mint"/>
+            <text x="638" y="314" class="dia__t">Dashboard, API, webhooks</text><text x="638" y="333" class="dia__dim">responding; no failed deliveries</text>
+
+            <rect x="40" y="384" width="1120" height="92" rx="16" class="dia__box dia__box--yellow"/>
+            <text x="68" y="414" class="dia__k">WATCH &#8212; 1 · HERE SO YOU KNOW, NOT SOMETHING TO ACT ON</text>
+            <text x="68" y="440" class="dia__t">One source is draining more slowly than usual.</text>
+            <text x="68" y="464" class="dia__dim">Leads still get processed, just slower. No action unless it keeps growing.</text>
+
+            <text x="40" y="506" class="dia__k">AN ILLUSTRATION OF THE DIGEST FORMAT · ON A DAY SOMETHING DOES BREAK, THE SAME MESSAGE LEADS WITH WHAT TO FIX</text>
+          </svg>
         </div>
-        <figcaption>A real daily summary: two checkers caught giving wrong answers, six delays triaged as “no action”, each with the evidence. Vendor names are blurred.</figcaption>
+        <figcaption>The all-clear version of the morning digest. Quiet by default is the point — a message means something precisely because most mornings it says this.</figcaption>
       </figure>
     </article>
 
@@ -749,11 +780,84 @@
           </ul>
         </div>
       </div>
-      <!-- MEDIA SLOT 06 (web search agent). Once the file(s) are in assets/work/, delete this line and the END line below.
-        <figure class="shot reveal" data-anim="rise">
-          <div class="shot__frame" data-shot data-cursor="Zoom"><img src="assets/work/web-search-agent.webp" width="1600" height="1000" alt="The web research agent answering a question with its source" loading="lazy" decoding="async"></div>
-        </figure>
-      END MEDIA SLOT 06 -->
+      <figure class="shot shot--flat reveal" data-anim="rise">
+        <div class="shot__frame shot__frame--dia">
+          <svg class="dia" viewBox="0 0 1200 580" role="img" aria-labelledby="webTitle webDesc">
+            <title id="webTitle">How the web research agent answers a question</title>
+            <desc id="webDesc">A question asked in plain English is first turned into a typed output schema. Firecrawl maps the company's site, with sitemap and navigation fallbacks and a cached map per project. An AI pass ranks and prunes the mapped URLs down to the pages likely to hold the answer. Pages are scraped in waves of five through a proxy, with browser rendering for bot-walled pages and page text cached in Postgres, then each page is read for a value, a verbatim quote and a confidence. Depth is capped by mode: Instant reads one page, Thinking up to twenty-five, Exhaustive up to five hundred, and Auto picks one. An early-stop classifier decides per question whether the run can finish on the first positive page, on the first counterexample, or must scan everything, which is what questions that count or list require.</desc>
+            <defs>
+              <marker id="webArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+            </defs>
+
+            <text x="40" y="44" class="dia__h">One question, the fewest pages that answer it</text>
+            <text x="40" y="68" class="dia__k">ASKED IN PLAIN ENGLISH · ANSWERED FROM THE COMPANY'S OWN SITE</text>
+
+            <text x="40" y="92" class="dia__k">THE ASK</text>
+            <rect x="40" y="104" width="250" height="170" rx="16" class="dia__box dia__box--sky"/>
+            <text x="62" y="134" class="dia__t">“Do they sell to</text>
+            <text x="62" y="156" class="dia__t">enterprises?”</text>
+            <line x1="62" y1="178" x2="268" y2="178" class="dia__rule"/>
+            <text x="62" y="202" class="dia__dim">one question, run once</text>
+            <text x="62" y="222" class="dia__dim">per row of the sheet</text>
+            <text x="62" y="248" class="dia__dim">the prompt itself infers</text>
+            <text x="62" y="268" class="dia__dim">the typed answer schema</text>
+            <path d="M296 189 L336 189" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+            <text x="340" y="92" class="dia__k">THE CHAIN, ONE PHASE PER STEP</text>
+            <rect x="340" y="104" width="380" height="96" rx="16" class="dia__card"/>
+            <text x="362" y="134" class="dia__t">1 · Map the site</text>
+            <text x="362" y="158" class="dia__dim">hundreds of URLs in seconds, with sitemap</text>
+            <text x="362" y="178" class="dia__dim">and nav fallbacks; the map is cached per project</text>
+            <path d="M530 204 L530 222" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+            <rect x="340" y="226" width="380" height="96" rx="16" class="dia__card"/>
+            <text x="362" y="256" class="dia__t">2 · Rank, then prune</text>
+            <text x="362" y="280" class="dia__dim">a model orders the candidates by where the</text>
+            <text x="362" y="300" class="dia__dim">answer is likely to live, and drops the rest</text>
+            <path d="M530 326 L530 344" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+            <rect x="340" y="348" width="380" height="96" rx="16" class="dia__card"/>
+            <text x="362" y="378" class="dia__t">3 · Scrape in waves of five</text>
+            <text x="362" y="402" class="dia__dim">proxy first, browser rendering for bot-walled</text>
+            <text x="362" y="422" class="dia__dim">pages; page text and PDFs cached in Postgres</text>
+            <path d="M530 448 L530 466" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+            <rect x="340" y="470" width="380" height="96" rx="16" class="dia__card"/>
+            <text x="362" y="500" class="dia__t">4 · Read each page for evidence</text>
+            <text x="362" y="524" class="dia__dim">a value, a verbatim quote from that page</text>
+            <text x="362" y="544" class="dia__dim">and a confidence — never a guess</text>
+
+            <g class="dia__arrow" marker-end="url(#webArrow)">
+              <path d="M724 152 L766 152"/>
+              <path d="M724 274 C 748 274, 748 300, 766 300"/>
+            </g>
+
+            <text x="770" y="92" class="dia__k">WHAT KEEPS IT AFFORDABLE</text>
+            <rect x="770" y="104" width="390" height="140" rx="16" class="dia__box dia__box--yellow"/>
+            <text x="794" y="134" class="dia__t">How deep to go</text>
+            <text x="794" y="160" class="dia__dim">Instant · the landing page alone</text>
+            <text x="794" y="182" class="dia__dim">Thinking · up to 25 ranked pages</text>
+            <text x="794" y="204" class="dia__dim">Exhaustive · up to 500</text>
+            <text x="794" y="226" class="dia__dim">Auto · picks one from the question</text>
+
+            <rect x="770" y="258" width="390" height="180" rx="16" class="dia__box dia__box--mint"/>
+            <text x="794" y="288" class="dia__t">When it may stop early</text>
+            <text x="794" y="314" class="dia__dim">A classifier reads the question first:</text>
+            <circle cx="800" cy="338" r="5" class="dia__dot--mint"/><text x="814" y="342" class="dia__dim">settle on the first positive page</text>
+            <circle cx="800" cy="364" r="5" class="dia__dot--sky"/><text x="814" y="368" class="dia__dim">settle on the first counterexample</text>
+            <circle cx="800" cy="390" r="5" class="dia__dot--pink"/><text x="814" y="394" class="dia__dim">scan everything</text>
+            <text x="794" y="422" class="dia__dim">Only counts, lists and superlatives scan.</text>
+
+            <rect x="770" y="452" width="390" height="114" rx="16" class="dia__card"/>
+            <text x="794" y="482" class="dia__k">WHAT COMES BACK</text>
+            <text x="794" y="508" class="dia__t">value · quote · confidence</text>
+            <text x="794" y="534" class="dia__dim">plus the page it came from, so an answer</text>
+            <text x="794" y="554" class="dia__dim">can be checked rather than trusted</text>
+          </svg>
+        </div>
+        <figcaption>The phase chain behind one answer — and the two things that stop it reading more pages than the question needs.</figcaption>
+      </figure>
+
     </article>
 
     <article class="case" id="case-07">
@@ -773,19 +877,76 @@
             read and what it cost.
           </p>
           <p>
-            Plus the spreadsheet basics — edit, dedupe, saved views, full version history — and a public API
-            and MCP server so other agents can use it.
+            Plus the spreadsheet basics — edit, dedupe, saved views, full version history — and a public
+            API so another system can run the same enrichment.
           </p>
           <ul class="chips">
             <li>React</li><li>Vite</li><li>Tailwind</li><li>Express</li><li>Cloudflare R2</li><li>Supabase Postgres</li><li>Redis</li><li>Firecrawl</li><li>Zyte</li><li>Apify</li><li>GPT</li><li>Gemini</li>
           </ul>
         </div>
       </div>
-      <!-- MEDIA SLOT 07 (web searches). Once the file(s) are in assets/work/, delete this line and the END line below.
-        <figure class="shot reveal" data-anim="rise">
-          <div class="shot__frame" data-shot data-cursor="Zoom"><img src="assets/work/web-searches.webp" width="1600" height="1000" alt="Web search enrichment columns in the Clay workspace" loading="lazy" decoding="async"></div>
-        </figure>
-      END MEDIA SLOT 07 -->
+      <figure class="shot shot--flat reveal" data-anim="rise">
+        <div class="shot__frame shot__frame--dia">
+          <svg class="dia" viewBox="0 0 1200 530" role="img" aria-labelledby="clayTitle clayDesc">
+            <title id="clayTitle">How the enrichment workspace is put together</title>
+            <desc id="clayDesc">Three services over one queue. The React sheet uploads a CSV to object storage and lets you add an enrichment column as a prompt plus a typed schema you preview before it runs. An Express worker seeds one job per cell, dispatches them through a Redis-backed queue, and writes every finished result back to Postgres. The engine claims a row job and runs the research phase chain, keeping run state in Postgres. Finished cells flow back into the sheet as they land. Around it: runs can be paused, resumed or reverted from checkpoints stored per phase; every cell keeps a trace of the pages read, the quote behind the value and what it cost; and a public API runs the same enrichment from another system.</desc>
+            <defs>
+              <marker id="clayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+            </defs>
+
+            <text x="40" y="44" class="dia__h">Add a column, every row comes back answered</text>
+            <text x="40" y="68" class="dia__k">THREE SERVICES OVER ONE QUEUE</text>
+
+            <rect x="40" y="96" width="340" height="186" rx="16" class="dia__box dia__box--sky"/>
+            <text x="64" y="126" class="dia__k">THE SHEET · REACT + VITE</text>
+            <text x="64" y="154" class="dia__t">Upload, edit, add a column</text>
+            <text x="64" y="180" class="dia__dim">the CSV lands in object storage</text>
+            <text x="64" y="202" class="dia__dim">a column is a prompt plus a typed</text>
+            <text x="64" y="224" class="dia__dim">schema you preview before it runs</text>
+            <text x="64" y="252" class="dia__dim">dedupe, saved views, version history</text>
+            <path d="M386 189 L426 189" class="dia__arrow" marker-end="url(#clayArrow)"/>
+
+            <rect x="430" y="96" width="340" height="186" rx="16" class="dia__card"/>
+            <text x="454" y="126" class="dia__k">THE WORKER · EXPRESS</text>
+            <text x="454" y="154" class="dia__t">Seeds and dispatches</text>
+            <text x="454" y="180" class="dia__dim">one job per cell, written once</text>
+            <text x="454" y="202" class="dia__dim">a Redis-backed queue claims row jobs</text>
+            <text x="454" y="224" class="dia__dim">and nothing is dispatched twice</text>
+            <text x="454" y="252" class="dia__dim">every result written back to Postgres</text>
+            <path d="M776 189 L816 189" class="dia__arrow" marker-end="url(#clayArrow)"/>
+
+            <rect x="820" y="96" width="340" height="186" rx="16" class="dia__box dia__box--mint"/>
+            <text x="844" y="126" class="dia__k">THE ENGINE</text>
+            <text x="844" y="154" class="dia__t">Runs the research</text>
+            <text x="844" y="180" class="dia__dim">claims a row job, then the phase chain:</text>
+            <text x="844" y="202" class="dia__dim">schema &#8594; map &#8594; rank &#8594; scrape &#8594; extract</text>
+            <text x="844" y="224" class="dia__dim">run state and payloads in Postgres</text>
+            <text x="844" y="252" class="dia__dim">the same engine as chapter 06</text>
+
+            <path d="M990 294 C 990 330, 600 330, 600 296" class="dia__arrow" marker-end="url(#clayArrow)"/>
+            <text x="795" y="352" class="dia__dim" text-anchor="middle">finished cells flow back into the sheet as they land</text>
+
+            <rect x="40" y="376" width="340" height="124" rx="16" class="dia__box dia__box--yellow"/>
+            <text x="64" y="406" class="dia__k">CONTROL</text>
+            <text x="64" y="434" class="dia__t">Pause, resume, revert</text>
+            <text x="64" y="460" class="dia__dim">a checkpoint is stored per phase, so a</text>
+            <text x="64" y="480" class="dia__dim">paused run resumes where it stopped</text>
+
+            <rect x="430" y="376" width="340" height="124" rx="16" class="dia__box dia__box--coral"/>
+            <text x="454" y="406" class="dia__k">TRACE, PER CELL</text>
+            <text x="454" y="434" class="dia__t">What it read, and what it cost</text>
+            <text x="454" y="460" class="dia__dim">the pages, the quote behind the value,</text>
+            <text x="454" y="480" class="dia__dim">the tokens &#8212; for every single cell</text>
+
+            <rect x="820" y="376" width="340" height="124" rx="16" class="dia__card"/>
+            <text x="844" y="406" class="dia__k">PUBLIC API</text>
+            <text x="844" y="434" class="dia__t">The same run, from anywhere</text>
+            <text x="844" y="460" class="dia__dim">another system can start an enrichment</text>
+            <text x="844" y="480" class="dia__dim">and read the results back</text>
+          </svg>
+        </div>
+        <figcaption>An in-house Clay: the sheet, the worker that seeds and dispatches every cell, and the engine that answers them.</figcaption>
+      </figure>
     </article>
 
     <article class="case" id="case-08">
@@ -1079,7 +1240,6 @@
       <a class="btn btn--light" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=abhi.k.ajay05@gmail.com" target="_blank" rel="noopener" data-magnet><span class="btn__t">Email me</span><span class="btn__a" aria-hidden="true">→</span></a>
       <button class="ul ul--light copy" type="button" id="copyEmail" data-email="abhi.k.ajay05@gmail.com" title="Click to copy"><span class="copy__addr">abhi.k.ajay05@gmail.com</span><span class="copy__tip" aria-live="polite"></span></button>
       <a class="ul ul--light" href="tel:+919381741053">+91 93817 41053</a>
-      <a class="ul ul--light" href="https://gethuntd.com" target="_blank" rel="noopener">Huntd ↗</a>
       <a class="ul ul--light" href="https://github.com/AbhinandhaAjay" target="_blank" rel="noopener">GitHub ↗</a>
       <a class="ul ul--light" href="https://www.linkedin.com/in/abhinandha-k-06a727305/" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
@@ -1091,6 +1251,7 @@
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged screenshot" hidden>
   <button class="lb__x" id="lbClose" type="button" aria-label="Close">&times;</button>
   <img id="lbImg" alt="">
+  <div class="lb__dia" id="lbDia" hidden></div>
 </div>
 
 <script src="scripts/main.js" defer></script>
