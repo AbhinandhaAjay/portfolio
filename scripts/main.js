@@ -508,7 +508,19 @@
       // and never pauses or restarts what is already running.
       var wait = document.createElement("div");
       wait.className = "video__wait";
-      wait.innerHTML = '<span class="video__bar"><i class="video__fill" id="videoFill"></i></span>' +
+      wait.innerHTML = '<span class="video__reel" aria-hidden="true">' +
+                         '<svg viewBox="0 0 48 48" width="46" height="46">' +
+                           '<circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="3"/>' +
+                           '<circle cx="24" cy="24" r="4.4" fill="currentColor"/>' +
+                           '<circle cx="24" cy="11" r="3.6" fill="currentColor"/>' +
+                           '<circle cx="35.3" cy="17.5" r="3.6" fill="currentColor"/>' +
+                           '<circle cx="35.3" cy="30.5" r="3.6" fill="currentColor"/>' +
+                           '<circle cx="24" cy="37" r="3.6" fill="currentColor"/>' +
+                           '<circle cx="12.7" cy="30.5" r="3.6" fill="currentColor"/>' +
+                           '<circle cx="12.7" cy="17.5" r="3.6" fill="currentColor"/>' +
+                         '</svg>' +
+                       '</span>' +
+                       '<span class="video__bar"><i class="video__fill" id="videoFill"></i></span>' +
                        '<span class="video__wait-t">Rolling the tape…</span>' +
                        '<a class="video__alt" href="' + href + '" target="_blank" rel="noopener">Taking a while? Open it on Loom ↗</a>';
       box.innerHTML = "";

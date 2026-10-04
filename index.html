@@ -251,8 +251,7 @@
           <p>
             Lead data used to arrive as CSV attachments, with no filtering and no sense of where a record
             came from. Now customers search their own verified users across millions of rows, break them
-            down by source, save searches and export in a click. Every Huntd customer works in it daily —
-            Deepgram, Blitzy, HyperBound and Peec&nbsp;AI among them.
+            down by source, save searches and export in a click. Every Huntd customer works in it daily.
           </p>
           <p>Around it, everything daily users asked for next:</p>
         </div>
@@ -265,9 +264,7 @@
           <li><b>Personas</b> Job titles sorted into levels, departments and functions, saved as one-click presets.</li>
           <li><b>Public API &amp; webhooks</b> Keyed, rate-limited endpoints and signed signup events.</li>
           <li><b>Admin CLI</b> The whole internal admin panel as 104 terminal commands — create an org,
-            add a source, upload and enrich a list, re-run signals, rotate API keys, requeue stuck work.
-            Dry-run by default (<code>--apply</code> to write), so running production no longer means one
-            person clicking through a local-only app.</li>
+            add a source, upload and enrich a list, re-run signals, rotate API keys, requeue stuck work.</li>
         </ul>
         <ul class="chips">
           <li>React</li><li>TypeScript</li><li>Node</li><li>Express</li><li>PostgreSQL</li><li>Supabase</li><li>Recharts</li><li>Leaflet</li><li>Infisical</li>
@@ -284,68 +281,83 @@
         <div class="case__media">
         <figure class="shot shot--flat reveal" data-anim="rise">
           <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1200 520" role="img" aria-labelledby="migTitle migDesc">
+            <svg class="dia" viewBox="0 0 1200 620" role="img" aria-labelledby="migTitle migDesc">
     <title id="migTitle">Moving the database with the product still running</title>
-    <desc id="migDesc">On the left, the old database: millions of lead records held as documents, one shape per service. In the middle, a single pass that carries them across in batches of five thousand — each batch converted, then counted and compared against the original before anything is switched over. On the right, the new database: the same records as rows the dashboard can filter. Customers kept working the whole way through, and because the passwords came across too, every existing login still worked.</desc>
+    <desc id="migDesc">On the left, the old database: sixteen collections of documents — about 3.8 million of them — holding leads, the answer each vendor gave about them, the queue of work still to do, and the accounts and sessions customers log in with. In the middle, one pass carries them across in batches of five thousand: read a batch, convert every field to a shape the new database understands, copy it in, then count and compare it against the original. Only when a collection matches is it signed off, and only when all of them match does the dashboard start reading from the new side. On the right, the new database holds the same records as rows, with a slim summary table on top of them that the dashboard reads for search and filters. Customers kept working throughout, passwords came across so existing logins still worked, and the other services kept running because the old shapes were preserved for them.</desc>
     <defs>
       <marker id="migArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
     </defs>
 
     <text x="40" y="46" class="dia__h">Moving the database with the product still running</text>
-    <text x="40" y="70" class="dia__k">ONE PASS · EVERY BATCH CHECKED BEFORE ANYTHING WAS SWITCHED OVER</text>
+    <text x="40" y="70" class="dia__k">ONE PASS · NOTHING SWITCHED OVER UNTIL THE TWO SIDES MATCHED</text>
 
     <!-- before -->
-    <text x="40" y="112" class="dia__k">BEFORE</text>
-    <rect x="40" y="124" width="300" height="250" rx="18" class="dia__box dia__box--sky"/>
+    <text x="40" y="112" class="dia__k">BEFORE · DOCUMENTS</text>
+    <rect x="40" y="124" width="296" height="330" rx="18" class="dia__box dia__box--sky"/>
     <g>
-      <rect x="74" y="156" width="214" height="54" rx="10" class="dia__card"/>
-      <line x1="92" y1="176" x2="250" y2="176" class="dia__rule"/><line x1="92" y1="192" x2="214" y2="192" class="dia__rule"/>
-      <rect x="86" y="178" width="214" height="54" rx="10" class="dia__card"/>
-      <line x1="104" y1="198" x2="262" y2="198" class="dia__rule"/><line x1="104" y1="214" x2="226" y2="214" class="dia__rule"/>
-      <rect x="98" y="200" width="214" height="54" rx="10" class="dia__card"/>
-      <line x1="116" y1="220" x2="274" y2="220" class="dia__rule"/><line x1="116" y1="236" x2="238" y2="236" class="dia__rule"/>
+      <rect x="66" y="150" width="200" height="44" rx="10" class="dia__card"/>
+      <rect x="76" y="166" width="200" height="44" rx="10" class="dia__card"/>
+      <rect x="86" y="182" width="200" height="44" rx="10" class="dia__card"/>
+      <text x="104" y="210" class="dia__dim">one document per record</text>
     </g>
-    <text x="64" y="296" class="dia__t">Documents</text>
-    <text x="64" y="320" class="dia__dim">millions of lead records,</text>
-    <text x="64" y="340" class="dia__dim">one shape per service</text>
+    <circle cx="70" cy="266" r="6" class="dia__dot--mint"/><text x="88" y="271" class="dia__dim">the leads themselves</text>
+    <circle cx="70" cy="302" r="6" class="dia__dot--sky"/><text x="88" y="307" class="dia__dim">what each source answered</text>
+    <circle cx="70" cy="338" r="6" class="dia__dot--yellow"/><text x="88" y="343" class="dia__dim">the queue of work still to do</text>
+    <circle cx="70" cy="374" r="6" class="dia__dot--pink"/><text x="88" y="379" class="dia__dim">accounts and logins</text>
+    <line x1="64" y1="400" x2="312" y2="400" class="dia__rule"/>
+    <text x="64" y="428" class="dia__dim">16 collections · about 3.8M documents</text>
 
     <!-- the pass -->
-    <text x="600" y="112" class="dia__k" text-anchor="middle">COPIED ACROSS IN BATCHES</text>
-    <path d="M348 250 L852 250" class="dia__arrow" marker-end="url(#migArrow)"/>
+    <text x="600" y="112" class="dia__k" text-anchor="middle">THE PASS · 5,000 RECORDS AT A TIME</text>
+    <path d="M344 196 L856 196" class="dia__arrow" marker-end="url(#migArrow)"/>
     <g>
-      <rect x="376" y="226" width="96" height="48" rx="12" class="dia__card"/>
-      <circle cx="400" cy="250" r="7" class="dia__dot--mint"/><text x="414" y="255" class="dia__dim">5,000</text>
-      <rect x="500" y="226" width="96" height="48" rx="12" class="dia__card"/>
-      <circle cx="524" cy="250" r="7" class="dia__dot--mint"/><text x="538" y="255" class="dia__dim">5,000</text>
-      <rect x="624" y="226" width="96" height="48" rx="12" class="dia__card"/>
-      <circle cx="648" cy="250" r="7" class="dia__dot--mint"/><text x="662" y="255" class="dia__dim">5,000</text>
-      <rect x="748" y="226" width="96" height="48" rx="12" class="dia__card dia__card--dash"/>
-      <text x="772" y="255" class="dia__dim">next…</text>
+      <rect x="372" y="172" width="86" height="48" rx="12" class="dia__card"/><text x="392" y="202" class="dia__dim">batch</text>
+      <rect x="486" y="172" width="86" height="48" rx="12" class="dia__card"/><text x="506" y="202" class="dia__dim">batch</text>
+      <rect x="600" y="172" width="86" height="48" rx="12" class="dia__card"/><text x="620" y="202" class="dia__dim">batch</text>
+      <rect x="714" y="172" width="86" height="48" rx="12" class="dia__card dia__card--dash"/><text x="734" y="202" class="dia__dim">next…</text>
     </g>
-    <text x="600" y="316" class="dia__t" text-anchor="middle">converted · counted · compared</text>
-    <text x="600" y="340" class="dia__dim" text-anchor="middle">a batch only counts as done once it matches the original</text>
+    <g>
+      <rect x="360" y="252" width="200" height="74" rx="14" class="dia__card"/>
+      <text x="380" y="280" class="dia__t">1 · Convert</text>
+      <text x="380" y="304" class="dia__dim">every field into a shape</text>
+      <text x="380" y="320" class="dia__dim">the new database accepts</text>
+      <rect x="584" y="252" width="200" height="74" rx="14" class="dia__card"/>
+      <text x="604" y="280" class="dia__t">2 · Copy in</text>
+      <text x="604" y="304" class="dia__dim">smallest collections first,</text>
+      <text x="604" y="320" class="dia__dim">the 1.27M leads last</text>
+      <rect x="360" y="342" width="424" height="78" rx="14" class="dia__box dia__box--yellow"/>
+      <text x="380" y="370" class="dia__t">3 · Count and compare</text>
+      <text x="380" y="394" class="dia__dim">a collection is signed off only when both sides hold the</text>
+      <text x="380" y="410" class="dia__dim">same number of records, and samples read back the same</text>
+    </g>
+    <path d="M572 290 L580 290" class="dia__arrow" marker-end="url(#migArrow)"/>
+    <text x="600" y="446" class="dia__k" text-anchor="middle">ONLY THEN DOES THE DASHBOARD READ FROM THE NEW SIDE</text>
 
     <!-- after -->
-    <text x="860" y="112" class="dia__k">AFTER</text>
-    <rect x="860" y="124" width="300" height="250" rx="18" class="dia__box dia__box--mint"/>
+    <text x="864" y="112" class="dia__k">AFTER · ROWS</text>
+    <rect x="864" y="124" width="296" height="330" rx="18" class="dia__box dia__box--mint"/>
     <g>
-      <rect x="888" y="152" width="244" height="150" rx="10" class="dia__card"/>
-      <line x1="888" y1="182" x2="1132" y2="182" class="dia__rule"/>
-      <line x1="888" y1="212" x2="1132" y2="212" class="dia__rule"/>
-      <line x1="888" y1="242" x2="1132" y2="242" class="dia__rule"/>
-      <line x1="888" y1="272" x2="1132" y2="272" class="dia__rule"/>
-      <line x1="970" y1="152" x2="970" y2="302" class="dia__rule"/>
-      <line x1="1050" y1="152" x2="1050" y2="302" class="dia__rule"/>
-      <rect x="892" y="186" width="74" height="22" rx="6" class="dia__box dia__box--yellow"/>
-      <rect x="1054" y="216" width="74" height="22" rx="6" class="dia__box dia__box--sky"/>
+      <rect x="890" y="150" width="244" height="130" rx="10" class="dia__card"/>
+      <line x1="890" y1="180" x2="1134" y2="180" class="dia__rule"/>
+      <line x1="890" y1="210" x2="1134" y2="210" class="dia__rule"/>
+      <line x1="890" y1="240" x2="1134" y2="240" class="dia__rule"/>
+      <line x1="972" y1="150" x2="972" y2="280" class="dia__rule"/>
+      <line x1="1054" y1="150" x2="1054" y2="280" class="dia__rule"/>
+      <rect x="894" y="184" width="74" height="22" rx="6" class="dia__box dia__box--yellow"/>
+      <rect x="1058" y="214" width="72" height="22" rx="6" class="dia__box dia__box--sky"/>
     </g>
-    <text x="884" y="330" class="dia__t">Rows</text>
-    <text x="884" y="354" class="dia__dim">the same records, in tables the dashboard can filter</text>
+    <text x="888" y="308" class="dia__dim">the same records, as rows you can filter</text>
+    <path d="M1012 318 L1012 338" class="dia__arrow" marker-end="url(#migArrow)"/>
+    <rect x="888" y="344" width="248" height="92" rx="14" class="dia__card"/>
+    <text x="908" y="372" class="dia__t">A slim summary on top</text>
+    <text x="908" y="396" class="dia__dim">one short row per lead, kept up</text>
+    <text x="908" y="412" class="dia__dim">to date — this is what search reads</text>
 
     <!-- what it meant -->
-    <rect x="40" y="404" width="1120" height="76" rx="16" class="dia__box dia__box--yellow"/>
-    <text x="64" y="438" class="dia__t">Nobody had to stop working, and nobody had to sign up again.</text>
-    <text x="64" y="464" class="dia__dim">Passwords came across with everything else, so every existing login still worked the next morning.</text>
+    <rect x="40" y="478" width="1120" height="104" rx="16" class="dia__box dia__box--coral"/>
+    <text x="64" y="512" class="dia__t">Nobody stopped working, and nobody had to sign up again.</text>
+    <text x="64" y="540" class="dia__dim">Passwords came across with everything else, so every existing login still worked the next morning.</text>
+    <text x="64" y="562" class="dia__dim">The old record shapes were kept for the other services, so they carried on reading as if nothing had moved.</text>
   </svg>
           </div>
           <figcaption>The move, start to finish — with the product still running the whole way through.</figcaption>
@@ -480,58 +492,68 @@
         <div class="case__media">
         <figure class="shot shot--flat reveal" data-anim="rise">
           <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1200 520" role="img" aria-labelledby="sigTitle sigDesc">
+            <svg class="dia" viewBox="0 0 1200 640" role="img" aria-labelledby="sigTitle sigDesc">
     <title id="sigTitle">Spotting the moment a lead becomes a user</title>
-    <desc id="sigDesc">A lead checked in March came back as not a user. Checking everyone again every day would cost too much, so each night the system picks the leads most likely to have changed — the companies that look like this customer's real users, oldest answers first — and re-checks only those. When one of them comes back as a user, the flip becomes a just-signed-up entry in the feed, a line in the daily Slack digest and a webhook, while the sales team still has a reason to call. The same machinery run in reverse catches customers who have stopped using a tool.</desc>
+    <desc id="sigDesc">A lead checked in March came back as not a user, and that answer was given to the customer. Asking every source about every lead again each day would cost far more than it is worth, so each night the system ranks who is worth asking again: companies that look like this customer's real users first, then whoever has been waiting longest for a fresh answer, all inside a fixed daily budget and whatever each source allows per day. Those leads are asked about again. When one comes back as a user, that flip becomes an entry in the just-signed-up feed, a line in the next morning's Slack digest and a webhook, while the sales team still has a reason to call. Run the same machinery in reverse and a user who has stopped counts as churn, on a slower cycle.</desc>
     <defs>
       <marker id="sigArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
     </defs>
 
     <text x="40" y="46" class="dia__h">Spotting the moment a lead becomes a user</text>
-    <text x="40" y="70" class="dia__k">THE FLIP IS THE PRODUCT — A LEAD THAT WAS NOT A USER, AND NOW IS</text>
+    <text x="40" y="70" class="dia__k">THE FLIP IS THE PRODUCT — A LEAD WHO WAS NOT A USER, AND NOW IS</text>
 
-    <!-- the timeline -->
-    <line x1="80" y1="250" x2="1120" y2="250" class="dia__rule"/>
+    <!-- timeline -->
+    <line x1="80" y1="268" x2="1120" y2="268" class="dia__rule"/>
     <g class="dia__sat">
-      <circle cx="200" cy="250" r="4"/><circle cx="380" cy="250" r="4"/><circle cx="560" cy="250" r="4"/>
-      <circle cx="740" cy="250" r="4"/><circle cx="920" cy="250" r="4"/>
+      <circle cx="210" cy="268" r="4"/><circle cx="420" cy="268" r="4"/><circle cx="630" cy="268" r="4"/><circle cx="840" cy="268" r="4"/>
     </g>
+    <text x="210" y="300" class="dia__dim" text-anchor="middle">March</text>
+    <text x="630" y="300" class="dia__dim" text-anchor="middle">every night since</text>
+    <text x="840" y="300" class="dia__dim" text-anchor="middle">the day it changed</text>
 
-    <!-- checked once, negative -->
-    <rect x="96" y="150" width="230" height="76" rx="14" class="dia__box dia__box--sky"/>
-    <text x="118" y="180" class="dia__t">Checked in March</text>
-    <text x="118" y="204" class="dia__dim">not a user — so we said so</text>
-    <path d="M200 230 L200 244" class="dia__arrow"/>
+    <rect x="96" y="152" width="230" height="86" rx="14" class="dia__box dia__box--sky"/>
+    <text x="118" y="184" class="dia__t">Asked once, in March</text>
+    <text x="118" y="208" class="dia__dim">not a user — and that is</text>
+    <text x="118" y="226" class="dia__dim">the answer the customer got</text>
+    <path d="M210 242 L210 262" class="dia__arrow"/>
 
-    <!-- the nightly pass -->
-    <rect x="420" y="290" width="360" height="118" rx="16" class="dia__card"/>
-    <circle cx="448" cy="322" r="8" class="dia__dot--yellow"/>
-    <text x="468" y="327" class="dia__k">EVERY NIGHT</text>
-    <text x="444" y="356" class="dia__t">Who is worth asking again?</text>
-    <text x="444" y="380" class="dia__dim">companies that look like this customer's real</text>
-    <text x="444" y="398" class="dia__dim">users, oldest answers first, inside a daily budget</text>
-    <path d="M560 286 L560 256" class="dia__arrow" marker-end="url(#sigArrow)"/>
+    <!-- the nightly ranking -->
+    <rect x="372" y="330" width="520" height="190" rx="16" class="dia__card"/>
+    <circle cx="400" cy="362" r="8" class="dia__dot--yellow"/>
+    <text x="420" y="367" class="dia__k">EVERY NIGHT · WHO IS WORTH ASKING AGAIN?</text>
+    <g>
+      <circle cx="402" cy="404" r="6" class="dia__dot--mint"/>
+      <text x="422" y="400" class="dia__t">Companies that look like this customer's users</text>
+      <text x="422" y="420" class="dia__dim">learned from the ones who already are, and ranked A to D</text>
+      <circle cx="402" cy="450" r="6" class="dia__dot--sky"/>
+      <text x="422" y="446" class="dia__t">Whoever has waited longest for a fresh answer</text>
+      <text x="422" y="466" class="dia__dim">nobody is asked about twice in the same short window</text>
+      <circle cx="402" cy="496" r="6" class="dia__dot--pink"/>
+      <text x="422" y="492" class="dia__t">As many as the day's budget allows</text>
+      <text x="422" y="512" class="dia__dim">and no more than each source will answer in a day</text>
+    </g>
+    <path d="M630 326 L630 278" class="dia__arrow" marker-end="url(#sigArrow)"/>
 
     <!-- the flip -->
-    <circle cx="740" cy="250" r="12" class="dia__champ"/>
-    <rect x="620" y="140" width="240" height="86" rx="14" class="dia__box dia__box--mint"/>
-    <text x="642" y="170" class="dia__t">Signed up</text>
-    <text x="642" y="194" class="dia__dim">the answer changed, and</text>
-    <text x="642" y="212" class="dia__dim">that is worth a phone call</text>
-    <path d="M740 232 L740 244" class="dia__arrow"/>
+    <circle cx="840" cy="268" r="12" class="dia__champ"/>
+    <rect x="720" y="150" width="240" height="88" rx="14" class="dia__box dia__box--mint"/>
+    <text x="742" y="182" class="dia__t">Now a user</text>
+    <text x="742" y="206" class="dia__dim">the answer changed — and</text>
+    <text x="742" y="224" class="dia__dim">that is worth a phone call</text>
+    <path d="M840 242 L840 262" class="dia__arrow"/>
 
     <!-- what the customer gets -->
-    <path d="M764 250 L906 250" class="dia__arrow" marker-end="url(#sigArrow)"/>
-    <rect x="920" y="150" width="240" height="200" rx="16" class="dia__card"/>
-    <text x="944" y="182" class="dia__k">THE SAME MORNING</text>
-    <circle cx="952" cy="214" r="6" class="dia__dot--mint"/><text x="970" y="219" class="dia__dim">in the “just signed up” feed</text>
-    <circle cx="952" cy="254" r="6" class="dia__dot--sky"/><text x="970" y="259" class="dia__dim">in the Slack digest</text>
-    <circle cx="952" cy="294" r="6" class="dia__dot--yellow"/><text x="970" y="299" class="dia__dim">and on a webhook, if they</text>
-    <text x="970" y="316" class="dia__dim">would rather pull it</text>
+    <path d="M864 268 L1004 268" class="dia__arrow" marker-end="url(#sigArrow)"/>
+    <rect x="1012" y="150" width="148" height="196" rx="16" class="dia__card"/>
+    <text x="1032" y="182" class="dia__k">BY MORNING</text>
+    <circle cx="1040" cy="214" r="6" class="dia__dot--mint"/><text x="1058" y="219" class="dia__dim">the feed</text>
+    <circle cx="1040" cy="252" r="6" class="dia__dot--sky"/><text x="1058" y="257" class="dia__dim">Slack digest</text>
+    <circle cx="1040" cy="290" r="6" class="dia__dot--yellow"/><text x="1058" y="295" class="dia__dim">a webhook,</text>
+    <text x="1058" y="312" class="dia__dim">if they pull</text>
 
-    <rect x="40" y="432" width="1120" height="68" rx="16" class="dia__box dia__box--coral"/>
-    <text x="64" y="464" class="dia__t">Run the same thing backwards and you get churn.</text>
-    <text x="64" y="488" class="dia__dim">A user who stops being one is the same flip in the other direction, on a slower cycle.</text>
+    <rect x="40" y="552" width="1120" height="68" rx="16" class="dia__box dia__box--coral"/>
+    <text x="64" y="584" class="dia__t">Run the same thing backwards and you get churn.</text>
+    <text x="64" y="608" class="dia__dim">A user who stops being one is the same flip in the other direction, on a slower cycle and a smaller share of the budget.</text>
   </svg>
           </div>
           <figcaption>How a signup gets spotted, and what the customer sees when it does.</figcaption>
@@ -576,9 +598,9 @@
         <div class="case__media">
         <figure class="shot shot--flat reveal" data-anim="rise">
           <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1200 540" role="img" aria-labelledby="detTitle detDesc">
+            <svg class="dia" viewBox="0 0 1200 640" role="img" aria-labelledby="detTitle detDesc">
     <title id="detTitle">The pipeline watches itself</title>
-    <desc id="detDesc">Every stage of the pipeline is watched: leads coming in, each vendor check, the classifier, the CRM and Sheets syncs, the dashboard and the customer digests. Most stages are fine. When one stops producing what it should, a message reaches Slack within minutes naming the thing, the real error and what to do about it — and only when the problem is new, so an ongoing one is not announced twice. An agent then takes the first look: it reads the codebase, works out the cause and comes back with a fix to approve, such as requeuing stuck work or a draft pull request.</desc>
+    <desc id="detDesc">Every stage of the pipeline is watched a few minutes apart: leads arriving, each source being asked, the classifier, the CRM and Sheets syncs, the dashboard and the customer digests. Four things are looked for: a queue that has stopped draining, a source that has gone quiet or started answering wrongly, a sync drifting out of date, and a customer digest that never went out. A source is proved by a daily known-answer test — ten leads whose real answer is already known, which the checker has to get right. When something is newly wrong, a message reaches Slack naming the thing, the real error and what to do about it; an explanation written by a model is checked against the facts first, and anything it invents is dropped. An agent then reads the codebase and comes back with a cause and a fix to approve, such as requeuing stuck work or a draft pull request. The rest of the time it says nothing but a daily summary.</desc>
     <defs>
       <marker id="detArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
     </defs>
@@ -587,40 +609,64 @@
     <text x="40" y="70" class="dia__k">A FAILURE USED TO BE SOMETHING THE CUSTOMER TOLD US ABOUT</text>
 
     <!-- the pipeline -->
-    <rect x="40" y="128" width="1120" height="86" rx="18" class="dia__box dia__box--sky"/>
+    <text x="40" y="112" class="dia__k">CHECKED EVERY FEW MINUTES, END TO END</text>
+    <rect x="40" y="124" width="1120" height="84" rx="18" class="dia__box dia__box--sky"/>
     <g>
-      <circle cx="140" cy="171" r="9" class="dia__dot--mint"/><text x="140" y="238" class="dia__dim" text-anchor="middle">leads in</text>
-      <circle cx="330" cy="171" r="9" class="dia__dot--mint"/><text x="330" y="238" class="dia__dim" text-anchor="middle">vendor checks</text>
-      <circle cx="520" cy="171" r="9" class="dia__dot--mint"/><text x="520" y="238" class="dia__dim" text-anchor="middle">classify</text>
-      <circle cx="710" cy="171" r="11" class="dia__champ"/><text x="710" y="238" class="dia__dim" text-anchor="middle">CRM &amp; Sheets sync</text>
-      <circle cx="900" cy="171" r="9" class="dia__dot--mint"/><text x="900" y="238" class="dia__dim" text-anchor="middle">dashboard</text>
-      <circle cx="1070" cy="171" r="9" class="dia__dot--mint"/><text x="1070" y="238" class="dia__dim" text-anchor="middle">digests</text>
-      <line x1="140" y1="171" x2="1070" y2="171" class="dia__net"/>
+      <line x1="140" y1="166" x2="1070" y2="166" class="dia__net"/>
+      <circle cx="140" cy="166" r="9" class="dia__dot--mint"/><text x="140" y="232" class="dia__dim" text-anchor="middle">leads in</text>
+      <circle cx="326" cy="166" r="9" class="dia__dot--mint"/><text x="326" y="232" class="dia__dim" text-anchor="middle">each source asked</text>
+      <circle cx="512" cy="166" r="9" class="dia__dot--mint"/><text x="512" y="232" class="dia__dim" text-anchor="middle">classify</text>
+      <circle cx="698" cy="166" r="12" class="dia__champ"/><text x="698" y="232" class="dia__dim" text-anchor="middle">CRM &amp; Sheets sync</text>
+      <circle cx="884" cy="166" r="9" class="dia__dot--mint"/><text x="884" y="232" class="dia__dim" text-anchor="middle">dashboard</text>
+      <circle cx="1070" cy="166" r="9" class="dia__dot--mint"/><text x="1070" y="232" class="dia__dim" text-anchor="middle">digests</text>
     </g>
-    <text x="64" y="112" class="dia__k">CHECKED EVERY FEW MINUTES</text>
+
+    <!-- what counts as wrong -->
+    <text x="40" y="282" class="dia__k">WHAT COUNTS AS WRONG</text>
+    <rect x="40" y="294" width="330" height="200" rx="16" class="dia__card"/>
+    <circle cx="68" cy="330" r="6" class="dia__dot--pink"/><text x="86" y="335" class="dia__dim">a queue that stopped draining</text>
+    <circle cx="68" cy="372" r="6" class="dia__dot--pink"/><text x="86" y="377" class="dia__dim">a source gone quiet, or newly</text>
+    <text x="86" y="394" class="dia__dim">answering wrongly</text>
+    <circle cx="68" cy="430" r="6" class="dia__dot--pink"/><text x="86" y="435" class="dia__dim">a sync drifting out of date</text>
+    <circle cx="68" cy="470" r="6" class="dia__dot--pink"/><text x="86" y="475" class="dia__dim">a customer digest that never went</text>
+
+    <!-- the known-answer test -->
+    <rect x="40" y="512" width="330" height="100" rx="16" class="dia__box dia__box--yellow"/>
+    <text x="64" y="544" class="dia__t">How a source is proved</text>
+    <text x="64" y="568" class="dia__dim">ten leads whose real answer we already</text>
+    <text x="64" y="586" class="dia__dim">know, asked daily — get those wrong and</text>
+    <text x="64" y="604" class="dia__dim">nothing else you say is trusted</text>
+
+    <path d="M698 246 C 698 270, 560 270, 560 292" class="dia__arrow" marker-end="url(#detArrow)"/>
 
     <!-- the alert -->
-    <path d="M710 252 L710 290" class="dia__arrow" marker-end="url(#detArrow)"/>
-    <rect x="300" y="296" width="430" height="150" rx="16" class="dia__card"/>
-    <circle cx="328" cy="328" r="8" class="dia__dot--pink"/>
-    <text x="348" y="333" class="dia__k">IN SLACK, WITHIN MINUTES</text>
-    <text x="324" y="364" class="dia__t">The one that stopped, and why</text>
-    <text x="324" y="390" class="dia__dim">the thing, the real error, and what to do about it</text>
-    <text x="324" y="412" class="dia__dim">only when it is new — an ongoing problem is</text>
-    <text x="324" y="430" class="dia__dim">not announced twice</text>
+    <rect x="402" y="294" width="372" height="200" rx="16" class="dia__card"/>
+    <circle cx="430" cy="326" r="8" class="dia__dot--pink"/>
+    <text x="450" y="331" class="dia__k">IN SLACK, WITHIN MINUTES</text>
+    <text x="426" y="364" class="dia__t">The one that stopped, and why</text>
+    <text x="426" y="390" class="dia__dim">the thing, the real error, the step it died on</text>
+    <text x="426" y="412" class="dia__dim">only when it is new — an ongoing problem</text>
+    <text x="426" y="430" class="dia__dim">is not announced twice</text>
+    <line x1="426" y1="448" x2="750" y2="448" class="dia__rule"/>
+    <text x="426" y="472" class="dia__dim">the plain-English explanation is checked against</text>
+    <text x="426" y="488" class="dia__dim">the facts; anything invented is dropped</text>
 
-    <path d="M738 370 L786 370" class="dia__arrow" marker-end="url(#detArrow)"/>
+    <path d="M782 394 L812 394" class="dia__arrow" marker-end="url(#detArrow)"/>
 
     <!-- the agent -->
-    <rect x="794" y="296" width="366" height="150" rx="16" class="dia__box dia__box--mint"/>
-    <text x="818" y="328" class="dia__k">THEN AN AGENT LOOKS FIRST</text>
-    <text x="818" y="358" class="dia__t">A cause, and a fix to approve</text>
-    <text x="818" y="384" class="dia__dim">it reads the codebase, works out what</text>
-    <text x="818" y="402" class="dia__dim">actually broke, and comes back with</text>
-    <text x="818" y="420" class="dia__dim">the stuck work requeued or a draft PR</text>
+    <rect x="820" y="294" width="340" height="200" rx="16" class="dia__box dia__box--mint"/>
+    <text x="844" y="326" class="dia__k">THEN AN AGENT LOOKS FIRST</text>
+    <text x="844" y="358" class="dia__t">A cause, and a fix to approve</text>
+    <text x="844" y="384" class="dia__dim">it reads the codebase against the open</text>
+    <text x="844" y="402" class="dia__dim">case and works out what actually broke</text>
+    <circle cx="852" cy="432" r="5" class="dia__dot--mint"/><text x="868" y="437" class="dia__dim">requeue the stuck work</text>
+    <circle cx="852" cy="458" r="5" class="dia__dot--sky"/><text x="868" y="463" class="dia__dim">run a known runbook</text>
+    <circle cx="852" cy="484" r="5" class="dia__dot--yellow"/><text x="868" y="489" class="dia__dim">or a draft pull request to review</text>
 
-    <text x="40" y="492" class="dia__k">THE REST OF THE TIME</text>
-    <text x="40" y="518" class="dia__dim">It says nothing at all — which is the point. A message from it means something.</text>
+    <rect x="402" y="512" width="758" height="100" rx="16" class="dia__box dia__box--coral"/>
+    <text x="426" y="544" class="dia__t">The rest of the time it says nothing at all.</text>
+    <text x="426" y="570" class="dia__dim">Just a daily summary: every source still answering correctly, every queue draining, every sync fresh.</text>
+    <text x="426" y="592" class="dia__dim">That silence is the feature — a message from it means something.</text>
   </svg>
           </div>
           <figcaption>From a failure nobody would have noticed to a message someone can act on, within minutes.</figcaption>
