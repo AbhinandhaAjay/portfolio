@@ -385,10 +385,26 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
   color: var(--coral); opacity: .22; pointer-events: none; user-select: none;
 }
 .case__head h3 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1; }
-.case__cols {
-  display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
-  gap: 24px clamp(28px, 4vw, 64px); margin-top: clamp(20px, 3vw, 32px); align-items: start;
+/* One text flow with the media floated into a corner, so the lede, the outcome
+   and the paragraphs run beside the picture and then continue underneath it.
+   Two columns left a tall empty block under whichever column ran out first. */
+.case__cols { display: block; margin-top: clamp(20px, 3vw, 32px); }
+.case__media {
+  float: right; width: 56%; margin: 6px 0 24px clamp(28px, 3.4vw, 52px);
 }
+.case:nth-of-type(even) .case__media {           /* alternate sides down the page */
+  float: left; margin: 6px clamp(28px, 3.4vw, 52px) 24px 0;
+}
+.case__media .shot { margin: 0; max-width: none; }
+.case__media .shot + .shot { margin-top: 18px; }
+.case__media .shot--narrow { width: 82%; margin-inline: auto; }
+/* a supporting screenshot sits under the text, in the column the float leaves
+   free, instead of letting that column trail off into blank page */
+.case__cols > .shot { display: flow-root; width: 42%; margin: 24px 0 0; }
+.case:nth-of-type(even) .case__cols > .shot { margin-left: auto; }
+.case__lead { margin-bottom: 18px; }
+.case__wide { clear: both; }
+.case__cols::after { content: ""; display: block; clear: both; }
 .case__lead .lede { font-size: 1.3rem; line-height: 1.45; font-weight: 500; color: var(--ink); }
 .case__body p { color: var(--ink-2); }
 .case__body p + p { margin-top: 14px; }
@@ -396,7 +412,8 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 .case__body .chips { margin-top: 20px; }
 .case__wide { margin-top: clamp(24px, 3vw, 40px); }
 .case__out {                     /* the one-line result */
-  display: inline-flex; align-items: baseline; gap: 10px; margin-top: 20px;
+  display: flex;                 /* block-level, so a long one wraps beside the picture
+                                    instead of dropping below it and leaving a hole */ align-items: baseline; gap: 10px; margin-top: 20px;
   padding: 10px 16px 10px 12px; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow-sm);
   font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.45;
 }
@@ -406,9 +423,6 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 
 /* media: full width of the column, under the text */
 .case > .shot { margin-top: clamp(20px, 2.6vw, 32px); max-width: 720px; margin-inline: auto; }
-.case > .shot--flat { max-width: 820px; }           /* diagrams need the width to stay legible */
-.case > .shot--narrow { max-width: 520px; }         /* a supporting screenshot, not the headline */
-.case > .shot + .shot { margin-top: clamp(18px, 2.4vw, 28px); }
 .shot--two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .shot--two figcaption { grid-column: 1 / -1; }
 
@@ -421,7 +435,7 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
 }
 .shot:hover .shot__frame { box-shadow: var(--shadow-lg); }
 .shot__frame img {
-  width: 100%; height: auto; max-height: 320px; object-fit: cover; object-position: 50% 0;
+  width: 100%; height: auto; max-height: 360px; object-fit: cover; object-position: 50% 0;
   will-change: transform; transform: scale(1.06);
 }
 .feature__shot, .video { transform: perspective(1200px) rotateX(var(--lean, 0deg)); will-change: transform; }
@@ -506,10 +520,19 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
 }
 .feature__quote { color: var(--accent-ink); font-style: italic; }
 
-.tiles {                          /* a grid, not columns: columns filled one at a time and left holes */
-  list-style: none; padding: 0; margin: 0; perspective: 1400px;
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch;
+/* the company, named where someone would look for it */
+.about__site { margin-top: 22px; font-size: 14px; color: var(--muted); }
+.about__site a {
+  font-family: var(--display); font-size: 1.15rem; color: var(--accent-ink);
+  border-bottom: 2px solid var(--coral-t); padding-bottom: 2px; transition: border-color .3s ease;
 }
+.about__site a:hover { border-color: var(--coral); }
+
+.tiles {                          /* six tracks, so a wide shot can take more of the row than a square one */
+  list-style: none; padding: 0; margin: 0; perspective: 1400px;
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; align-items: stretch;
+}
+.tile { grid-column: span var(--span, 2); }
 .tile {
   position: relative; overflow: hidden;
   background: var(--surface); border: var(--border); border-radius: var(--r-lg); box-shadow: var(--shadow);
@@ -523,8 +546,8 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
 }
 .tile:nth-child(6n+1) { --edge: var(--pink); }  .tile:nth-child(6n+2) { --edge: var(--coral); } .tile:nth-child(6n+3) { --edge: var(--yellow); }
 .tile:nth-child(6n+4) { --edge: var(--lime); }  .tile:nth-child(6n+5) { --edge: var(--mint); }  .tile:nth-child(6n+6) { --edge: var(--sky); }
-.tile img {                       /* one shape for every tile, so rows line up */
-  width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 0;
+.tile img {                       /* never cropped: a face cut in half reads as a mistake */
+  width: 100%; height: auto;
   border-radius: var(--r-sm); border: var(--border);
 }
 .tile p { padding: 2px 4px 4px; font-size: 13px; color: var(--ink-2); line-height: 1.5; }
@@ -749,6 +772,7 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
   .polaroid { right: 8px; bottom: -24px; }
   .feature { grid-template-columns: 1fr; }
   .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile { grid-column: span 1; }
   .train { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .train > .card:nth-child(4) { grid-column: auto / span 2; }
   .train > .card:nth-child(5) { grid-column: 2 / span 2; }
@@ -760,12 +784,15 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
   .nav__in { height: 64px; }
   .polaroid { width: 96px; }
   .head::before { left: -24px; }
-  .case__cols { grid-template-columns: 1fr; }
+  .case__cols { display: block; }
+  .case__media { float: none; width: 100%; margin: 0 0 24px; }
+  .case:nth-of-type(even) .case__media { float: none; margin: 0 0 24px; }
   .case__head { padding: 36px 0 0 16px; }
   .case__n { font-size: clamp(4.5rem, 22vw, 7rem); }
   .shot--two { grid-template-columns: 1fr; }
   .facts { grid-template-columns: 1fr; }
   .tiles { grid-template-columns: 1fr; }
+  .tile { grid-column: 1 / -1; }
   .train { grid-template-columns: 1fr; }
   .train > .card, .train > .card:nth-child(4), .train > .card:nth-child(5) { grid-column: 1 / -1; }
   .stack { grid-template-columns: 1fr; }

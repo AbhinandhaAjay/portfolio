@@ -172,41 +172,41 @@
     </article>
 
     <ul class="tiles">
-      <li class="tile reveal" data-anim="fan" data-shot data-cursor="Zoom">
+      <li class="tile reveal" data-anim="fan" style="--span: 4; --d:0" data-shot data-cursor="Zoom">
         <img src="assets/work/slack/deepgram-call.webp" width="1880" height="735"
              alt="Video call with Deepgram's team, configuring their CRM sync"
              loading="lazy" decoding="async">
         <p><b>Deepgram · CRM working session</b> Configured the CRM sync live with Deepgram's team over video.</p>
       </li>
-      <li class="tile reveal" data-anim="fan" style="--d:1" data-shot data-cursor="Zoom">
-        <img src="assets/work/slack/hyperbound-call.webp" width="1920" height="1080"
-             alt="Video call onboarding HyperBound's team on the Data Explorer, with prospect details blurred"
-             loading="lazy" decoding="async">
-        <p><b>HyperBound · Onboarding</b> Walked HyperBound's team through the Data Explorer on a shared screen; prospect details are blurred.</p>
-      </li>
-      <li class="tile reveal" data-anim="fan" style="--d:2" data-shot data-cursor="Zoom">
-        <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
-             alt="Slack thread with Blitzy: a signup alert for a target account, met with thanks"
-             loading="lazy" decoding="async">
-        <p><b>Blitzy · Signup alerts</b> Flagged a new signup at one of Blitzy's target accounts ahead of the feature's launch. <em>“This is amazing thank you.”</em></p>
-      </li>
-      <li class="tile reveal" data-anim="fan" style="--d:3" data-shot data-cursor="Zoom">
+      <li class="tile reveal" data-anim="fan" style="--span: 2; --d:1" data-shot data-cursor="Zoom">
         <img src="assets/work/slack/forty-contacts.webp" width="859" height="733"
              alt="Slack thread with Deepgram about preserving existing lead attribution; their campaign names are blurred"
              loading="lazy" decoding="async">
         <p><b>Deepgram · Lead attribution</b> Found forty contacts already carrying attribution from Deepgram's own campaigns, raised it instead of overwriting, and shipped the option they chose.</p>
       </li>
-      <li class="tile reveal" data-anim="fan" style="--d:4" data-shot data-cursor="Zoom">
-        <img src="assets/work/slack/cross-sell.webp" width="688" height="364"
-             alt="Slack thread with HyperBound: recommending a workflow built for another customer"
+      <li class="tile reveal" data-anim="fan" style="--span: 4; --d:2" data-shot data-cursor="Zoom">
+        <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
+             alt="Slack thread with Blitzy: a signup alert for a target account, met with thanks"
              loading="lazy" decoding="async">
-        <p><b>HyperBound · Workflow recommendation</b> Spotted a workflow built for another customer that fit HyperBound's process and proposed extending it to them. <em>“Agreed. Let us get back to you.”</em></p>
+        <p><b>Blitzy · Signup alerts</b> Flagged a new signup at one of Blitzy's target accounts ahead of the feature's launch. <em>“This is amazing thank you.”</em></p>
       </li>
-      <li class="tile reveal" data-anim="fan" style="--d:5" data-shot data-cursor="Zoom">
+      <li class="tile reveal" data-anim="fan" style="--span: 2; --d:0" data-shot data-cursor="Zoom">
         <img src="assets/work/slack/hubspot-spec.webp" width="1042" height="798"
              alt="Slack thread: specifying and backfilling a HubSpot classification property"
              loading="lazy" decoding="async">
         <p><b>HubSpot · Classification property</b> Specified the property, coordinated its setup with the customer and backfilled every existing record. <em>“All set ✅”</em></p>
+      </li>
+      <li class="tile reveal" data-anim="fan" style="--span: 3; --d:1" data-shot data-cursor="Zoom">
+        <img src="assets/work/slack/hyperbound-call.webp" width="1920" height="1080"
+             alt="Video call onboarding HyperBound's team on the Data Explorer, with prospect details blurred"
+             loading="lazy" decoding="async">
+        <p><b>HyperBound · Onboarding</b> Walked HyperBound's team through the Data Explorer on a shared screen; prospect details are blurred.</p>
+      </li>
+      <li class="tile reveal" data-anim="fan" style="--span: 3; --d:2" data-shot data-cursor="Zoom">
+        <img src="assets/work/slack/cross-sell.webp" width="688" height="364"
+             alt="Slack thread with HyperBound: recommending a workflow built for another customer"
+             loading="lazy" decoding="async">
+        <p><b>HyperBound · Workflow recommendation</b> Spotted a workflow built for another customer that fit HyperBound's process and proposed extending it to them. <em>“Agreed. Let us get back to you.”</em></p>
       </li>
     </ul>
   </div>
@@ -235,6 +235,15 @@
         <h3 data-split="words" class="reveal">Customer dashboard</h3>
       </header>
       <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot reveal" data-anim="rise" data-shot data-cursor="Zoom">
+          <div class="shot__frame" data-parallax="0.08">
+            <img src="assets/work/huntd-explorer-companies.webp" width="1896" height="826"
+                 alt="The Data Explorer, companies view: 3,157 companies across seven sources with per-source usage ticks; company names and domains are blurred"
+                 loading="lazy" decoding="async">
+          </div>
+        </figure>
+        </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
           <p class="lede">The product customers log into every day. I owned it end to end — interface, API and schema.</p>
           <p class="case__out"><span>Outcome</span> One dashboard every customer works in daily, with search and filters over millions of leads that stay fast</p>
@@ -264,13 +273,6 @@
           <li>React</li><li>TypeScript</li><li>Node</li><li>Express</li><li>PostgreSQL</li><li>Supabase</li><li>Recharts</li><li>Leaflet</li><li>Infisical</li>
         </ul>
       </div>
-      <figure class="shot reveal" data-anim="rise" data-shot data-cursor="Zoom">
-        <div class="shot__frame" data-parallax="0.08">
-          <img src="assets/work/huntd-explorer-companies.webp" width="1896" height="826"
-               alt="The Data Explorer, companies view: 3,157 companies across seven sources with per-source usage ticks; company names and domains are blurred"
-               loading="lazy" decoding="async">
-        </div>
-      </figure>
     </article>
 
     <article class="case case--stack" id="case-02">
@@ -279,6 +281,106 @@
         <h3 data-split="words" class="reveal">MongoDB to Postgres</h3>
       </header>
       <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 620" role="img" aria-labelledby="migTitle migDesc">
+              <title id="migTitle">MongoDB to Postgres migration</title>
+              <desc id="migDesc">Sixteen MongoDB Atlas collections, about 3.8 million documents, streamed in 5,000-document chunks through a one-pass ETL into Supabase Postgres, collection by collection. Today the database is 21 GB on Postgres 17: 5.1 million typed action rows, 2.7 million lead rows, 1.5 million verifications, and a 2.4-million-row read model the dashboard reads. A second hop moved the whole database from Supabase Cloud to a self-hosted Supabase on our own server with a connection-string swap.</desc>
+              <defs>
+                <marker id="diaArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+              </defs>
+
+              <!-- threads row to row, behind the ETL cards -->
+              <g stroke-width="2" opacity=".55">
+                <path d="M356 168 L844 168" class="dia__thr dia__thr--mint"/>
+                <path d="M356 208 L844 208" class="dia__thr dia__thr--sky"/>
+                <path d="M356 248 L844 248" class="dia__thr dia__thr--yellow"/>
+                <path d="M356 288 L844 288" class="dia__thr"/>
+                <path d="M356 328 L844 328" class="dia__thr"/>
+                <path d="M356 368 L844 368" class="dia__thr"/>
+                <path d="M356 408 L844 408" class="dia__thr"/>
+              </g>
+
+              <!-- MongoDB, before -->
+              <text x="40" y="48" class="dia__h">MongoDB</text>
+              <text x="40" y="70" class="dia__k">BEFORE · ONE ATLAS CLUSTER</text>
+              <rect x="40" y="92" width="320" height="480" rx="18" class="dia__box dia__box--sky"/>
+              <g>
+                <circle cx="66" cy="168" r="6" class="dia__dot--mint"/><text x="82" y="172" class="dia__t">csvrows</text><text x="336" y="172" class="dia__num" text-anchor="end">1.27M</text>
+                <circle cx="66" cy="208" r="6" class="dia__dot--sky"/><text x="82" y="212" class="dia__t">classification.actions</text>
+                <circle cx="66" cy="248" r="6" class="dia__dot--yellow"/><text x="82" y="252" class="dia__t">test.user_verifications</text>
+                <circle cx="66" cy="288" r="5" class="dia__dot"/><text x="82" y="292" class="dia__t">csvmetadatas · csvdatas</text>
+                <circle cx="66" cy="328" r="5" class="dia__dot"/><text x="82" y="332" class="dia__t">company · linkedin caches</text>
+                <circle cx="66" cy="368" r="5" class="dia__dot"/><text x="82" y="372" class="dia__t">users · sessions</text>
+                <circle cx="66" cy="408" r="5" class="dia__dot"/><text x="82" y="412" class="dia__t">source_configs · dailyquotas</text>
+              </g>
+              <text x="64" y="128" class="dia__dim">16 collections · ~3.8M documents</text>
+              <line x1="64" y1="440" x2="336" y2="440" class="dia__rule"/>
+              <text x="64" y="470" class="dia__dim">One document shape per service,</text>
+              <text x="64" y="488" class="dia__dim">every read a full document.</text>
+              <text x="64" y="518" class="dia__dim">The ceiling: filtering millions of rows</text>
+              <text x="64" y="536" class="dia__dim">by title, seniority, industry and source.</text>
+
+              <!-- ETL, one pass -->
+              <text x="600" y="48" class="dia__h" text-anchor="middle">One-pass ETL</text>
+              <text x="600" y="70" class="dia__k" text-anchor="middle">SCRIPTS/ETL.TS · ~3.8M DOCUMENTS</text>
+              <path d="M362 318 L438 318" class="dia__arrow" marker-end="url(#diaArrow)"/>
+              <path d="M762 318 L838 318" class="dia__arrow" marker-end="url(#diaArrow)"/>
+              <g>
+                <rect x="446" y="136" width="308" height="60" rx="14" class="dia__card"/>
+                <text x="466" y="161" class="dia__t">1 · Stream</text><text x="466" y="181" class="dia__dim">5,000-document chunks per collection</text>
+                <path d="M600 196 L600 218" class="dia__arrow" marker-end="url(#diaArrow)"/>
+                <rect x="446" y="222" width="308" height="60" rx="14" class="dia__card"/>
+                <text x="466" y="247" class="dia__t">2 · Convert BSON → JSON-safe</text><text x="466" y="267" class="dia__dim">ObjectId · Decimal128 · Long · Binary · Date</text>
+                <path d="M600 282 L600 304" class="dia__arrow" marker-end="url(#diaArrow)"/>
+                <rect x="446" y="308" width="308" height="60" rx="14" class="dia__card"/>
+                <text x="466" y="333" class="dia__t">3 · COPY … FORMAT csv</text><text x="466" y="353" class="dia__dim">small collections first, csvrows last</text>
+                <path d="M600 368 L600 390" class="dia__arrow" marker-end="url(#diaArrow)"/>
+                <rect x="446" y="394" width="308" height="60" rx="14" class="dia__card"/>
+                <text x="466" y="419" class="dia__t">4 · Parity checks, then cut over</text><text x="466" y="439" class="dia__dim">counts and samples compared, reads flipped</text>
+              </g>
+              <text x="600" y="484" class="dia__dim" text-anchor="middle">bcrypt hashes carried over — every login kept working</text>
+
+              <!-- hop 2 -->
+              <rect x="446" y="504" width="308" height="68" rx="14" class="dia__card dia__card--dash"/>
+              <text x="466" y="527" class="dia__k">HOP 2 · SUPABASE CLOUD TO OUR OWN SERVER</text>
+              <text x="466" y="547" class="dia__dim">same schema, 140 migrations replayed,</text>
+              <text x="466" y="563" class="dia__dim">one connection string swapped</text>
+
+              <!-- Postgres, now -->
+              <text x="840" y="48" class="dia__h">Supabase Postgres</text>
+              <text x="840" y="70" class="dia__k">NOW · SELF-HOSTED · PG 17 · 21 GB</text>
+              <rect x="840" y="92" width="320" height="480" rx="18" class="dia__box dia__box--mint"/>
+              <text x="864" y="128" class="dia__dim">classification schema · 148 tables · 18 GB</text>
+              <g>
+                <circle cx="866" cy="168" r="6" class="dia__dot--mint"/><text x="882" y="172" class="dia__t">csvrows</text><text x="1136" y="172" class="dia__num" text-anchor="end">2.7M</text>
+                <circle cx="866" cy="208" r="6" class="dia__dot--sky"/><text x="882" y="212" class="dia__t">actions</text><text x="1136" y="212" class="dia__num" text-anchor="end">5.1M · typed</text>
+                <circle cx="866" cy="248" r="6" class="dia__dot--yellow"/><text x="882" y="252" class="dia__t">user_verifications</text><text x="1136" y="252" class="dia__num" text-anchor="end">1.5M</text>
+                <circle cx="866" cy="288" r="5" class="dia__dot"/><text x="882" y="292" class="dia__t">csvmetadatas</text><text x="1136" y="292" class="dia__dim" text-anchor="end">1.1k</text>
+                <circle cx="866" cy="328" r="5" class="dia__dot"/><text x="882" y="332" class="dia__t">linkedin_cache</text><text x="1136" y="332" class="dia__dim" text-anchor="end">75k</text>
+                <circle cx="866" cy="368" r="5" class="dia__dot"/><text x="882" y="372" class="dia__t">users · sessions</text><text x="1136" y="372" class="dia__dim" text-anchor="end">huntd_clients</text>
+                <circle cx="866" cy="408" r="5" class="dia__dot"/><text x="882" y="412" class="dia__t">source_configs · dailyquotas</text>
+              </g>
+              <rect x="856" y="432" width="288" height="88" rx="12" class="dia__box dia__box--yellow"/>
+              <text x="872" y="454" class="dia__k">READ MODEL · WHAT THE DASHBOARD READS</text>
+              <circle cx="878" cy="478" r="5" class="dia__ring"/><text x="892" y="482" class="dia__t">csvrow_display</text><text x="1128" y="482" class="dia__num" text-anchor="end">2.4M · 31 cols</text>
+              <circle cx="878" cy="504" r="5" class="dia__ring"/><text x="892" y="508" class="dia__t">csvrow_sources</text><text x="1128" y="508" class="dia__num" text-anchor="end">1.6M</text>
+              <text x="864" y="544" class="dia__dim">+ proximity · 20 tables · Warmest Path</text>
+              <text x="864" y="560" class="dia__dim">+ 140 more: signals, sync ledgers, caches</text>
+
+              <!-- legend -->
+              <g>
+                <circle cx="46" cy="600" r="5" class="dia__dot--sky"/><text x="58" y="604" class="dia__dim">typed columns</text>
+                <circle cx="180" cy="600" r="5" class="dia__dot--mint"/><text x="192" y="604" class="dia__dim">id + doc jsonb with generated columns</text>
+                <circle cx="470" cy="600" r="5" class="dia__ring"/><text x="482" y="604" class="dia__dim">projected read model</text>
+                <text x="1160" y="604" class="dia__dim" text-anchor="end">sizes from the production catalogue, Sep 2026</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption>How the data moved: MongoDB Atlas → Supabase Postgres, then from Supabase Cloud to our own server.</figcaption>
+        </figure>
+        </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
           <p class="lede">The data layer under the dashboard, moved while customers kept using it.</p>
           <p class="case__out"><span>Outcome</span> Zero downtime; every existing login kept working</p>
@@ -303,104 +405,6 @@
           </ul>
         </div>
       </div>
-      <figure class="shot shot--flat reveal" data-anim="rise">
-        <div class="shot__frame shot__frame--dia">
-          <svg class="dia" viewBox="0 0 1200 620" role="img" aria-labelledby="migTitle migDesc">
-            <title id="migTitle">MongoDB to Postgres migration</title>
-            <desc id="migDesc">Sixteen MongoDB Atlas collections, about 3.8 million documents, streamed in 5,000-document chunks through a one-pass ETL into Supabase Postgres, collection by collection. Today the database is 21 GB on Postgres 17: 5.1 million typed action rows, 2.7 million lead rows, 1.5 million verifications, and a 2.4-million-row read model the dashboard reads. A second hop moved the whole database from Supabase Cloud to a self-hosted Supabase on our own server with a connection-string swap.</desc>
-            <defs>
-              <marker id="diaArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-            </defs>
-
-            <!-- threads row to row, behind the ETL cards -->
-            <g stroke-width="2" opacity=".55">
-              <path d="M356 168 L844 168" class="dia__thr dia__thr--mint"/>
-              <path d="M356 208 L844 208" class="dia__thr dia__thr--sky"/>
-              <path d="M356 248 L844 248" class="dia__thr dia__thr--yellow"/>
-              <path d="M356 288 L844 288" class="dia__thr"/>
-              <path d="M356 328 L844 328" class="dia__thr"/>
-              <path d="M356 368 L844 368" class="dia__thr"/>
-              <path d="M356 408 L844 408" class="dia__thr"/>
-            </g>
-
-            <!-- MongoDB, before -->
-            <text x="40" y="48" class="dia__h">MongoDB</text>
-            <text x="40" y="70" class="dia__k">BEFORE · ONE ATLAS CLUSTER</text>
-            <rect x="40" y="92" width="320" height="480" rx="18" class="dia__box dia__box--sky"/>
-            <g>
-              <circle cx="66" cy="168" r="6" class="dia__dot--mint"/><text x="82" y="172" class="dia__t">csvrows</text><text x="336" y="172" class="dia__num" text-anchor="end">1.27M</text>
-              <circle cx="66" cy="208" r="6" class="dia__dot--sky"/><text x="82" y="212" class="dia__t">classification.actions</text>
-              <circle cx="66" cy="248" r="6" class="dia__dot--yellow"/><text x="82" y="252" class="dia__t">test.user_verifications</text>
-              <circle cx="66" cy="288" r="5" class="dia__dot"/><text x="82" y="292" class="dia__t">csvmetadatas · csvdatas</text>
-              <circle cx="66" cy="328" r="5" class="dia__dot"/><text x="82" y="332" class="dia__t">company · linkedin caches</text>
-              <circle cx="66" cy="368" r="5" class="dia__dot"/><text x="82" y="372" class="dia__t">users · sessions</text>
-              <circle cx="66" cy="408" r="5" class="dia__dot"/><text x="82" y="412" class="dia__t">source_configs · dailyquotas</text>
-            </g>
-            <text x="64" y="128" class="dia__dim">16 collections · ~3.8M documents</text>
-            <line x1="64" y1="440" x2="336" y2="440" class="dia__rule"/>
-            <text x="64" y="470" class="dia__dim">One document shape per service,</text>
-            <text x="64" y="488" class="dia__dim">every read a full document.</text>
-            <text x="64" y="518" class="dia__dim">The ceiling: filtering millions of rows</text>
-            <text x="64" y="536" class="dia__dim">by title, seniority, industry and source.</text>
-
-            <!-- ETL, one pass -->
-            <text x="600" y="48" class="dia__h" text-anchor="middle">One-pass ETL</text>
-            <text x="600" y="70" class="dia__k" text-anchor="middle">SCRIPTS/ETL.TS · ~3.8M DOCUMENTS</text>
-            <path d="M362 318 L438 318" class="dia__arrow" marker-end="url(#diaArrow)"/>
-            <path d="M762 318 L838 318" class="dia__arrow" marker-end="url(#diaArrow)"/>
-            <g>
-              <rect x="446" y="136" width="308" height="60" rx="14" class="dia__card"/>
-              <text x="466" y="161" class="dia__t">1 · Stream</text><text x="466" y="181" class="dia__dim">5,000-document chunks per collection</text>
-              <path d="M600 196 L600 218" class="dia__arrow" marker-end="url(#diaArrow)"/>
-              <rect x="446" y="222" width="308" height="60" rx="14" class="dia__card"/>
-              <text x="466" y="247" class="dia__t">2 · Convert BSON → JSON-safe</text><text x="466" y="267" class="dia__dim">ObjectId · Decimal128 · Long · Binary · Date</text>
-              <path d="M600 282 L600 304" class="dia__arrow" marker-end="url(#diaArrow)"/>
-              <rect x="446" y="308" width="308" height="60" rx="14" class="dia__card"/>
-              <text x="466" y="333" class="dia__t">3 · COPY … FORMAT csv</text><text x="466" y="353" class="dia__dim">small collections first, csvrows last</text>
-              <path d="M600 368 L600 390" class="dia__arrow" marker-end="url(#diaArrow)"/>
-              <rect x="446" y="394" width="308" height="60" rx="14" class="dia__card"/>
-              <text x="466" y="419" class="dia__t">4 · Parity checks, then cut over</text><text x="466" y="439" class="dia__dim">counts and samples compared, reads flipped</text>
-            </g>
-            <text x="600" y="484" class="dia__dim" text-anchor="middle">bcrypt hashes carried over — every login kept working</text>
-
-            <!-- hop 2 -->
-            <rect x="446" y="504" width="308" height="68" rx="14" class="dia__card dia__card--dash"/>
-            <text x="466" y="527" class="dia__k">HOP 2 · SUPABASE CLOUD TO OUR OWN SERVER</text>
-            <text x="466" y="547" class="dia__dim">same schema, 140 migrations replayed,</text>
-            <text x="466" y="563" class="dia__dim">one connection string swapped</text>
-
-            <!-- Postgres, now -->
-            <text x="840" y="48" class="dia__h">Supabase Postgres</text>
-            <text x="840" y="70" class="dia__k">NOW · SELF-HOSTED · PG 17 · 21 GB</text>
-            <rect x="840" y="92" width="320" height="480" rx="18" class="dia__box dia__box--mint"/>
-            <text x="864" y="128" class="dia__dim">classification schema · 148 tables · 18 GB</text>
-            <g>
-              <circle cx="866" cy="168" r="6" class="dia__dot--mint"/><text x="882" y="172" class="dia__t">csvrows</text><text x="1136" y="172" class="dia__num" text-anchor="end">2.7M</text>
-              <circle cx="866" cy="208" r="6" class="dia__dot--sky"/><text x="882" y="212" class="dia__t">actions</text><text x="1136" y="212" class="dia__num" text-anchor="end">5.1M · typed</text>
-              <circle cx="866" cy="248" r="6" class="dia__dot--yellow"/><text x="882" y="252" class="dia__t">user_verifications</text><text x="1136" y="252" class="dia__num" text-anchor="end">1.5M</text>
-              <circle cx="866" cy="288" r="5" class="dia__dot"/><text x="882" y="292" class="dia__t">csvmetadatas</text><text x="1136" y="292" class="dia__dim" text-anchor="end">1.1k</text>
-              <circle cx="866" cy="328" r="5" class="dia__dot"/><text x="882" y="332" class="dia__t">linkedin_cache</text><text x="1136" y="332" class="dia__dim" text-anchor="end">75k</text>
-              <circle cx="866" cy="368" r="5" class="dia__dot"/><text x="882" y="372" class="dia__t">users · sessions</text><text x="1136" y="372" class="dia__dim" text-anchor="end">huntd_clients</text>
-              <circle cx="866" cy="408" r="5" class="dia__dot"/><text x="882" y="412" class="dia__t">source_configs · dailyquotas</text>
-            </g>
-            <rect x="856" y="432" width="288" height="88" rx="12" class="dia__box dia__box--yellow"/>
-            <text x="872" y="454" class="dia__k">READ MODEL · WHAT THE DASHBOARD READS</text>
-            <circle cx="878" cy="478" r="5" class="dia__ring"/><text x="892" y="482" class="dia__t">csvrow_display</text><text x="1128" y="482" class="dia__num" text-anchor="end">2.4M · 31 cols</text>
-            <circle cx="878" cy="504" r="5" class="dia__ring"/><text x="892" y="508" class="dia__t">csvrow_sources</text><text x="1128" y="508" class="dia__num" text-anchor="end">1.6M</text>
-            <text x="864" y="544" class="dia__dim">+ proximity · 20 tables · Warmest Path</text>
-            <text x="864" y="560" class="dia__dim">+ 140 more: signals, sync ledgers, caches</text>
-
-            <!-- legend -->
-            <g>
-              <circle cx="46" cy="600" r="5" class="dia__dot--sky"/><text x="58" y="604" class="dia__dim">typed columns</text>
-              <circle cx="180" cy="600" r="5" class="dia__dot--mint"/><text x="192" y="604" class="dia__dim">id + doc jsonb with generated columns</text>
-              <circle cx="470" cy="600" r="5" class="dia__ring"/><text x="482" y="604" class="dia__dim">projected read model</text>
-              <text x="1160" y="604" class="dia__dim" text-anchor="end">sizes from the production catalogue, Sep 2026</text>
-            </g>
-          </svg>
-        </div>
-        <figcaption>How the data moved: MongoDB Atlas → Supabase Postgres, then from Supabase Cloud to our own server.</figcaption>
-      </figure>
     </article>
 
     <article class="case" id="case-03">
@@ -409,6 +413,84 @@
         <h3 data-split="words" class="reveal">CRM &amp; GTM integrations</h3>
       </header>
       <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 470" role="img" aria-labelledby="crmTitle crmDesc">
+              <title id="crmTitle">How the CRM sync works</title>
+              <desc id="crmDesc">People a customer filters in the dashboard flow through one sync engine into HubSpot contacts and companies with custom fields, Salesforce contacts and accounts, or Google Sheets grouped by account. Every record carries a content hash so unchanged records are skipped; failures retry with backoff and surface in the admin panel; a contact the customer deleted is never recreated; a ledger records what went where.</desc>
+              <defs>
+                <marker id="crmArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+              </defs>
+
+              <text x="40" y="44" class="dia__h">One engine, three destinations</text>
+              <text x="40" y="68" class="dia__k">WHAT HAPPENS TO EVERY RECORD</text>
+
+              <!-- source -->
+              <text x="40" y="92" class="dia__k">FROM THE DASHBOARD</text>
+              <rect x="40" y="104" width="250" height="150" rx="16" class="dia__box dia__box--sky"/>
+              <text x="62" y="134" class="dia__t">The people you filtered</text>
+              <text x="62" y="160" class="dia__dim">name · email · company</text>
+              <text x="62" y="180" class="dia__dim">title · seniority · source</text>
+              <text x="62" y="208" class="dia__dim">saved searches, on a schedule</text>
+              <text x="62" y="228" class="dia__dim">one-click export</text>
+              <path d="M296 179 L344 179" class="dia__arrow" marker-end="url(#crmArrow)"/>
+
+              <!-- engine -->
+              <text x="350" y="92" class="dia__k">SYNC ENGINE</text>
+              <rect x="350" y="104" width="330" height="294" rx="16" class="dia__card"/>
+              <g>
+                <circle cx="376" cy="142" r="7" class="dia__dot--mint"/>
+                <text x="396" y="138" class="dia__t">Content hash per record</text><text x="396" y="157" class="dia__dim">unchanged → skipped</text>
+                <circle cx="376" cy="196" r="7" class="dia__dot--sky"/>
+                <text x="396" y="192" class="dia__t">Custom fields created</text><text x="396" y="211" class="dia__dim">source, tier, signal date</text>
+                <circle cx="376" cy="250" r="7" class="dia__dot--yellow"/>
+                <text x="396" y="246" class="dia__t">Retry with backoff</text><text x="396" y="265" class="dia__dim">failures land in the admin panel</text>
+                <circle cx="376" cy="304" r="7" class="dia__dot--pink"/>
+                <text x="396" y="300" class="dia__t">Deleted stays deleted</text><text x="396" y="319" class="dia__dim">a removed contact is never recreated</text>
+                <circle cx="376" cy="358" r="7" class="dia__dot"/>
+                <text x="396" y="354" class="dia__t">Sync ledger</text><text x="396" y="373" class="dia__dim">what went where, and why</text>
+              </g>
+
+              <!-- one engine fans out to three -->
+              <g class="dia__arrow" marker-end="url(#crmArrow)">
+                <path d="M684 251 C 718 251, 720 152, 752 152"/>
+                <path d="M684 251 C 718 251, 720 262, 752 262"/>
+                <path d="M684 251 C 718 251, 720 372, 752 372"/>
+              </g>
+
+              <!-- destinations -->
+              <text x="760" y="92" class="dia__k">INTO THE CUSTOMER'S TOOLS</text>
+              <rect x="760" y="104" width="400" height="96" rx="16" class="dia__box dia__box--coral"/>
+              <rect x="760" y="104" width="7" height="96" rx="3.5" class="dia__dot--pink"/>
+              <text x="786" y="134" class="dia__t">HubSpot</text>
+              <text x="786" y="158" class="dia__dim">contacts + companies · OAuth app</text>
+              <text x="786" y="178" class="dia__dim">creates its own properties, backfills every record</text>
+
+              <rect x="760" y="214" width="400" height="96" rx="16" class="dia__box dia__box--sky"/>
+              <rect x="760" y="214" width="7" height="96" rx="3.5" class="dia__dot--sky"/>
+              <text x="786" y="244" class="dia__t">Salesforce</text>
+              <text x="786" y="268" class="dia__dim">Contacts + Accounts · production or sandbox org</text>
+              <text x="786" y="288" class="dia__dim">field mapping per object</text>
+
+              <rect x="760" y="324" width="400" height="96" rx="16" class="dia__box dia__box--mint"/>
+              <rect x="760" y="324" width="7" height="96" rx="3.5" class="dia__dot--mint"/>
+              <text x="786" y="354" class="dia__t">Google Sheets</text>
+              <text x="786" y="378" class="dia__dim">one workbook per org, grouped by account</text>
+              <text x="786" y="398" class="dia__dim">updated on change, never rewritten</text>
+
+              <!-- footer -->
+              <text x="40" y="310" class="dia__k">IN THE DASHBOARD</text>
+              <text x="40" y="334" class="dia__dim">“Synced · 4 min ago”</text>
+              <text x="40" y="364" class="dia__k">ALSO</text>
+              <text x="40" y="388" class="dia__dim">a public API with keys and</text>
+              <text x="40" y="408" class="dia__dim">rate limits, and signed webhooks</text>
+              <text x="40" y="428" class="dia__dim">for teams that would rather pull.</text>
+            </svg>
+          </div>
+          <figcaption>What the sync engine does with every record.</figcaption>
+        </figure>
+        </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
           <p class="lede">The data was useful, but it lived in the wrong place. I built the bridge into customers' CRMs.</p>
           <p class="case__out"><span>Outcome</span> Live in HubSpot, Salesforce and Google Sheets</p>
@@ -427,92 +509,16 @@
             <li>HubSpot OAuth</li><li>Salesforce</li><li>Sheets API</li><li>Public API</li><li>Webhooks</li>
           </ul>
         </div>
+        <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
+          <div class="shot__frame">
+            <img src="assets/work/huntd-integrations.webp" width="920" height="620"
+                 alt="The Integrations tab of the dashboard settings: HubSpot and Salesforce connection cards"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption>The Integrations settings page customers connect their CRM from.</figcaption>
+        </figure>
       </div>
-      <figure class="shot shot--flat reveal" data-anim="rise">
-        <div class="shot__frame shot__frame--dia">
-          <svg class="dia" viewBox="0 0 1200 470" role="img" aria-labelledby="crmTitle crmDesc">
-            <title id="crmTitle">How the CRM sync works</title>
-            <desc id="crmDesc">People a customer filters in the dashboard flow through one sync engine into HubSpot contacts and companies with custom fields, Salesforce contacts and accounts, or Google Sheets grouped by account. Every record carries a content hash so unchanged records are skipped; failures retry with backoff and surface in the admin panel; a contact the customer deleted is never recreated; a ledger records what went where.</desc>
-            <defs>
-              <marker id="crmArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-            </defs>
 
-            <text x="40" y="44" class="dia__h">One engine, three destinations</text>
-            <text x="40" y="68" class="dia__k">WHAT HAPPENS TO EVERY RECORD</text>
-
-            <!-- source -->
-            <text x="40" y="92" class="dia__k">FROM THE DASHBOARD</text>
-            <rect x="40" y="104" width="250" height="150" rx="16" class="dia__box dia__box--sky"/>
-            <text x="62" y="134" class="dia__t">The people you filtered</text>
-            <text x="62" y="160" class="dia__dim">name · email · company</text>
-            <text x="62" y="180" class="dia__dim">title · seniority · source</text>
-            <text x="62" y="208" class="dia__dim">saved searches, on a schedule</text>
-            <text x="62" y="228" class="dia__dim">one-click export</text>
-            <path d="M296 179 L344 179" class="dia__arrow" marker-end="url(#crmArrow)"/>
-
-            <!-- engine -->
-            <text x="350" y="92" class="dia__k">SYNC ENGINE</text>
-            <rect x="350" y="104" width="330" height="294" rx="16" class="dia__card"/>
-            <g>
-              <circle cx="376" cy="142" r="7" class="dia__dot--mint"/>
-              <text x="396" y="138" class="dia__t">Content hash per record</text><text x="396" y="157" class="dia__dim">unchanged → skipped</text>
-              <circle cx="376" cy="196" r="7" class="dia__dot--sky"/>
-              <text x="396" y="192" class="dia__t">Custom fields created</text><text x="396" y="211" class="dia__dim">source, tier, signal date</text>
-              <circle cx="376" cy="250" r="7" class="dia__dot--yellow"/>
-              <text x="396" y="246" class="dia__t">Retry with backoff</text><text x="396" y="265" class="dia__dim">failures land in the admin panel</text>
-              <circle cx="376" cy="304" r="7" class="dia__dot--pink"/>
-              <text x="396" y="300" class="dia__t">Deleted stays deleted</text><text x="396" y="319" class="dia__dim">a removed contact is never recreated</text>
-              <circle cx="376" cy="358" r="7" class="dia__dot"/>
-              <text x="396" y="354" class="dia__t">Sync ledger</text><text x="396" y="373" class="dia__dim">what went where, and why</text>
-            </g>
-
-            <!-- one engine fans out to three -->
-            <g class="dia__arrow" marker-end="url(#crmArrow)">
-              <path d="M684 251 C 718 251, 720 152, 752 152"/>
-              <path d="M684 251 C 718 251, 720 262, 752 262"/>
-              <path d="M684 251 C 718 251, 720 372, 752 372"/>
-            </g>
-
-            <!-- destinations -->
-            <text x="760" y="92" class="dia__k">INTO THE CUSTOMER'S TOOLS</text>
-            <rect x="760" y="104" width="400" height="96" rx="16" class="dia__box dia__box--coral"/>
-            <rect x="760" y="104" width="7" height="96" rx="3.5" class="dia__dot--pink"/>
-            <text x="786" y="134" class="dia__t">HubSpot</text>
-            <text x="786" y="158" class="dia__dim">contacts + companies · OAuth app</text>
-            <text x="786" y="178" class="dia__dim">creates its own properties, backfills every record</text>
-
-            <rect x="760" y="214" width="400" height="96" rx="16" class="dia__box dia__box--sky"/>
-            <rect x="760" y="214" width="7" height="96" rx="3.5" class="dia__dot--sky"/>
-            <text x="786" y="244" class="dia__t">Salesforce</text>
-            <text x="786" y="268" class="dia__dim">Contacts + Accounts · production or sandbox org</text>
-            <text x="786" y="288" class="dia__dim">field mapping per object</text>
-
-            <rect x="760" y="324" width="400" height="96" rx="16" class="dia__box dia__box--mint"/>
-            <rect x="760" y="324" width="7" height="96" rx="3.5" class="dia__dot--mint"/>
-            <text x="786" y="354" class="dia__t">Google Sheets</text>
-            <text x="786" y="378" class="dia__dim">one workbook per org, grouped by account</text>
-            <text x="786" y="398" class="dia__dim">updated on change, never rewritten</text>
-
-            <!-- footer -->
-            <text x="40" y="310" class="dia__k">IN THE DASHBOARD</text>
-            <text x="40" y="334" class="dia__dim">“Synced · 4 min ago”</text>
-            <text x="40" y="364" class="dia__k">ALSO</text>
-            <text x="40" y="388" class="dia__dim">a public API with keys and</text>
-            <text x="40" y="408" class="dia__dim">rate limits, and signed webhooks</text>
-            <text x="40" y="428" class="dia__dim">for teams that would rather pull.</text>
-          </svg>
-        </div>
-        <figcaption>What the sync engine does with every record.</figcaption>
-      </figure>
-
-      <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
-        <div class="shot__frame">
-          <img src="assets/work/huntd-integrations.webp" width="920" height="620"
-               alt="The Integrations tab of the dashboard settings: HubSpot and Salesforce connection cards"
-               loading="lazy" decoding="async">
-        </div>
-        <figcaption>The Integrations settings page customers connect their CRM from.</figcaption>
-      </figure>
     </article>
 
     <article class="case" id="case-04">
@@ -521,6 +527,76 @@
         <h3 data-split="words" class="reveal">Signup &amp; churn signals</h3>
       </header>
       <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 470" role="img" aria-labelledby="sigTitle sigDesc">
+              <title id="sigTitle">How a signup signal is found</title>
+              <desc id="sigDesc">A watch table holds the last verdict the customer was told, per lead and source; the lag against today's data is what makes a flip visible. A 03:00 sweep learns the customer's ideal customer profile from their true users on four facets and tiers every watched company A to D. A 06:00 sweep spends a bounded daily budget re-checking the due, tier-eligible leads under per-source rate ceilings, keeping a slice in reserve for churn. A false-to-true flip becomes a "just signed up" feed entry, a Slack digest line and a signed webhook; a true-to-false flip is churn, running the same engine in reverse on a slower cadence.</desc>
+              <defs>
+                <marker id="sigArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+              </defs>
+
+              <text x="40" y="44" class="dia__h">Who gets re-checked today</text>
+              <text x="40" y="68" class="dia__k">RE-CHECKING EVERYONE DAILY IS UNAFFORDABLE — SO THE SYSTEM CHOOSES</text>
+
+              <text x="40" y="92" class="dia__k">WHAT WE ALREADY KNOW</text>
+              <rect x="40" y="104" width="250" height="190" rx="16" class="dia__box dia__box--sky"/>
+              <text x="62" y="134" class="dia__t">The watch table</text>
+              <text x="62" y="158" class="dia__dim">the last verdict the customer</text>
+              <text x="62" y="178" class="dia__dim">was told, per lead × source</text>
+              <line x1="62" y1="202" x2="268" y2="202" class="dia__rule"/>
+              <text x="62" y="228" class="dia__dim">The lag between that and</text>
+              <text x="62" y="248" class="dia__dim">today's answer is exactly</text>
+              <text x="62" y="268" class="dia__dim">what makes a flip visible.</text>
+              <path d="M296 199 L344 199" class="dia__arrow" marker-end="url(#sigArrow)"/>
+
+              <text x="350" y="92" class="dia__k">TWO SWEEPS A DAY</text>
+              <rect x="350" y="104" width="330" height="140" rx="16" class="dia__card"/>
+              <circle cx="376" cy="138" r="7" class="dia__dot--yellow"/>
+              <text x="396" y="134" class="dia__k">03:00 UTC · SCORING SWEEP</text>
+              <text x="370" y="170" class="dia__t">Who looks like your users</text>
+              <text x="370" y="194" class="dia__dim">role · seniority · company size · industry,</text>
+              <text x="370" y="214" class="dia__dim">learned from your own true users</text>
+              <text x="370" y="234" class="dia__dim">every watched company tiered A to D</text>
+              <path d="M515 248 L515 268" class="dia__arrow" marker-end="url(#sigArrow)"/>
+
+              <rect x="350" y="272" width="330" height="150" rx="16" class="dia__card"/>
+              <circle cx="376" cy="306" r="7" class="dia__dot--mint"/>
+              <text x="396" y="302" class="dia__k">06:00 UTC · RE-VERIFY SWEEP</text>
+              <text x="370" y="338" class="dia__t">Spend the day's budget</text>
+              <text x="370" y="362" class="dia__dim">A and B tiers first, longest-unchecked first</text>
+              <text x="370" y="382" class="dia__dim">per-source rate ceilings · a gap in days</text>
+              <text x="370" y="402" class="dia__dim">between re-checks of the same lead</text>
+
+              <g class="dia__arrow" marker-end="url(#sigArrow)">
+                <path d="M684 347 C 718 347, 720 180, 752 180"/>
+                <path d="M684 347 C 718 347, 720 347, 752 347"/>
+              </g>
+
+              <text x="760" y="92" class="dia__k">WHAT THE CUSTOMER GETS</text>
+              <rect x="760" y="104" width="400" height="150" rx="16" class="dia__box dia__box--mint"/>
+              <text x="786" y="134" class="dia__k">FALSE TO TRUE</text>
+              <text x="786" y="162" class="dia__t">“Just signed up”</text>
+              <text x="786" y="188" class="dia__dim">the feed, the watchlist and the trend charts</text>
+              <text x="786" y="208" class="dia__dim">a daily Slack digest, per customer</text>
+              <text x="786" y="228" class="dia__dim">a signed webhook for their own systems</text>
+
+              <rect x="760" y="272" width="400" height="150" rx="16" class="dia__box dia__box--coral"/>
+              <text x="786" y="302" class="dia__k">TRUE TO FALSE</text>
+              <text x="786" y="330" class="dia__t">Churn, the same engine in reverse</text>
+              <text x="786" y="356" class="dia__dim">a slower cadence, its own slice of the budget</text>
+              <text x="786" y="376" class="dia__dim">one codebase, both directions</text>
+
+              <text x="40" y="330" class="dia__k">SAFEGUARD</text>
+              <text x="40" y="354" class="dia__dim">Every tracker is dry-run by</text>
+              <text x="40" y="374" class="dia__dim">default. Live dispatch is a flag,</text>
+              <text x="40" y="394" class="dia__dim">per source and per customer.</text>
+            </svg>
+          </div>
+          <figcaption>One budget, spent where a flip is most likely — and the same engine run backwards for churn.</figcaption>
+        </figure>
+        </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
           <p class="lede">The lead who wasn't a user last month might have signed up this week — the best moment for sales to call.</p>
           <p class="case__out"><span>Outcome</span> A daily “just signed up” feed and Slack digest that sales teams act on</p>
@@ -539,84 +615,16 @@
             <li>Postgres</li><li>Inngest</li><li>Azure OpenAI</li><li>Zyte</li><li>Recharts</li><li>Slack</li>
           </ul>
         </div>
+        <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
+          <div class="shot__frame">
+            <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
+                 alt="Slack thread: a signup alert for a target account, met with thanks from the customer"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption>The end of that pipeline: a new signup at one of a customer's target accounts, in their Slack.</figcaption>
+        </figure>
       </div>
-      <figure class="shot shot--flat reveal" data-anim="rise">
-        <div class="shot__frame shot__frame--dia">
-          <svg class="dia" viewBox="0 0 1200 470" role="img" aria-labelledby="sigTitle sigDesc">
-            <title id="sigTitle">How a signup signal is found</title>
-            <desc id="sigDesc">A watch table holds the last verdict the customer was told, per lead and source; the lag against today's data is what makes a flip visible. A 03:00 sweep learns the customer's ideal customer profile from their true users on four facets and tiers every watched company A to D. A 06:00 sweep spends a bounded daily budget re-checking the due, tier-eligible leads under per-source rate ceilings, keeping a slice in reserve for churn. A false-to-true flip becomes a "just signed up" feed entry, a Slack digest line and a signed webhook; a true-to-false flip is churn, running the same engine in reverse on a slower cadence.</desc>
-            <defs>
-              <marker id="sigArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-            </defs>
 
-            <text x="40" y="44" class="dia__h">Who gets re-checked today</text>
-            <text x="40" y="68" class="dia__k">RE-CHECKING EVERYONE DAILY IS UNAFFORDABLE — SO THE SYSTEM CHOOSES</text>
-
-            <text x="40" y="92" class="dia__k">WHAT WE ALREADY KNOW</text>
-            <rect x="40" y="104" width="250" height="190" rx="16" class="dia__box dia__box--sky"/>
-            <text x="62" y="134" class="dia__t">The watch table</text>
-            <text x="62" y="158" class="dia__dim">the last verdict the customer</text>
-            <text x="62" y="178" class="dia__dim">was told, per lead × source</text>
-            <line x1="62" y1="202" x2="268" y2="202" class="dia__rule"/>
-            <text x="62" y="228" class="dia__dim">The lag between that and</text>
-            <text x="62" y="248" class="dia__dim">today's answer is exactly</text>
-            <text x="62" y="268" class="dia__dim">what makes a flip visible.</text>
-            <path d="M296 199 L344 199" class="dia__arrow" marker-end="url(#sigArrow)"/>
-
-            <text x="350" y="92" class="dia__k">TWO SWEEPS A DAY</text>
-            <rect x="350" y="104" width="330" height="140" rx="16" class="dia__card"/>
-            <circle cx="376" cy="138" r="7" class="dia__dot--yellow"/>
-            <text x="396" y="134" class="dia__k">03:00 UTC · SCORING SWEEP</text>
-            <text x="370" y="170" class="dia__t">Who looks like your users</text>
-            <text x="370" y="194" class="dia__dim">role · seniority · company size · industry,</text>
-            <text x="370" y="214" class="dia__dim">learned from your own true users</text>
-            <text x="370" y="234" class="dia__dim">every watched company tiered A to D</text>
-            <path d="M515 248 L515 268" class="dia__arrow" marker-end="url(#sigArrow)"/>
-
-            <rect x="350" y="272" width="330" height="150" rx="16" class="dia__card"/>
-            <circle cx="376" cy="306" r="7" class="dia__dot--mint"/>
-            <text x="396" y="302" class="dia__k">06:00 UTC · RE-VERIFY SWEEP</text>
-            <text x="370" y="338" class="dia__t">Spend the day's budget</text>
-            <text x="370" y="362" class="dia__dim">A and B tiers first, longest-unchecked first</text>
-            <text x="370" y="382" class="dia__dim">per-source rate ceilings · a gap in days</text>
-            <text x="370" y="402" class="dia__dim">between re-checks of the same lead</text>
-
-            <g class="dia__arrow" marker-end="url(#sigArrow)">
-              <path d="M684 347 C 718 347, 720 180, 752 180"/>
-              <path d="M684 347 C 718 347, 720 347, 752 347"/>
-            </g>
-
-            <text x="760" y="92" class="dia__k">WHAT THE CUSTOMER GETS</text>
-            <rect x="760" y="104" width="400" height="150" rx="16" class="dia__box dia__box--mint"/>
-            <text x="786" y="134" class="dia__k">FALSE TO TRUE</text>
-            <text x="786" y="162" class="dia__t">“Just signed up”</text>
-            <text x="786" y="188" class="dia__dim">the feed, the watchlist and the trend charts</text>
-            <text x="786" y="208" class="dia__dim">a daily Slack digest, per customer</text>
-            <text x="786" y="228" class="dia__dim">a signed webhook for their own systems</text>
-
-            <rect x="760" y="272" width="400" height="150" rx="16" class="dia__box dia__box--coral"/>
-            <text x="786" y="302" class="dia__k">TRUE TO FALSE</text>
-            <text x="786" y="330" class="dia__t">Churn, the same engine in reverse</text>
-            <text x="786" y="356" class="dia__dim">a slower cadence, its own slice of the budget</text>
-            <text x="786" y="376" class="dia__dim">one codebase, both directions</text>
-
-            <text x="40" y="330" class="dia__k">SAFEGUARD</text>
-            <text x="40" y="354" class="dia__dim">Every tracker is dry-run by</text>
-            <text x="40" y="374" class="dia__dim">default. Live dispatch is a flag,</text>
-            <text x="40" y="394" class="dia__dim">per source and per customer.</text>
-          </svg>
-        </div>
-        <figcaption>One budget, spent where a flip is most likely — and the same engine run backwards for churn.</figcaption>
-      </figure>
-
-      <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
-        <div class="shot__frame">
-          <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
-               alt="Slack thread: a signup alert for a target account, met with thanks from the customer"
-               loading="lazy" decoding="async">
-        </div>
-        <figcaption>The end of that pipeline: a new signup at one of a customer's target accounts, in their Slack.</figcaption>
-      </figure>
     </article>
 
     <article class="case" id="case-05">
@@ -625,6 +633,116 @@
         <h3 data-split="words" class="reveal">Detector &amp; Doctor</h3>
       </header>
       <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 470" role="img" aria-labelledby="detTitle detDesc">
+              <title id="detTitle">How Detector and Doctor work</title>
+              <desc id="detDesc">More than fifteen detectors run every five minutes over the queue lanes, the vendor checkers, the signal sweeps, the CRM and Sheets syncs, dashboard liveness and webhook delivery. A deterministic facts pass every ten minutes writes deduplicated cases and posts to Slack only when something newly broke, with digests otherwise. A model expands each alert into plain English, and a guard re-checks every identifier in that text and drops any explanation that introduces one the facts did not contain. Doctor, a read-only Claude Agent SDK agent with Read, Grep and Glob only and a two-dollar cap per case, investigates against the codebase and proposes a requeue, a runbook or a draft pull request. It never merges and never deploys.</desc>
+              <defs>
+                <marker id="detArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+              </defs>
+
+              <text x="40" y="44" class="dia__h">Quiet until something breaks</text>
+              <text x="40" y="68" class="dia__k">15+ DETECTORS · EVERY 5 MINUTES · IT POSTS ONLY WHAT IS NEW</text>
+
+              <text x="40" y="92" class="dia__k">WHAT IS WATCHED</text>
+              <rect x="40" y="104" width="250" height="230" rx="16" class="dia__box dia__box--sky"/>
+              <circle cx="64" cy="134" r="5" class="dia__dot--mint"/><text x="80" y="138" class="dia__dim">queue lanes: stalled,</text><text x="80" y="156" class="dia__dim">orphaned, backed up</text>
+              <circle cx="64" cy="180" r="5" class="dia__dot--sky"/><text x="80" y="184" class="dia__dim">each vendor checker, by a</text><text x="80" y="202" class="dia__dim">daily known-answer test</text>
+              <circle cx="64" cy="226" r="5" class="dia__dot--yellow"/><text x="80" y="230" class="dia__dim">signal sweeps and the</text><text x="80" y="248" class="dia__dim">customer digests</text>
+              <circle cx="64" cy="272" r="5" class="dia__dot--pink"/><text x="80" y="276" class="dia__dim">Sheets, HubSpot and</text><text x="80" y="294" class="dia__dim">Salesforce drift</text>
+              <circle cx="64" cy="314" r="5" class="dia__dot"/><text x="80" y="318" class="dia__dim">dashboard liveness</text>
+              <path d="M296 219 L344 219" class="dia__arrow" marker-end="url(#detArrow)"/>
+
+              <text x="350" y="92" class="dia__k">THE ALERT PATH</text>
+              <rect x="350" y="104" width="330" height="96" rx="16" class="dia__card"/>
+              <text x="370" y="134" class="dia__t">1 · A facts pass, not a guess</text>
+              <text x="370" y="158" class="dia__dim">per source: trues, falses, checks,</text>
+              <text x="370" y="178" class="dia__dim">and the real error text</text>
+              <path d="M515 204 L515 224" class="dia__arrow" marker-end="url(#detArrow)"/>
+
+              <rect x="350" y="228" width="330" height="96" rx="16" class="dia__card"/>
+              <text x="370" y="258" class="dia__t">2 · Only what newly broke</text>
+              <text x="370" y="282" class="dia__dim">cases are deduplicated; an ongoing</text>
+              <text x="370" y="302" class="dia__dim">problem is not re-announced</text>
+              <path d="M515 328 L515 348" class="dia__arrow" marker-end="url(#detArrow)"/>
+
+              <rect x="350" y="352" width="330" height="96" rx="16" class="dia__card"/>
+              <text x="370" y="382" class="dia__t">3 · Explained, then checked</text>
+              <text x="370" y="406" class="dia__dim">a model writes the explanation; a guard</text>
+              <text x="370" y="426" class="dia__dim">drops it if it invents an identifier</text>
+
+              <g class="dia__arrow" marker-end="url(#detArrow)">
+                <path d="M684 276 C 718 276, 720 170, 752 170"/>
+                <path d="M684 276 C 718 276, 720 348, 752 348"/>
+              </g>
+
+              <text x="760" y="92" class="dia__k">WHAT COMES OUT</text>
+              <rect x="760" y="104" width="400" height="132" rx="16" class="dia__box dia__box--yellow"/>
+              <text x="786" y="134" class="dia__k">SLACK, WITHIN MINUTES</text>
+              <text x="786" y="162" class="dia__t">An alert you can act on</text>
+              <text x="786" y="188" class="dia__dim">the thing, the real error, the step, the id</text>
+              <text x="786" y="208" class="dia__dim">split into “fix now” and “just so you know”</text>
+              <text x="786" y="228" class="dia__dim">daily and weekly digests when all is well</text>
+
+              <rect x="760" y="272" width="400" height="176" rx="16" class="dia__box dia__box--mint"/>
+              <text x="786" y="302" class="dia__k">DOCTOR · A READ-ONLY AGENT</text>
+              <text x="786" y="330" class="dia__t">Investigates, then proposes</text>
+              <text x="786" y="356" class="dia__dim">Read, Grep and Glob only — no writes, no shell</text>
+              <text x="786" y="376" class="dia__dim">a spend cap per case, a schema-checked verdict</text>
+              <text x="786" y="396" class="dia__dim">requeue · run a runbook · open a draft PR</text>
+              <line x1="786" y1="414" x2="1134" y2="414" class="dia__rule"/>
+              <text x="786" y="436" class="dia__t">It never merges and never deploys.</text>
+
+              <text x="40" y="372" class="dia__k">THE PATTERN</text>
+              <text x="40" y="396" class="dia__dim">Agents recommend.</text>
+              <text x="40" y="416" class="dia__dim">Code mutates.</text>
+              <text x="40" y="436" class="dia__dim">That is what lets it run at 3 a.m.</text>
+            </svg>
+          </div>
+          <figcaption>From a silent failure to a Slack message a human can act on — and an agent that may only propose the fix.</figcaption>
+        </figure>
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 520" role="img" aria-labelledby="digTitle digDesc">
+              <title id="digTitle">The daily digest on an all-clear day</title>
+              <desc id="digDesc">An illustration of the message the Detector posts to Slack each morning when nothing is wrong: a bottom line saying everything is running, then six all-clear lines covering the vendor checkers and their known-answer test, the pipeline queue, the customer digests, the CRM sync, the Sheets export, and the dashboard, API and webhooks. Below them, one watch item that needs no action: a source draining more slowly than usual. On a day something does break, the same message leads with what to fix.</desc>
+
+              <text x="40" y="44" class="dia__h">A quiet day, reported anyway</text>
+              <text x="40" y="68" class="dia__k">WHAT LANDS IN SLACK WHEN NOTHING IS WRONG</text>
+
+              <rect x="40" y="92" width="1120" height="268" rx="18" class="dia__card"/>
+              <circle cx="70" cy="122" r="8" class="dia__dot--mint"/>
+              <text x="90" y="126" class="dia__k">DETECTOR · DAILY SUMMARY · LAST 24 HOURS</text>
+              <text x="68" y="160" class="dia__t">Bottom line: everything is running. No checker is broken, no queue is stalled.</text>
+              <line x1="68" y1="182" x2="1132" y2="182" class="dia__rule"/>
+
+              <circle cx="76" cy="214" r="6" class="dia__dot--mint"/>
+              <text x="94" y="210" class="dia__t">Vendor checkers</text><text x="94" y="229" class="dia__dim">every one passed its known-answer test</text>
+              <circle cx="76" cy="266" r="6" class="dia__dot--mint"/>
+              <text x="94" y="262" class="dia__t">Pipeline queue</text><text x="94" y="281" class="dia__dim">draining on schedule, nothing stranded</text>
+              <circle cx="76" cy="318" r="6" class="dia__dot--mint"/>
+              <text x="94" y="314" class="dia__t">Customer digests</text><text x="94" y="333" class="dia__dim">all delivered this morning</text>
+
+              <circle cx="620" cy="214" r="6" class="dia__dot--mint"/>
+              <text x="638" y="210" class="dia__t">CRM sync</text><text x="638" y="229" class="dia__dim">HubSpot and Salesforce fresh, minutes old</text>
+              <circle cx="620" cy="266" r="6" class="dia__dot--mint"/>
+              <text x="638" y="262" class="dia__t">Sheets export</text><text x="638" y="281" class="dia__dim">every workbook up to date</text>
+              <circle cx="620" cy="318" r="6" class="dia__dot--mint"/>
+              <text x="638" y="314" class="dia__t">Dashboard, API, webhooks</text><text x="638" y="333" class="dia__dim">responding; no failed deliveries</text>
+
+              <rect x="40" y="384" width="1120" height="92" rx="16" class="dia__box dia__box--yellow"/>
+              <text x="68" y="414" class="dia__k">WATCH &#8212; 1 · HERE SO YOU KNOW, NOT SOMETHING TO ACT ON</text>
+              <text x="68" y="440" class="dia__t">One source is draining more slowly than usual.</text>
+              <text x="68" y="464" class="dia__dim">Leads still get processed, just slower. No action unless it keeps growing.</text>
+
+              <text x="40" y="506" class="dia__k">AN ILLUSTRATION OF THE DIGEST FORMAT · ON A DAY SOMETHING DOES BREAK, THE SAME MESSAGE LEADS WITH WHAT TO FIX</text>
+            </svg>
+          </div>
+          <figcaption>The all-clear version of the morning digest. Quiet by default is the point — a message means something precisely because most mornings it says this.</figcaption>
+        </figure>
+        </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
           <p class="lede">Failures were silent — one vendor produced nothing for weeks while its log said "ok".</p>
           <p class="case__out"><span>Outcome</span> Silent failures now reach Slack within minutes, with a checked explanation</p>
@@ -644,115 +762,7 @@
           </ul>
         </div>
       </div>
-      <figure class="shot shot--flat reveal" data-anim="rise">
-        <div class="shot__frame shot__frame--dia">
-          <svg class="dia" viewBox="0 0 1200 470" role="img" aria-labelledby="detTitle detDesc">
-            <title id="detTitle">How Detector and Doctor work</title>
-            <desc id="detDesc">More than fifteen detectors run every five minutes over the queue lanes, the vendor checkers, the signal sweeps, the CRM and Sheets syncs, dashboard liveness and webhook delivery. A deterministic facts pass every ten minutes writes deduplicated cases and posts to Slack only when something newly broke, with digests otherwise. A model expands each alert into plain English, and a guard re-checks every identifier in that text and drops any explanation that introduces one the facts did not contain. Doctor, a read-only Claude Agent SDK agent with Read, Grep and Glob only and a two-dollar cap per case, investigates against the codebase and proposes a requeue, a runbook or a draft pull request. It never merges and never deploys.</desc>
-            <defs>
-              <marker id="detArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-            </defs>
 
-            <text x="40" y="44" class="dia__h">Quiet until something breaks</text>
-            <text x="40" y="68" class="dia__k">15+ DETECTORS · EVERY 5 MINUTES · IT POSTS ONLY WHAT IS NEW</text>
-
-            <text x="40" y="92" class="dia__k">WHAT IS WATCHED</text>
-            <rect x="40" y="104" width="250" height="230" rx="16" class="dia__box dia__box--sky"/>
-            <circle cx="64" cy="134" r="5" class="dia__dot--mint"/><text x="80" y="138" class="dia__dim">queue lanes: stalled,</text><text x="80" y="156" class="dia__dim">orphaned, backed up</text>
-            <circle cx="64" cy="180" r="5" class="dia__dot--sky"/><text x="80" y="184" class="dia__dim">each vendor checker, by a</text><text x="80" y="202" class="dia__dim">daily known-answer test</text>
-            <circle cx="64" cy="226" r="5" class="dia__dot--yellow"/><text x="80" y="230" class="dia__dim">signal sweeps and the</text><text x="80" y="248" class="dia__dim">customer digests</text>
-            <circle cx="64" cy="272" r="5" class="dia__dot--pink"/><text x="80" y="276" class="dia__dim">Sheets, HubSpot and</text><text x="80" y="294" class="dia__dim">Salesforce drift</text>
-            <circle cx="64" cy="314" r="5" class="dia__dot"/><text x="80" y="318" class="dia__dim">dashboard liveness</text>
-            <path d="M296 219 L344 219" class="dia__arrow" marker-end="url(#detArrow)"/>
-
-            <text x="350" y="92" class="dia__k">THE ALERT PATH</text>
-            <rect x="350" y="104" width="330" height="96" rx="16" class="dia__card"/>
-            <text x="370" y="134" class="dia__t">1 · A facts pass, not a guess</text>
-            <text x="370" y="158" class="dia__dim">per source: trues, falses, checks,</text>
-            <text x="370" y="178" class="dia__dim">and the real error text</text>
-            <path d="M515 204 L515 224" class="dia__arrow" marker-end="url(#detArrow)"/>
-
-            <rect x="350" y="228" width="330" height="96" rx="16" class="dia__card"/>
-            <text x="370" y="258" class="dia__t">2 · Only what newly broke</text>
-            <text x="370" y="282" class="dia__dim">cases are deduplicated; an ongoing</text>
-            <text x="370" y="302" class="dia__dim">problem is not re-announced</text>
-            <path d="M515 328 L515 348" class="dia__arrow" marker-end="url(#detArrow)"/>
-
-            <rect x="350" y="352" width="330" height="96" rx="16" class="dia__card"/>
-            <text x="370" y="382" class="dia__t">3 · Explained, then checked</text>
-            <text x="370" y="406" class="dia__dim">a model writes the explanation; a guard</text>
-            <text x="370" y="426" class="dia__dim">drops it if it invents an identifier</text>
-
-            <g class="dia__arrow" marker-end="url(#detArrow)">
-              <path d="M684 276 C 718 276, 720 170, 752 170"/>
-              <path d="M684 276 C 718 276, 720 348, 752 348"/>
-            </g>
-
-            <text x="760" y="92" class="dia__k">WHAT COMES OUT</text>
-            <rect x="760" y="104" width="400" height="132" rx="16" class="dia__box dia__box--yellow"/>
-            <text x="786" y="134" class="dia__k">SLACK, WITHIN MINUTES</text>
-            <text x="786" y="162" class="dia__t">An alert you can act on</text>
-            <text x="786" y="188" class="dia__dim">the thing, the real error, the step, the id</text>
-            <text x="786" y="208" class="dia__dim">split into “fix now” and “just so you know”</text>
-            <text x="786" y="228" class="dia__dim">daily and weekly digests when all is well</text>
-
-            <rect x="760" y="272" width="400" height="176" rx="16" class="dia__box dia__box--mint"/>
-            <text x="786" y="302" class="dia__k">DOCTOR · A READ-ONLY AGENT</text>
-            <text x="786" y="330" class="dia__t">Investigates, then proposes</text>
-            <text x="786" y="356" class="dia__dim">Read, Grep and Glob only — no writes, no shell</text>
-            <text x="786" y="376" class="dia__dim">a spend cap per case, a schema-checked verdict</text>
-            <text x="786" y="396" class="dia__dim">requeue · run a runbook · open a draft PR</text>
-            <line x1="786" y1="414" x2="1134" y2="414" class="dia__rule"/>
-            <text x="786" y="436" class="dia__t">It never merges and never deploys.</text>
-
-            <text x="40" y="372" class="dia__k">THE PATTERN</text>
-            <text x="40" y="396" class="dia__dim">Agents recommend.</text>
-            <text x="40" y="416" class="dia__dim">Code mutates.</text>
-            <text x="40" y="436" class="dia__dim">That is what lets it run at 3 a.m.</text>
-          </svg>
-        </div>
-        <figcaption>From a silent failure to a Slack message a human can act on — and an agent that may only propose the fix.</figcaption>
-      </figure>
-
-      <figure class="shot shot--flat reveal" data-anim="rise">
-        <div class="shot__frame shot__frame--dia">
-          <svg class="dia" viewBox="0 0 1200 520" role="img" aria-labelledby="digTitle digDesc">
-            <title id="digTitle">The daily digest on an all-clear day</title>
-            <desc id="digDesc">An illustration of the message the Detector posts to Slack each morning when nothing is wrong: a bottom line saying everything is running, then six all-clear lines covering the vendor checkers and their known-answer test, the pipeline queue, the customer digests, the CRM sync, the Sheets export, and the dashboard, API and webhooks. Below them, one watch item that needs no action: a source draining more slowly than usual. On a day something does break, the same message leads with what to fix.</desc>
-
-            <text x="40" y="44" class="dia__h">A quiet day, reported anyway</text>
-            <text x="40" y="68" class="dia__k">WHAT LANDS IN SLACK WHEN NOTHING IS WRONG</text>
-
-            <rect x="40" y="92" width="1120" height="268" rx="18" class="dia__card"/>
-            <circle cx="70" cy="122" r="8" class="dia__dot--mint"/>
-            <text x="90" y="126" class="dia__k">DETECTOR · DAILY SUMMARY · LAST 24 HOURS</text>
-            <text x="68" y="160" class="dia__t">Bottom line: everything is running. No checker is broken, no queue is stalled.</text>
-            <line x1="68" y1="182" x2="1132" y2="182" class="dia__rule"/>
-
-            <circle cx="76" cy="214" r="6" class="dia__dot--mint"/>
-            <text x="94" y="210" class="dia__t">Vendor checkers</text><text x="94" y="229" class="dia__dim">every one passed its known-answer test</text>
-            <circle cx="76" cy="266" r="6" class="dia__dot--mint"/>
-            <text x="94" y="262" class="dia__t">Pipeline queue</text><text x="94" y="281" class="dia__dim">draining on schedule, nothing stranded</text>
-            <circle cx="76" cy="318" r="6" class="dia__dot--mint"/>
-            <text x="94" y="314" class="dia__t">Customer digests</text><text x="94" y="333" class="dia__dim">all delivered this morning</text>
-
-            <circle cx="620" cy="214" r="6" class="dia__dot--mint"/>
-            <text x="638" y="210" class="dia__t">CRM sync</text><text x="638" y="229" class="dia__dim">HubSpot and Salesforce fresh, minutes old</text>
-            <circle cx="620" cy="266" r="6" class="dia__dot--mint"/>
-            <text x="638" y="262" class="dia__t">Sheets export</text><text x="638" y="281" class="dia__dim">every workbook up to date</text>
-            <circle cx="620" cy="318" r="6" class="dia__dot--mint"/>
-            <text x="638" y="314" class="dia__t">Dashboard, API, webhooks</text><text x="638" y="333" class="dia__dim">responding; no failed deliveries</text>
-
-            <rect x="40" y="384" width="1120" height="92" rx="16" class="dia__box dia__box--yellow"/>
-            <text x="68" y="414" class="dia__k">WATCH &#8212; 1 · HERE SO YOU KNOW, NOT SOMETHING TO ACT ON</text>
-            <text x="68" y="440" class="dia__t">One source is draining more slowly than usual.</text>
-            <text x="68" y="464" class="dia__dim">Leads still get processed, just slower. No action unless it keeps growing.</text>
-
-            <text x="40" y="506" class="dia__k">AN ILLUSTRATION OF THE DIGEST FORMAT · ON A DAY SOMETHING DOES BREAK, THE SAME MESSAGE LEADS WITH WHAT TO FIX</text>
-          </svg>
-        </div>
-        <figcaption>The all-clear version of the morning digest. Quiet by default is the point — a message means something precisely because most mornings it says this.</figcaption>
-      </figure>
     </article>
 
     <article class="case" id="case-06">
@@ -761,6 +771,85 @@
         <h3 data-split="words" class="reveal">Web research agent</h3>
       </header>
       <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 580" role="img" aria-labelledby="webTitle webDesc">
+              <title id="webTitle">How the web research agent answers a question</title>
+              <desc id="webDesc">A question asked in plain English is first turned into a typed output schema. Firecrawl maps the company's site, with sitemap and navigation fallbacks and a cached map per project. An AI pass ranks and prunes the mapped URLs down to the pages likely to hold the answer. Pages are scraped in waves of five through a proxy, with browser rendering for bot-walled pages and page text cached in Postgres, then each page is read for a value, a verbatim quote and a confidence. Depth is capped by mode: Instant reads one page, Thinking up to twenty-five, Exhaustive up to five hundred, and Auto picks one. An early-stop classifier decides per question whether the run can finish on the first positive page, on the first counterexample, or must scan everything, which is what questions that count or list require.</desc>
+              <defs>
+                <marker id="webArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+              </defs>
+
+              <text x="40" y="44" class="dia__h">One question, the fewest pages that answer it</text>
+              <text x="40" y="68" class="dia__k">ASKED IN PLAIN ENGLISH · ANSWERED FROM THE COMPANY'S OWN SITE</text>
+
+              <text x="40" y="92" class="dia__k">THE ASK</text>
+              <rect x="40" y="104" width="250" height="170" rx="16" class="dia__box dia__box--sky"/>
+              <text x="62" y="134" class="dia__t">“Do they sell to</text>
+              <text x="62" y="156" class="dia__t">enterprises?”</text>
+              <line x1="62" y1="178" x2="268" y2="178" class="dia__rule"/>
+              <text x="62" y="202" class="dia__dim">one question, run once</text>
+              <text x="62" y="222" class="dia__dim">per row of the sheet</text>
+              <text x="62" y="248" class="dia__dim">the prompt itself infers</text>
+              <text x="62" y="268" class="dia__dim">the typed answer schema</text>
+              <path d="M296 189 L336 189" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+              <text x="340" y="92" class="dia__k">THE CHAIN, ONE PHASE PER STEP</text>
+              <rect x="340" y="104" width="380" height="96" rx="16" class="dia__card"/>
+              <text x="362" y="134" class="dia__t">1 · Map the site</text>
+              <text x="362" y="158" class="dia__dim">hundreds of URLs in seconds, with sitemap</text>
+              <text x="362" y="178" class="dia__dim">and nav fallbacks; the map is cached per project</text>
+              <path d="M530 204 L530 222" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+              <rect x="340" y="226" width="380" height="96" rx="16" class="dia__card"/>
+              <text x="362" y="256" class="dia__t">2 · Rank, then prune</text>
+              <text x="362" y="280" class="dia__dim">a model orders the candidates by where the</text>
+              <text x="362" y="300" class="dia__dim">answer is likely to live, and drops the rest</text>
+              <path d="M530 326 L530 344" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+              <rect x="340" y="348" width="380" height="96" rx="16" class="dia__card"/>
+              <text x="362" y="378" class="dia__t">3 · Scrape in waves of five</text>
+              <text x="362" y="402" class="dia__dim">proxy first, browser rendering for bot-walled</text>
+              <text x="362" y="422" class="dia__dim">pages; page text and PDFs cached in Postgres</text>
+              <path d="M530 448 L530 466" class="dia__arrow" marker-end="url(#webArrow)"/>
+
+              <rect x="340" y="470" width="380" height="96" rx="16" class="dia__card"/>
+              <text x="362" y="500" class="dia__t">4 · Read each page for evidence</text>
+              <text x="362" y="524" class="dia__dim">a value, a verbatim quote from that page</text>
+              <text x="362" y="544" class="dia__dim">and a confidence — never a guess</text>
+
+              <g class="dia__arrow" marker-end="url(#webArrow)">
+                <path d="M724 152 L766 152"/>
+                <path d="M724 274 C 748 274, 748 300, 766 300"/>
+              </g>
+
+              <text x="770" y="92" class="dia__k">WHAT KEEPS IT AFFORDABLE</text>
+              <rect x="770" y="104" width="390" height="140" rx="16" class="dia__box dia__box--yellow"/>
+              <text x="794" y="134" class="dia__t">How deep to go</text>
+              <text x="794" y="160" class="dia__dim">Instant · the landing page alone</text>
+              <text x="794" y="182" class="dia__dim">Thinking · up to 25 ranked pages</text>
+              <text x="794" y="204" class="dia__dim">Exhaustive · up to 500</text>
+              <text x="794" y="226" class="dia__dim">Auto · picks one from the question</text>
+
+              <rect x="770" y="258" width="390" height="180" rx="16" class="dia__box dia__box--mint"/>
+              <text x="794" y="288" class="dia__t">When it may stop early</text>
+              <text x="794" y="314" class="dia__dim">A classifier reads the question first:</text>
+              <circle cx="800" cy="338" r="5" class="dia__dot--mint"/><text x="814" y="342" class="dia__dim">settle on the first positive page</text>
+              <circle cx="800" cy="364" r="5" class="dia__dot--sky"/><text x="814" y="368" class="dia__dim">settle on the first counterexample</text>
+              <circle cx="800" cy="390" r="5" class="dia__dot--pink"/><text x="814" y="394" class="dia__dim">scan everything</text>
+              <text x="794" y="422" class="dia__dim">Only counts, lists and superlatives scan.</text>
+
+              <rect x="770" y="452" width="390" height="114" rx="16" class="dia__card"/>
+              <text x="794" y="482" class="dia__k">WHAT COMES BACK</text>
+              <text x="794" y="508" class="dia__t">value · quote · confidence</text>
+              <text x="794" y="534" class="dia__dim">plus the page it came from, so an answer</text>
+              <text x="794" y="554" class="dia__dim">can be checked rather than trusted</text>
+            </svg>
+          </div>
+          <figcaption>The phase chain behind one answer — and the two things that stop it reading more pages than the question needs.</figcaption>
+        </figure>
+        </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
           <p class="lede">Ask a question about a company in plain English; get the answer from its own website, with the page it came from.</p>
           <p class="case__out"><span>Outcome</span> Every answer arrives with a verbatim quote, a source page and a confidence</p>
@@ -780,83 +869,6 @@
           </ul>
         </div>
       </div>
-      <figure class="shot shot--flat reveal" data-anim="rise">
-        <div class="shot__frame shot__frame--dia">
-          <svg class="dia" viewBox="0 0 1200 580" role="img" aria-labelledby="webTitle webDesc">
-            <title id="webTitle">How the web research agent answers a question</title>
-            <desc id="webDesc">A question asked in plain English is first turned into a typed output schema. Firecrawl maps the company's site, with sitemap and navigation fallbacks and a cached map per project. An AI pass ranks and prunes the mapped URLs down to the pages likely to hold the answer. Pages are scraped in waves of five through a proxy, with browser rendering for bot-walled pages and page text cached in Postgres, then each page is read for a value, a verbatim quote and a confidence. Depth is capped by mode: Instant reads one page, Thinking up to twenty-five, Exhaustive up to five hundred, and Auto picks one. An early-stop classifier decides per question whether the run can finish on the first positive page, on the first counterexample, or must scan everything, which is what questions that count or list require.</desc>
-            <defs>
-              <marker id="webArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-            </defs>
-
-            <text x="40" y="44" class="dia__h">One question, the fewest pages that answer it</text>
-            <text x="40" y="68" class="dia__k">ASKED IN PLAIN ENGLISH · ANSWERED FROM THE COMPANY'S OWN SITE</text>
-
-            <text x="40" y="92" class="dia__k">THE ASK</text>
-            <rect x="40" y="104" width="250" height="170" rx="16" class="dia__box dia__box--sky"/>
-            <text x="62" y="134" class="dia__t">“Do they sell to</text>
-            <text x="62" y="156" class="dia__t">enterprises?”</text>
-            <line x1="62" y1="178" x2="268" y2="178" class="dia__rule"/>
-            <text x="62" y="202" class="dia__dim">one question, run once</text>
-            <text x="62" y="222" class="dia__dim">per row of the sheet</text>
-            <text x="62" y="248" class="dia__dim">the prompt itself infers</text>
-            <text x="62" y="268" class="dia__dim">the typed answer schema</text>
-            <path d="M296 189 L336 189" class="dia__arrow" marker-end="url(#webArrow)"/>
-
-            <text x="340" y="92" class="dia__k">THE CHAIN, ONE PHASE PER STEP</text>
-            <rect x="340" y="104" width="380" height="96" rx="16" class="dia__card"/>
-            <text x="362" y="134" class="dia__t">1 · Map the site</text>
-            <text x="362" y="158" class="dia__dim">hundreds of URLs in seconds, with sitemap</text>
-            <text x="362" y="178" class="dia__dim">and nav fallbacks; the map is cached per project</text>
-            <path d="M530 204 L530 222" class="dia__arrow" marker-end="url(#webArrow)"/>
-
-            <rect x="340" y="226" width="380" height="96" rx="16" class="dia__card"/>
-            <text x="362" y="256" class="dia__t">2 · Rank, then prune</text>
-            <text x="362" y="280" class="dia__dim">a model orders the candidates by where the</text>
-            <text x="362" y="300" class="dia__dim">answer is likely to live, and drops the rest</text>
-            <path d="M530 326 L530 344" class="dia__arrow" marker-end="url(#webArrow)"/>
-
-            <rect x="340" y="348" width="380" height="96" rx="16" class="dia__card"/>
-            <text x="362" y="378" class="dia__t">3 · Scrape in waves of five</text>
-            <text x="362" y="402" class="dia__dim">proxy first, browser rendering for bot-walled</text>
-            <text x="362" y="422" class="dia__dim">pages; page text and PDFs cached in Postgres</text>
-            <path d="M530 448 L530 466" class="dia__arrow" marker-end="url(#webArrow)"/>
-
-            <rect x="340" y="470" width="380" height="96" rx="16" class="dia__card"/>
-            <text x="362" y="500" class="dia__t">4 · Read each page for evidence</text>
-            <text x="362" y="524" class="dia__dim">a value, a verbatim quote from that page</text>
-            <text x="362" y="544" class="dia__dim">and a confidence — never a guess</text>
-
-            <g class="dia__arrow" marker-end="url(#webArrow)">
-              <path d="M724 152 L766 152"/>
-              <path d="M724 274 C 748 274, 748 300, 766 300"/>
-            </g>
-
-            <text x="770" y="92" class="dia__k">WHAT KEEPS IT AFFORDABLE</text>
-            <rect x="770" y="104" width="390" height="140" rx="16" class="dia__box dia__box--yellow"/>
-            <text x="794" y="134" class="dia__t">How deep to go</text>
-            <text x="794" y="160" class="dia__dim">Instant · the landing page alone</text>
-            <text x="794" y="182" class="dia__dim">Thinking · up to 25 ranked pages</text>
-            <text x="794" y="204" class="dia__dim">Exhaustive · up to 500</text>
-            <text x="794" y="226" class="dia__dim">Auto · picks one from the question</text>
-
-            <rect x="770" y="258" width="390" height="180" rx="16" class="dia__box dia__box--mint"/>
-            <text x="794" y="288" class="dia__t">When it may stop early</text>
-            <text x="794" y="314" class="dia__dim">A classifier reads the question first:</text>
-            <circle cx="800" cy="338" r="5" class="dia__dot--mint"/><text x="814" y="342" class="dia__dim">settle on the first positive page</text>
-            <circle cx="800" cy="364" r="5" class="dia__dot--sky"/><text x="814" y="368" class="dia__dim">settle on the first counterexample</text>
-            <circle cx="800" cy="390" r="5" class="dia__dot--pink"/><text x="814" y="394" class="dia__dim">scan everything</text>
-            <text x="794" y="422" class="dia__dim">Only counts, lists and superlatives scan.</text>
-
-            <rect x="770" y="452" width="390" height="114" rx="16" class="dia__card"/>
-            <text x="794" y="482" class="dia__k">WHAT COMES BACK</text>
-            <text x="794" y="508" class="dia__t">value · quote · confidence</text>
-            <text x="794" y="534" class="dia__dim">plus the page it came from, so an answer</text>
-            <text x="794" y="554" class="dia__dim">can be checked rather than trusted</text>
-          </svg>
-        </div>
-        <figcaption>The phase chain behind one answer — and the two things that stop it reading more pages than the question needs.</figcaption>
-      </figure>
 
     </article>
 
@@ -866,6 +878,70 @@
         <h3 data-split="words" class="reveal">Building Clay</h3>
       </header>
       <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 530" role="img" aria-labelledby="clayTitle clayDesc">
+              <title id="clayTitle">How the enrichment workspace is put together</title>
+              <desc id="clayDesc">Three services over one queue. The React sheet uploads a CSV to object storage and lets you add an enrichment column as a prompt plus a typed schema you preview before it runs. An Express worker seeds one job per cell, dispatches them through a Redis-backed queue, and writes every finished result back to Postgres. The engine claims a row job and runs the research phase chain, keeping run state in Postgres. Finished cells flow back into the sheet as they land. Around it: runs can be paused, resumed or reverted from checkpoints stored per phase; every cell keeps a trace of the pages read, the quote behind the value and what it cost; and a public API runs the same enrichment from another system.</desc>
+              <defs>
+                <marker id="clayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+              </defs>
+
+              <text x="40" y="44" class="dia__h">Add a column, every row comes back answered</text>
+              <text x="40" y="68" class="dia__k">THREE SERVICES OVER ONE QUEUE</text>
+
+              <rect x="40" y="96" width="340" height="186" rx="16" class="dia__box dia__box--sky"/>
+              <text x="64" y="126" class="dia__k">THE SHEET · REACT + VITE</text>
+              <text x="64" y="154" class="dia__t">Upload, edit, add a column</text>
+              <text x="64" y="180" class="dia__dim">the CSV lands in object storage</text>
+              <text x="64" y="202" class="dia__dim">a column is a prompt plus a typed</text>
+              <text x="64" y="224" class="dia__dim">schema you preview before it runs</text>
+              <text x="64" y="252" class="dia__dim">dedupe, saved views, version history</text>
+              <path d="M386 189 L426 189" class="dia__arrow" marker-end="url(#clayArrow)"/>
+
+              <rect x="430" y="96" width="340" height="186" rx="16" class="dia__card"/>
+              <text x="454" y="126" class="dia__k">THE WORKER · EXPRESS</text>
+              <text x="454" y="154" class="dia__t">Seeds and dispatches</text>
+              <text x="454" y="180" class="dia__dim">one job per cell, written once</text>
+              <text x="454" y="202" class="dia__dim">a Redis-backed queue claims row jobs</text>
+              <text x="454" y="224" class="dia__dim">and nothing is dispatched twice</text>
+              <text x="454" y="252" class="dia__dim">every result written back to Postgres</text>
+              <path d="M776 189 L816 189" class="dia__arrow" marker-end="url(#clayArrow)"/>
+
+              <rect x="820" y="96" width="340" height="186" rx="16" class="dia__box dia__box--mint"/>
+              <text x="844" y="126" class="dia__k">THE ENGINE</text>
+              <text x="844" y="154" class="dia__t">Runs the research</text>
+              <text x="844" y="180" class="dia__dim">claims a row job, then the phase chain:</text>
+              <text x="844" y="202" class="dia__dim">schema &#8594; map &#8594; rank &#8594; scrape &#8594; extract</text>
+              <text x="844" y="224" class="dia__dim">run state and payloads in Postgres</text>
+              <text x="844" y="252" class="dia__dim">the same engine as chapter 06</text>
+
+              <path d="M990 294 C 990 330, 600 330, 600 296" class="dia__arrow" marker-end="url(#clayArrow)"/>
+              <text x="795" y="352" class="dia__dim" text-anchor="middle">finished cells flow back into the sheet as they land</text>
+
+              <rect x="40" y="376" width="340" height="124" rx="16" class="dia__box dia__box--yellow"/>
+              <text x="64" y="406" class="dia__k">CONTROL</text>
+              <text x="64" y="434" class="dia__t">Pause, resume, revert</text>
+              <text x="64" y="460" class="dia__dim">a checkpoint is stored per phase, so a</text>
+              <text x="64" y="480" class="dia__dim">paused run resumes where it stopped</text>
+
+              <rect x="430" y="376" width="340" height="124" rx="16" class="dia__box dia__box--coral"/>
+              <text x="454" y="406" class="dia__k">TRACE, PER CELL</text>
+              <text x="454" y="434" class="dia__t">What it read, and what it cost</text>
+              <text x="454" y="460" class="dia__dim">the pages, the quote behind the value,</text>
+              <text x="454" y="480" class="dia__dim">the tokens &#8212; for every single cell</text>
+
+              <rect x="820" y="376" width="340" height="124" rx="16" class="dia__card"/>
+              <text x="844" y="406" class="dia__k">PUBLIC API</text>
+              <text x="844" y="434" class="dia__t">The same run, from anywhere</text>
+              <text x="844" y="460" class="dia__dim">another system can start an enrichment</text>
+              <text x="844" y="480" class="dia__dim">and read the results back</text>
+            </svg>
+          </div>
+          <figcaption>An in-house Clay: the sheet, the worker that seeds and dispatches every cell, and the engine that answers them.</figcaption>
+        </figure>
+        </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
           <p class="lede">The workspace around the agent: upload a CSV, add a column, describe what you want, get sourced answers.</p>
           <p class="case__out"><span>Outcome</span> Spike: an in-house Clay — upload a lead list, add a column, and every row comes back enriched with a sourced answer</p>
@@ -885,68 +961,6 @@
           </ul>
         </div>
       </div>
-      <figure class="shot shot--flat reveal" data-anim="rise">
-        <div class="shot__frame shot__frame--dia">
-          <svg class="dia" viewBox="0 0 1200 530" role="img" aria-labelledby="clayTitle clayDesc">
-            <title id="clayTitle">How the enrichment workspace is put together</title>
-            <desc id="clayDesc">Three services over one queue. The React sheet uploads a CSV to object storage and lets you add an enrichment column as a prompt plus a typed schema you preview before it runs. An Express worker seeds one job per cell, dispatches them through a Redis-backed queue, and writes every finished result back to Postgres. The engine claims a row job and runs the research phase chain, keeping run state in Postgres. Finished cells flow back into the sheet as they land. Around it: runs can be paused, resumed or reverted from checkpoints stored per phase; every cell keeps a trace of the pages read, the quote behind the value and what it cost; and a public API runs the same enrichment from another system.</desc>
-            <defs>
-              <marker id="clayArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-            </defs>
-
-            <text x="40" y="44" class="dia__h">Add a column, every row comes back answered</text>
-            <text x="40" y="68" class="dia__k">THREE SERVICES OVER ONE QUEUE</text>
-
-            <rect x="40" y="96" width="340" height="186" rx="16" class="dia__box dia__box--sky"/>
-            <text x="64" y="126" class="dia__k">THE SHEET · REACT + VITE</text>
-            <text x="64" y="154" class="dia__t">Upload, edit, add a column</text>
-            <text x="64" y="180" class="dia__dim">the CSV lands in object storage</text>
-            <text x="64" y="202" class="dia__dim">a column is a prompt plus a typed</text>
-            <text x="64" y="224" class="dia__dim">schema you preview before it runs</text>
-            <text x="64" y="252" class="dia__dim">dedupe, saved views, version history</text>
-            <path d="M386 189 L426 189" class="dia__arrow" marker-end="url(#clayArrow)"/>
-
-            <rect x="430" y="96" width="340" height="186" rx="16" class="dia__card"/>
-            <text x="454" y="126" class="dia__k">THE WORKER · EXPRESS</text>
-            <text x="454" y="154" class="dia__t">Seeds and dispatches</text>
-            <text x="454" y="180" class="dia__dim">one job per cell, written once</text>
-            <text x="454" y="202" class="dia__dim">a Redis-backed queue claims row jobs</text>
-            <text x="454" y="224" class="dia__dim">and nothing is dispatched twice</text>
-            <text x="454" y="252" class="dia__dim">every result written back to Postgres</text>
-            <path d="M776 189 L816 189" class="dia__arrow" marker-end="url(#clayArrow)"/>
-
-            <rect x="820" y="96" width="340" height="186" rx="16" class="dia__box dia__box--mint"/>
-            <text x="844" y="126" class="dia__k">THE ENGINE</text>
-            <text x="844" y="154" class="dia__t">Runs the research</text>
-            <text x="844" y="180" class="dia__dim">claims a row job, then the phase chain:</text>
-            <text x="844" y="202" class="dia__dim">schema &#8594; map &#8594; rank &#8594; scrape &#8594; extract</text>
-            <text x="844" y="224" class="dia__dim">run state and payloads in Postgres</text>
-            <text x="844" y="252" class="dia__dim">the same engine as chapter 06</text>
-
-            <path d="M990 294 C 990 330, 600 330, 600 296" class="dia__arrow" marker-end="url(#clayArrow)"/>
-            <text x="795" y="352" class="dia__dim" text-anchor="middle">finished cells flow back into the sheet as they land</text>
-
-            <rect x="40" y="376" width="340" height="124" rx="16" class="dia__box dia__box--yellow"/>
-            <text x="64" y="406" class="dia__k">CONTROL</text>
-            <text x="64" y="434" class="dia__t">Pause, resume, revert</text>
-            <text x="64" y="460" class="dia__dim">a checkpoint is stored per phase, so a</text>
-            <text x="64" y="480" class="dia__dim">paused run resumes where it stopped</text>
-
-            <rect x="430" y="376" width="340" height="124" rx="16" class="dia__box dia__box--coral"/>
-            <text x="454" y="406" class="dia__k">TRACE, PER CELL</text>
-            <text x="454" y="434" class="dia__t">What it read, and what it cost</text>
-            <text x="454" y="460" class="dia__dim">the pages, the quote behind the value,</text>
-            <text x="454" y="480" class="dia__dim">the tokens &#8212; for every single cell</text>
-
-            <rect x="820" y="376" width="340" height="124" rx="16" class="dia__card"/>
-            <text x="844" y="406" class="dia__k">PUBLIC API</text>
-            <text x="844" y="434" class="dia__t">The same run, from anywhere</text>
-            <text x="844" y="460" class="dia__dim">another system can start an enrichment</text>
-            <text x="844" y="480" class="dia__dim">and read the results back</text>
-          </svg>
-        </div>
-        <figcaption>An in-house Clay: the sheet, the worker that seeds and dispatches every cell, and the engine that answers them.</figcaption>
-      </figure>
     </article>
 
     <article class="case" id="case-08">
@@ -955,6 +969,108 @@
         <h3 data-split="words" class="reveal">Warmest Path</h3>
       </header>
       <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 620" role="img" aria-labelledby="warmTitle warmDesc">
+              <title id="warmTitle">Warmest Path run graph</title>
+              <desc id="warmDesc">Our roster on the left, target accounts on the right. Eleven kinds of shared history — the same team, the same cohort, a shared accelerator batch, a co-authored patent, the same investor — become weighted edges; a three-stage search finds paths of up to three hops from one of our people to someone inside each target company, the last hop always inside the target, and scores each path. The result names who should reach out to which account and why.</desc>
+
+              <!-- title row -->
+              <text x="40" y="48" class="dia__h">Who should reach out, and why</text>
+              <text x="40" y="70" class="dia__k">A RUN GRAPH · 11 SIGNAL KINDS · 3 STAGES · NO LLM IN THE SCORING</text>
+
+              <!-- stages -->
+              <g>
+                <rect x="40" y="92" width="340" height="52" rx="14" class="dia__box dia__box--sky"/>
+                <text x="58" y="114" class="dia__k">STAGE 1</text><text x="58" y="132" class="dia__dim">shared history becomes weighted edges</text>
+                <rect x="430" y="92" width="340" height="52" rx="14" class="dia__box dia__box--yellow"/>
+                <text x="448" y="114" class="dia__k">STAGE 2</text><text x="448" y="132" class="dia__dim">search from both ends · K paths · ≤ 3 hops</text>
+                <rect x="820" y="92" width="340" height="52" rx="14" class="dia__box dia__box--mint"/>
+                <text x="838" y="114" class="dia__k">STAGE 3</text><text x="838" y="132" class="dia__dim">independent paths combine into one score</text>
+              </g>
+
+              <!-- unreached, faint -->
+              <g class="dia__faint">
+                <path d="M170 330 C 420 220, 720 190, 1000 220"/><path d="M230 280 C 500 320, 760 500, 1010 528"/>
+                <path d="M240 430 C 500 390, 700 250, 940 244"/><path d="M180 340 C 500 470, 740 560, 1060 490"/>
+                <path d="M300 350 C 560 260, 780 320, 1080 290"/><path d="M200 300 C 480 340, 700 430, 930 380"/>
+                <path d="M280 450 C 520 500, 820 400, 1100 444"/><path d="M160 310 C 380 370, 640 280, 900 350"/>
+              </g>
+
+              <!-- our roster -->
+              <text x="150" y="200" class="dia__k">OUR ROSTER</text>
+              <g class="dia__net">
+                <path d="M160 310 L205 345 L245 300"/><path d="M205 345 L185 388 L222 462"/><path d="M245 300 L255 248"/><path d="M290 440 L270 382 L300 340"/>
+              </g>
+              <g class="dia__sat">
+                <circle cx="160" cy="310" r="3.5"/><circle cx="205" cy="345" r="3.5"/><circle cx="245" cy="300" r="3.5"/><circle cx="185" cy="388" r="3.5"/>
+                <circle cx="270" cy="382" r="3.5"/><circle cx="222" cy="462" r="3.5"/><circle cx="290" cy="440" r="3.5"/><circle cx="140" cy="360" r="3.5"/>
+                <circle cx="255" cy="248" r="3.5"/><circle cx="318" cy="310" r="3.5"/>
+              </g>
+              <circle cx="200" cy="272" r="8" class="dia__champ"/>
+              <circle cx="300" cy="340" r="8" class="dia__champ"/>
+              <circle cx="230" cy="418" r="8" class="dia__champ"/>
+
+              <!-- warm paths -->
+              <g fill="none" stroke-width="3" stroke-linecap="round">
+                <path d="M200 272 C 480 160, 760 150, 980 216" class="dia__path--mint"/>
+                <path d="M300 340 C 560 260, 820 260, 1060 280" class="dia__path--sky"/>
+                <path d="M230 418 C 520 430, 800 430, 940 382" class="dia__path--yellow"/>
+                <path d="M300 340 C 600 410, 860 550, 1012 538" class="dia__path--pink"/>
+              </g>
+              <!-- signal names, on the curves -->
+              <g>
+                <text x="564" y="170" class="dia__sig" text-anchor="middle">same team, same years · base rate 0.38</text>
+                <text x="641" y="262" class="dia__sig" text-anchor="middle">co-authored patent · artifact</text>
+                <text x="596" y="448" class="dia__sig" text-anchor="middle">same cohort · education</text>
+                <text x="712" y="486" class="dia__sig" text-anchor="middle">shared investor · 2 hops</text>
+              </g>
+
+              <!-- target accounts -->
+              <text x="1020" y="176" class="dia__k" text-anchor="middle">TARGET ACCOUNTS</text>
+              <g class="dia__net"><path d="M980 216 L960 196 M980 216 L1004 200 M980 216 L1002 236 M980 216 L964 242"/></g>
+              <g class="dia__sat"><circle cx="960" cy="196" r="3"/><circle cx="1004" cy="200" r="3"/><circle cx="1002" cy="236" r="3"/><circle cx="964" cy="242" r="3"/></g>
+              <circle cx="980" cy="216" r="7" class="dia__bridge"/>
+              <text x="1022" y="212" class="dia__t">Northwind</text><text x="1022" y="234" class="dia__score">0.80</text>
+
+              <g class="dia__net"><path d="M1060 280 L1040 262 M1060 280 L1084 268 M1060 280 L1082 302 M1060 280 L1042 306"/></g>
+              <g class="dia__sat"><circle cx="1040" cy="262" r="3"/><circle cx="1084" cy="268" r="3"/><circle cx="1082" cy="302" r="3"/><circle cx="1042" cy="306" r="3"/></g>
+              <circle cx="1060" cy="280" r="7" class="dia__bridge"/>
+              <text x="1102" y="276" class="dia__t">Globex</text><text x="1102" y="298" class="dia__score">0.57</text>
+
+              <g class="dia__net"><path d="M940 382 L920 364 M940 382 L962 368 M940 382 L960 404 M940 382 L918 406"/></g>
+              <g class="dia__sat"><circle cx="920" cy="364" r="3"/><circle cx="962" cy="368" r="3"/><circle cx="960" cy="404" r="3"/><circle cx="918" cy="406" r="3"/></g>
+              <circle cx="940" cy="382" r="7" class="dia__bridge"/>
+              <text x="982" y="378" class="dia__t">Initech</text><text x="982" y="400" class="dia__score">0.35</text>
+
+              <g class="dia__net"><path d="M1012 538 L992 520 M1012 538 L1036 524 M1012 538 L1034 558 M1012 538 L994 562"/></g>
+              <g class="dia__sat"><circle cx="992" cy="520" r="3"/><circle cx="1036" cy="524" r="3"/><circle cx="1034" cy="558" r="3"/><circle cx="994" cy="562" r="3"/></g>
+              <circle cx="1012" cy="538" r="7" class="dia__bridge"/>
+              <text x="1054" y="534" class="dia__t">Contoso</text><text x="1054" y="556" class="dia__score">0.28</text>
+
+              <g class="dia__net"><path d="M1130 444 L1112 426 M1130 444 L1150 430 M1130 444 L1148 464"/></g>
+              <g class="dia__sat"><circle cx="1130" cy="444" r="4"/><circle cx="1112" cy="426" r="2.5"/><circle cx="1150" cy="430" r="2.5"/><circle cx="1148" cy="464" r="2.5"/></g>
+              <text x="1130" y="486" class="dia__dim" text-anchor="middle">Vandelay · no path yet</text>
+
+              <!-- safeguards -->
+              <rect x="40" y="500" width="380" height="72" rx="14" class="dia__box dia__box--pink"/>
+              <text x="58" y="522" class="dia__k">SAFEGUARDS</text>
+              <text x="58" y="542" class="dia__dim">Recruiters and bots never act as a bridge. A giant employer</text>
+              <text x="58" y="558" class="dia__dim">counts for less than a 120-person team. Tenants never mix.</text>
+
+              <!-- legend -->
+              <g>
+                <circle cx="470" cy="600" r="6" class="dia__champ"/><text x="484" y="604" class="dia__dim">one of our people</text>
+                <circle cx="640" cy="600" r="6" class="dia__bridge"/><text x="654" y="604" class="dia__dim">a bridge inside the target</text>
+                <circle cx="850" cy="600" r="3.5" class="dia__sat"/><text x="862" y="604" class="dia__dim">unreached</text>
+                <text x="1160" y="604" class="dia__dim" text-anchor="end">names and scores illustrative</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption>A run graph: who on our side is closest to each target account, through which shared history, and how warm the path is.</figcaption>
+        </figure>
+        </div>
         <div class="case__lead reveal" data-anim="rise" style="--d:1">
           <p class="lede">An intro finder: shared history goes in, a warm introduction comes out.</p>
           <p class="case__out"><span>Outcome</span> Tells a sales team which of their own people should reach out to each target account, and why</p>
@@ -980,106 +1096,6 @@
           </ul>
         </div>
       </div>
-      <figure class="shot shot--flat reveal" data-anim="rise">
-        <div class="shot__frame shot__frame--dia">
-          <svg class="dia" viewBox="0 0 1200 620" role="img" aria-labelledby="warmTitle warmDesc">
-            <title id="warmTitle">Warmest Path run graph</title>
-            <desc id="warmDesc">Our roster on the left, target accounts on the right. Eleven kinds of shared history — the same team, the same cohort, a shared accelerator batch, a co-authored patent, the same investor — become weighted edges; a three-stage search finds paths of up to three hops from one of our people to someone inside each target company, the last hop always inside the target, and scores each path. The result names who should reach out to which account and why.</desc>
-
-            <!-- title row -->
-            <text x="40" y="48" class="dia__h">Who should reach out, and why</text>
-            <text x="40" y="70" class="dia__k">A RUN GRAPH · 11 SIGNAL KINDS · 3 STAGES · NO LLM IN THE SCORING</text>
-
-            <!-- stages -->
-            <g>
-              <rect x="40" y="92" width="340" height="52" rx="14" class="dia__box dia__box--sky"/>
-              <text x="58" y="114" class="dia__k">STAGE 1</text><text x="58" y="132" class="dia__dim">shared history becomes weighted edges</text>
-              <rect x="430" y="92" width="340" height="52" rx="14" class="dia__box dia__box--yellow"/>
-              <text x="448" y="114" class="dia__k">STAGE 2</text><text x="448" y="132" class="dia__dim">search from both ends · K paths · ≤ 3 hops</text>
-              <rect x="820" y="92" width="340" height="52" rx="14" class="dia__box dia__box--mint"/>
-              <text x="838" y="114" class="dia__k">STAGE 3</text><text x="838" y="132" class="dia__dim">independent paths combine into one score</text>
-            </g>
-
-            <!-- unreached, faint -->
-            <g class="dia__faint">
-              <path d="M170 330 C 420 220, 720 190, 1000 220"/><path d="M230 280 C 500 320, 760 500, 1010 528"/>
-              <path d="M240 430 C 500 390, 700 250, 940 244"/><path d="M180 340 C 500 470, 740 560, 1060 490"/>
-              <path d="M300 350 C 560 260, 780 320, 1080 290"/><path d="M200 300 C 480 340, 700 430, 930 380"/>
-              <path d="M280 450 C 520 500, 820 400, 1100 444"/><path d="M160 310 C 380 370, 640 280, 900 350"/>
-            </g>
-
-            <!-- our roster -->
-            <text x="150" y="200" class="dia__k">OUR ROSTER</text>
-            <g class="dia__net">
-              <path d="M160 310 L205 345 L245 300"/><path d="M205 345 L185 388 L222 462"/><path d="M245 300 L255 248"/><path d="M290 440 L270 382 L300 340"/>
-            </g>
-            <g class="dia__sat">
-              <circle cx="160" cy="310" r="3.5"/><circle cx="205" cy="345" r="3.5"/><circle cx="245" cy="300" r="3.5"/><circle cx="185" cy="388" r="3.5"/>
-              <circle cx="270" cy="382" r="3.5"/><circle cx="222" cy="462" r="3.5"/><circle cx="290" cy="440" r="3.5"/><circle cx="140" cy="360" r="3.5"/>
-              <circle cx="255" cy="248" r="3.5"/><circle cx="318" cy="310" r="3.5"/>
-            </g>
-            <circle cx="200" cy="272" r="8" class="dia__champ"/>
-            <circle cx="300" cy="340" r="8" class="dia__champ"/>
-            <circle cx="230" cy="418" r="8" class="dia__champ"/>
-
-            <!-- warm paths -->
-            <g fill="none" stroke-width="3" stroke-linecap="round">
-              <path d="M200 272 C 480 160, 760 150, 980 216" class="dia__path--mint"/>
-              <path d="M300 340 C 560 260, 820 260, 1060 280" class="dia__path--sky"/>
-              <path d="M230 418 C 520 430, 800 430, 940 382" class="dia__path--yellow"/>
-              <path d="M300 340 C 600 410, 860 550, 1012 538" class="dia__path--pink"/>
-            </g>
-            <!-- signal names, on the curves -->
-            <g>
-              <text x="564" y="170" class="dia__sig" text-anchor="middle">same team, same years · base rate 0.38</text>
-              <text x="641" y="262" class="dia__sig" text-anchor="middle">co-authored patent · artifact</text>
-              <text x="596" y="448" class="dia__sig" text-anchor="middle">same cohort · education</text>
-              <text x="712" y="486" class="dia__sig" text-anchor="middle">shared investor · 2 hops</text>
-            </g>
-
-            <!-- target accounts -->
-            <text x="1020" y="176" class="dia__k" text-anchor="middle">TARGET ACCOUNTS</text>
-            <g class="dia__net"><path d="M980 216 L960 196 M980 216 L1004 200 M980 216 L1002 236 M980 216 L964 242"/></g>
-            <g class="dia__sat"><circle cx="960" cy="196" r="3"/><circle cx="1004" cy="200" r="3"/><circle cx="1002" cy="236" r="3"/><circle cx="964" cy="242" r="3"/></g>
-            <circle cx="980" cy="216" r="7" class="dia__bridge"/>
-            <text x="1022" y="212" class="dia__t">Northwind</text><text x="1022" y="234" class="dia__score">0.80</text>
-
-            <g class="dia__net"><path d="M1060 280 L1040 262 M1060 280 L1084 268 M1060 280 L1082 302 M1060 280 L1042 306"/></g>
-            <g class="dia__sat"><circle cx="1040" cy="262" r="3"/><circle cx="1084" cy="268" r="3"/><circle cx="1082" cy="302" r="3"/><circle cx="1042" cy="306" r="3"/></g>
-            <circle cx="1060" cy="280" r="7" class="dia__bridge"/>
-            <text x="1102" y="276" class="dia__t">Globex</text><text x="1102" y="298" class="dia__score">0.57</text>
-
-            <g class="dia__net"><path d="M940 382 L920 364 M940 382 L962 368 M940 382 L960 404 M940 382 L918 406"/></g>
-            <g class="dia__sat"><circle cx="920" cy="364" r="3"/><circle cx="962" cy="368" r="3"/><circle cx="960" cy="404" r="3"/><circle cx="918" cy="406" r="3"/></g>
-            <circle cx="940" cy="382" r="7" class="dia__bridge"/>
-            <text x="982" y="378" class="dia__t">Initech</text><text x="982" y="400" class="dia__score">0.35</text>
-
-            <g class="dia__net"><path d="M1012 538 L992 520 M1012 538 L1036 524 M1012 538 L1034 558 M1012 538 L994 562"/></g>
-            <g class="dia__sat"><circle cx="992" cy="520" r="3"/><circle cx="1036" cy="524" r="3"/><circle cx="1034" cy="558" r="3"/><circle cx="994" cy="562" r="3"/></g>
-            <circle cx="1012" cy="538" r="7" class="dia__bridge"/>
-            <text x="1054" y="534" class="dia__t">Contoso</text><text x="1054" y="556" class="dia__score">0.28</text>
-
-            <g class="dia__net"><path d="M1130 444 L1112 426 M1130 444 L1150 430 M1130 444 L1148 464"/></g>
-            <g class="dia__sat"><circle cx="1130" cy="444" r="4"/><circle cx="1112" cy="426" r="2.5"/><circle cx="1150" cy="430" r="2.5"/><circle cx="1148" cy="464" r="2.5"/></g>
-            <text x="1130" y="486" class="dia__dim" text-anchor="middle">Vandelay · no path yet</text>
-
-            <!-- safeguards -->
-            <rect x="40" y="500" width="380" height="72" rx="14" class="dia__box dia__box--pink"/>
-            <text x="58" y="522" class="dia__k">SAFEGUARDS</text>
-            <text x="58" y="542" class="dia__dim">Recruiters and bots never act as a bridge. A giant employer</text>
-            <text x="58" y="558" class="dia__dim">counts for less than a 120-person team. Tenants never mix.</text>
-
-            <!-- legend -->
-            <g>
-              <circle cx="470" cy="600" r="6" class="dia__champ"/><text x="484" y="604" class="dia__dim">one of our people</text>
-              <circle cx="640" cy="600" r="6" class="dia__bridge"/><text x="654" y="604" class="dia__dim">a bridge inside the target</text>
-              <circle cx="850" cy="600" r="3.5" class="dia__sat"/><text x="862" y="604" class="dia__dim">unreached</text>
-              <text x="1160" y="604" class="dia__dim" text-anchor="end">names and scores illustrative</text>
-            </g>
-          </svg>
-        </div>
-        <figcaption>A run graph: who on our side is closest to each target account, through which shared history, and how warm the path is.</figcaption>
-      </figure>
     </article>
   </div>
 </section>
@@ -1217,6 +1233,9 @@
           owning a dashboard end to end, then sitting in the customer's Slack while they used it.
         </p>
         <p>Outside work: dance, the odd hackathon, and chess — which I am actually good at.</p>
+        <p class="about__site">
+          The product — <a href="https://gethuntd.com" target="_blank" rel="noopener">gethuntd.com&nbsp;↗</a>
+        </p>
       </div>
     </div>
 

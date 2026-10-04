@@ -52,9 +52,13 @@ player is click-to-load so nothing loads for a visitor who doesn't press play, b
 it before sharing the site widely.
 
 **The proof section.** One `article.feature` at the top (the Salesforce thread, the strongest
-single screenshot) and then `ul.tiles` — a **grid**, three across, every image forced to the same
-`16 / 10` shape. It used to be CSS `columns`, which fills one column at a time and left a hole
-beside the tallest tile. Keep it a grid, and keep tile count a multiple of three if you can.
+single screenshot) and then `ul.tiles` — a six-track grid where each tile sets its own `--span`.
+Images are never cropped (a cropped screenshot cut a face in half), so a tile is as tall as its
+image is, and the spans are chosen to make rows come out level: a 2.5:1 video still takes 4 tracks
+beside a squarish Slack thread on 2, and two 1.8:1 shots take 3 each. If you add or swap a tile,
+work out the heights (`span × track width ÷ aspect ratio`) and pick spans that match within a row,
+or the row ends ragged. CSS `columns` was worse: it fills one column at a time and left a hole
+beside the tallest tile.
 
 **Blurring.** Anything a customer would call theirs gets blurred before it goes in: vendor names,
 campaign names, prospect rows, email addresses. `forty-contacts.webp` has Deepgram's campaign
@@ -67,6 +71,15 @@ side projects → about. The customer proof runs first, deliberately: it is the 
 The `data-zone` letters must stay in page order (hero `a`, customers `b`, work `c`, …) because the
 background colour morphs to the zone of the section under the reading line, and the nav links are a
 table of contents, so they follow the same order.
+
+**Chapter layout.** Each chapter is one text flow with its media floated into a corner
+(`.case__media`, 56% wide, right on odd chapters and left on even), so the lede, the outcome and
+the paragraphs run beside the picture and then continue underneath it. Two text columns with the
+media centred below left tall empty blocks wherever a column ran out first. Consequences worth
+knowing: `.case__out` must stay `display: flex` (as `inline-flex` a long outcome dropped below the
+float and tore a hole in the column), `.case__wide` and the chapter clear the float, and a second
+supporting screenshot goes **after** the text as `.case__cols > .shot` with `display: flow-root`,
+which parks it in the column the float leaves free rather than trailing off into blank page.
 
 **The Work section.** Eight full-width chapters (`article.case`). Each has a header with a
 huge faint number behind the title (`.case__n`), two columns — `.case__lead` (the lede and
