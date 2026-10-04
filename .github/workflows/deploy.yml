@@ -72,6 +72,14 @@ jobs:
         with:
           node-version: 22
 
+      - name: Stamp asset versions
+        # Browsers happily hold on to styles/main.css for a day; stamping the
+        # commit onto the URL means a deploy is always what a visitor sees.
+        run: |
+          sha="${GITHUB_SHA::7}"
+          sed -i "s|styles/main.css?v=[A-Za-z0-9]*|styles/main.css?v=$sha|; s|scripts/main.js?v=[A-Za-z0-9]*|scripts/main.js?v=$sha|" index.html
+          grep -o 'main\.\(css\|js\)?v=[A-Za-z0-9]*' index.html
+
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 

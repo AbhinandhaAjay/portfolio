@@ -483,24 +483,38 @@
       frame.setAttribute("allow", "autoplay; fullscreen; picture-in-picture");
       frame.setAttribute("allowfullscreen", "");
 
-      // The player takes a few seconds to come up, and an empty black box
-      // reads as broken: hold a spinner over it until the iframe loads, and
-      // offer the original link if it is taking unusually long.
+      // Loom's player takes a few seconds to boot. Show a progress bar over it
+      // meanwhile — pointer-events: none, so a click always reaches the player
+      // and never pauses or restarts what is already running.
       var wait = document.createElement("div");
       wait.className = "video__wait";
-      wait.innerHTML = '<span class="video__spin" aria-hidden="true"></span>' +
-                       '<span class="video__wait-t">Loading the recording…</span>' +
-                       '<a class="video__alt" href="' + href + '" target="_blank" rel="noopener">Open it on Loom ↗</a>';
+      wait.innerHTML = '<span class="video__bar"><i class="video__fill" id="videoFill"></i></span>' +
+                       '<span class="video__wait-t">Rolling the tape…</span>' +
+                       '<a class="video__alt" href="' + href + '" target="_blank" rel="noopener">Taking a while? Open it on Loom ↗</a>';
       box.innerHTML = "";
       box.removeAttribute("data-cursor");
       box.appendChild(frame);
       box.appendChild(wait);
+      if (cur) cur.classList.add("is-off");     // the drawn cursor has no business over a player
 
-      var done = false;
-      function clear() { if (done) return; done = true; if (wait.parentNode) wait.parentNode.removeChild(wait); }
-      frame.addEventListener("load", function () { setTimeout(clear, 400); });
-      setTimeout(function () { wait.classList.add("is-slow"); }, 4000);   // reveals the fallback link
-      setTimeout(clear, 20000);                                           // never leave the overlay stuck
+      // Creep towards 90% while we wait; the load event finishes the bar.
+      var fill = wait.querySelector(".video__fill"), pct = 0, done = false;
+      var creep = window.setInterval(function () {
+        pct += (90 - pct) * .08 + .4;
+        if (fill) fill.style.width = Math.min(pct, 90) + "%";
+      }, 140);
+
+      function clear() {
+        if (done) return;
+        done = true;
+        window.clearInterval(creep);
+        if (fill) fill.style.width = "100%";
+        wait.classList.add("is-done");
+        window.setTimeout(function () { if (wait.parentNode) wait.parentNode.removeChild(wait); }, 420);
+      }
+      frame.addEventListener("load", function () { setTimeout(clear, 300); });
+      setTimeout(function () { wait.classList.add("is-slow"); }, 4000);   // reveals the way out
+      setTimeout(clear, 20000);                                          // never leave it stuck
     });
   });
 })();

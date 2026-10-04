@@ -100,10 +100,20 @@ copy a `figure.shot` from 03 or 04, drop the file in `assets/work/`, and set the
 
 Nothing loads until play. For a Loom or YouTube recording, give the `shot__frame` the classes
 `shot__frame embed` plus `data-embed data-loom="<share id>"` (or `data-youtube`) and copy the
-play button from `#video`; the iframe is injected on click only. On click the loader also holds a
-spinner (`.video__wait`) over the iframe until it fires `load`, reveals an "open it on Loom" link
-after 4s and clears itself after 20s, because the Loom player takes a few seconds to boot and an
-empty black box reads as broken. Hovering the play button preconnects to Loom.
+play button from `#video`; the iframe is injected on click only.
+
+On click a curtain (`.video__wait`) covers the iframe with a progress bar that creeps to 90% and
+finishes on the iframe's `load`, reveals an "open it on Loom" link after 4s, and always clears
+itself by 20s. Two things about it are deliberate: it is **opaque**, so Loom's own restart as the
+player initialises happens out of sight, and it **takes the pointer**, because a click landing on
+an autoplaying player you cannot see is what made the video pause and start again. Hovering the
+play button preconnects to Loom.
+
+**Cache.** `index.html` loads `styles/main.css?v=…` and `scripts/main.js?v=…`; the deploy
+workflow stamps the commit sha onto both before uploading, and `vercel.json` sends
+`max-age=0, must-revalidate` for css/js and the page. Without that a browser will happily keep
+yesterday's stylesheet, and the site looks unchanged after a deploy. If you preview locally with
+`python -m http.server`, still hard-reload (Ctrl+Shift+R) after editing CSS.
 
 **The drawn cursor.** `#cur` follows the pointer and `cursor: none` hides the real one. Two
 things it must keep doing: it hides itself when the pointer crosses into an `<iframe>` (an iframe
