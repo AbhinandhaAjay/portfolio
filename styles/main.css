@@ -390,6 +390,7 @@ html.is-loading .tag--hi, html.is-leaving .tag--hi { opacity: 0; }
    Two columns left a tall empty block under whichever column ran out first. */
 .case__cols { display: block; margin-top: clamp(20px, 3vw, 32px); }
 .case__media {
+  position: relative; z-index: 1;   /* above the text beside it, whose reveal transform would otherwise cover it and eat the click */
   float: right; width: 56%; margin: 6px 0 24px clamp(28px, 3.4vw, 52px);
 }
 .case:nth-of-type(even) .case__media {           /* alternate sides down the page */
@@ -537,6 +538,8 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
   border-bottom: 2px solid var(--coral); padding-bottom: 1px;
   box-decoration-break: clone; -webkit-box-decoration-break: clone;
 }
+a.hl { text-decoration: none; transition: color .25s ease, border-color .25s ease; }
+a.hl:hover { color: var(--coral-ink, var(--accent-ink)); border-bottom-color: currentColor; }
 
 /* a long screenshot you read by scrolling inside it, the way it looked in Slack,
    instead of a shrunken thumbnail you have to open to read */
@@ -552,6 +555,19 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
 .scrollshot::-webkit-scrollbar-track { background: transparent; }
 .scrollshot img { display: block; width: 100%; height: auto; max-height: none; border: 0; border-radius: 0; }
 .scrollshot:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
+/* the "scroll to read" pill main.js puts over a scroll frame while there's more below */
+.scrollwrap { position: relative; min-width: 0; }
+.scrollhint {
+  position: absolute; left: 50%; bottom: 14px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px; border-radius: 999px;
+  background: var(--surface); color: var(--ink); box-shadow: var(--shadow);
+  font-size: 13px; font-weight: 600; white-space: nowrap; pointer-events: none;
+  opacity: 0; transform: translate(-50%, 8px); transition: opacity .3s ease, transform .3s var(--bounce);
+}
+.scrollwrap.has-more .scrollhint { opacity: 1; transform: translate(-50%, 0); }
+.scrollhint__a { display: inline-block; animation: nudge 1.4s var(--ease-io) infinite; }
+@keyframes nudge { 50% { transform: translateY(3px); } }
 .feature__shot.scrollshot { --scroll-h: 300px; }
 .tile .scrollshot { --scroll-h: 300px; }
 .case__media .scrollshot { --scroll-h: 300px; }
@@ -693,19 +709,18 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
 .about .head { margin-bottom: 0; }
 .about__text p { font-size: 1.1rem; color: var(--ink-2); line-height: 1.7; }
 .about__text p + p { margin-top: 14px; }
-.stack {
-  margin-top: clamp(48px, 6vw, 76px); padding-top: clamp(32px, 4vw, 48px); border-top: 1px solid var(--line-2);
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;
+/* the hero's second half: what I built in one breath, then every tool as one line of words */
+.brief {
+  margin-top: clamp(64px, 9vw, 112px); padding-top: clamp(32px, 4vw, 48px); border-top: 1px solid var(--line-2);
 }
-.stack > div {
-  border-radius: var(--r); padding: 20px 22px;
-  transition: transform .35s var(--bounce), box-shadow .35s var(--bounce);
+.brief__t { font-size: clamp(1.15rem, 1.8vw, 1.45rem); line-height: 1.6; color: var(--ink); }
+.brief__go { font-size: .8em; margin-left: .5em; white-space: nowrap; }
+.skills { margin-top: clamp(36px, 4.5vw, 56px); text-align: center; }
+.techline {
+  list-style: none; padding: 0; margin: 14px 0 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px;
+  font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--ink-2);
 }
-.stack > div:hover { transform: translate(-2px, -3px) rotate(-1deg); box-shadow: var(--shadow); }
-.stack > div:nth-child(1) { background: var(--yellow-t); } .stack > div:nth-child(2) { background: var(--sky-t); }
-.stack > div:nth-child(3) { background: var(--pink-t); }   .stack > div:nth-child(4) { background: var(--mint-t); }
-.stack h4 { font-family: var(--pixel); font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); line-height: 1.8; }
-.stack p { margin-top: 8px; font-size: 14px; color: var(--ink-2); line-height: 1.6; }
 
 /* ---------- footer ---------- */
 .foot {
@@ -809,7 +824,6 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
   .train > .card:nth-child(4) { grid-column: auto / span 2; }
   .train > .card:nth-child(5) { grid-column: 2 / span 2; }
   .about { grid-template-columns: 1fr; }
-  .stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 720px) {
   .nav__links { display: none; }
@@ -828,7 +842,6 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
   .tile { grid-column: 1 / -1; }
   .train { grid-template-columns: 1fr; }
   .train > .card, .train > .card:nth-child(4), .train > .card:nth-child(5) { grid-column: 1 / -1; }
-  .stack { grid-template-columns: 1fr; }
   .foot__links { flex-direction: column; gap: 12px; }
   .foot__links a, .copy { align-self: flex-start; }
   .copy__tip { left: 0; transform: translate(0, 6px); }
@@ -844,7 +857,8 @@ html:not(.cur-on) .shot__frame--dia { cursor: zoom-in; }   /* the drawn cursor s
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   body { transition: none; }
-  .js .reveal, .js [data-anim], .w__i, .c, .rot__w, .nl .c-nav, .btn, .btn__a, .ul::before, .ul::after, .tile, .card, .chips li, .pills li, .stack > div, .case__n, .shot__frame {
+  .scrollhint__a { animation: none; }
+  .js .reveal, .js [data-anim], .w__i, .c, .rot__w, .nl .c-nav, .btn, .btn__a, .ul::before, .ul::after, .tile, .card, .chips li, .pills li, .case__n, .shot__frame {
     transition: none !important; animation: none !important; transform: none !important; opacity: 1 !important; filter: none !important;
   }
   .shot-card img, .shot__frame img, .feature__shot, .video, .shot { transform: none !important; opacity: 1 !important; }

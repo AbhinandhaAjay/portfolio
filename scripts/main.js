@@ -452,6 +452,28 @@
     box.addEventListener("keydown", function (e) {
       if (e.key === "Enter") { e.preventDefault(); openLb(img); }
     });
+
+    // Nothing about a picture says it scrolls, so a pill sits on it until the
+    // reader reaches the bottom. It lives in a wrapper so it doesn't scroll away.
+    var wrap = document.createElement("div");
+    wrap.className = "scrollwrap";
+    box.parentNode.insertBefore(wrap, box);
+    wrap.appendChild(box);
+    var hint = document.createElement("span");
+    hint.className = "scrollhint";
+    hint.setAttribute("aria-hidden", "true");
+    hint.innerHTML = 'Scroll to read <span class="scrollhint__a">↓</span>';
+    wrap.appendChild(hint);
+    function check() {
+      var more = box.scrollHeight - box.clientHeight > 30;   // a few pixels of overflow is not "more to read"
+      var atEnd = box.scrollTop + box.clientHeight >= box.scrollHeight - 12;
+      wrap.classList.toggle("has-more", more && !atEnd);
+    }
+    box.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    img.addEventListener("load", check);
+    if ("ResizeObserver" in window) new ResizeObserver(check).observe(img);   // lazy images get their height late
+    check();
   });
 
   document.querySelectorAll("[data-shot] img").forEach(function (img) {

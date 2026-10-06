@@ -103,10 +103,12 @@
         </p>
 
         <p class="bio reveal" style="--d:3">
-          Forward-deployed engineer. At Huntd I owned the customer dashboard end to end, moved its
-          data layer with zero downtime, and built the CRM sync, signal and research systems around
-          it — working directly with the teams at
-          <span class="hl">Deepgram, Blitzy, HyperBound and Peec&nbsp;AI.</span>
+          Forward-deployed engineer. At Huntd I built the customer-facing product from scratch, then
+          worked alongside the customers using it — as their first line of support, shipping the
+          features they asked for, and making sure those features and the data behind them got used.
+          Around it I built the CRM integrations, signup signals and AI research agents, working
+          directly with the teams at
+          <a class="hl" href="#customers">Deepgram, Rho, Blitzy, HyperBound and Peec&nbsp;AI.</a>
         </p>
 
         <ul class="pills reveal" style="--d:4">
@@ -136,6 +138,20 @@
         </div>
       </figure>
 
+    </div>
+
+    <div class="brief reveal" data-anim="up">
+      <p class="brief__t">
+        I built the platform behind Huntd's customer-facing product. A stream of 2.4 million leads
+        comes in; I turned it into an explorer people enjoy working in, and sent it on to each team's
+        CRM — or wherever they wanted to see it.
+        <a class="ul brief__go" href="#work">View my work →</a>
+      </p>
+    </div>
+
+    <div class="skills reveal" style="--d:1">
+      <p class="eyebrow">Tech stack</p>
+      <ul class="techline"><li>React</li><li>TypeScript</li><li>JavaScript</li><li>Node.js</li><li>Express</li><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Supabase</li><li>MongoDB</li><li>Redis</li><li>Kafka</li><li>BullMQ</li><li>Tailwind</li><li>Docker</li><li>Sentry</li><li>HubSpot</li><li>Salesforce</li><li>Claude&nbsp;Agent&nbsp;SDK</li><li>OpenAI</li><li>Azure&nbsp;OpenAI</li><li>Gemini</li><li>Firecrawl</li></ul>
     </div>
   </div>
 </section>
@@ -173,9 +189,9 @@
     <ul class="tiles">
       <li class="tile reveal" data-anim="fan" style="--span: 4; --d:0" data-shot data-cursor="Zoom">
         <img src="assets/work/slack/deepgram-call.webp" width="1880" height="735"
-             alt="Video call with Deepgram's team, configuring their CRM sync"
+             alt="Video call with Deepgram's team, setting up their Salesforce integration"
              loading="lazy" decoding="async">
-        <p><b>Deepgram · CRM working session</b> Working the sync through on a call with Delano Fernando, who owns Salesforce at Deepgram — Huntd's co-founder and me on the other two tiles.</p>
+        <p><b>Deepgram · Salesforce integration</b> Setting up the Salesforce integration with Delano Fernando, who owns Salesforce at Deepgram — Huntd's co-founder and me on the other two tiles.</p>
       </li>
       <li class="tile reveal" data-anim="fan" style="--span: 2; --d:1" data-cursor="Zoom">
         <span class="scrollshot" tabindex="0"><img src="assets/work/slack/forty-contacts-v2.webp" width="859" height="733"
@@ -187,7 +203,7 @@
         <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
              alt="Slack thread with Blitzy: a signup alert for a target account, met with thanks"
              loading="lazy" decoding="async">
-        <p><b>Blitzy · Signup alerts</b> Caught a signup at one of their target accounts and sent it over the same day — before the feature had shipped.</p>
+        <p><b>Blitzy · Signup signals</b> Built signup signals, a first in the world: they catch the moment a lead at a target account starts using the product, and tell the customer the same day.</p>
       </li>
       <li class="tile reveal" data-anim="fan" style="--span: 2; --d:0" data-cursor="Zoom">
         <span class="scrollshot" tabindex="0"><img src="assets/work/slack/hubspot-spec.webp" width="1042" height="798"
@@ -379,335 +395,15 @@
             across millions of rows went from a query that crawled to one that returns while you type.
           </p>
           <ul class="chips">
-            <li>MongoDB</li><li>pg-copy-streams</li><li>Supabase Postgres</li><li>JSONB</li><li>pg_trgm</li><li>SQL migrations</li>
+            <li>MongoDB</li><li>PostgreSQL</li><li>Supabase</li><li>Node</li><li>TypeScript</li>
           </ul>
         </div>
       </div>
     </article>
 
-    <article class="case case--pair" id="case-03">
+    <article class="case" id="case-03">
       <header class="case__head reveal" data-anim="rise">
         <span class="case__n" aria-hidden="true">03</span>
-        <h3 data-split="words" class="reveal">CRM &amp; GTM integrations</h3>
-      </header>
-      <div class="case__cols">
-        <div class="case__media">
-        <figure class="shot shot--flat reveal" data-anim="rise">
-          <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1200 540" role="img" aria-labelledby="crmTitle crmDesc">
-    <title id="crmTitle">Where a filtered list ends up</title>
-    <desc id="crmDesc">A customer filters people in the dashboard and exports them. The same list arrives in HubSpot as contacts and companies, with the fields it needs created for them; in Salesforce as contacts, accounts and leads; or in Google Sheets as one workbook per team, grouped by account. Only what changed is sent, a failure retries and shows up in the admin panel, and a record the customer deleted is never put back.</desc>
-    <defs>
-      <marker id="crmArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-    </defs>
-
-    <text x="40" y="46" class="dia__h">Where a filtered list ends up</text>
-    <text x="40" y="70" class="dia__k">THE DASHBOARD IS OURS · THE TOOLS ON THE RIGHT ARE THEIRS</text>
-
-    <!-- the dashboard -->
-    <text x="40" y="116" class="dia__k">IN THE DASHBOARD</text>
-    <rect x="40" y="128" width="360" height="252" rx="18" class="dia__card"/>
-    <rect x="40" y="128" width="360" height="40" rx="18" class="dia__box dia__box--sky"/>
-    <text x="64" y="154" class="dia__t">The people you filtered</text>
-    <g>
-      <line x1="64" y1="196" x2="376" y2="196" class="dia__rule"/>
-      <line x1="64" y1="232" x2="376" y2="232" class="dia__rule"/>
-      <line x1="64" y1="268" x2="376" y2="268" class="dia__rule"/>
-      <line x1="64" y1="304" x2="376" y2="304" class="dia__rule"/>
-      <circle cx="78" cy="214" r="6" class="dia__dot--mint"/><text x="96" y="219" class="dia__dim">name · company · title</text>
-      <circle cx="78" cy="250" r="6" class="dia__dot--sky"/><text x="96" y="255" class="dia__dim">seniority</text>
-      <circle cx="78" cy="286" r="6" class="dia__dot--yellow"/><text x="96" y="291" class="dia__dim">where they came from</text>
-    </g>
-    <rect x="64" y="322" width="110" height="34" rx="10" class="dia__box dia__box--coral"/>
-    <text x="84" y="344" class="dia__t">Export</text>
-
-    <!-- the three destinations -->
-    <text x="640" y="116" class="dia__k">IN THE CUSTOMER'S OWN TOOLS</text>
-    <g class="dia__arrow" marker-end="url(#crmArrow)">
-      <path d="M404 254 C 520 254, 520 172, 632 172"/>
-      <path d="M404 254 C 520 254, 520 254, 632 254"/>
-      <path d="M404 254 C 520 254, 520 336, 632 336"/>
-    </g>
-
-    <rect x="640" y="128" width="520" height="88" rx="16" class="dia__box dia__box--coral"/>
-    <text x="664" y="160" class="dia__t">HubSpot</text>
-    <text x="664" y="184" class="dia__dim">contacts and companies — and the custom fields</text>
-    <text x="664" y="204" class="dia__dim">it needs are created for you, then backfilled</text>
-
-    <rect x="640" y="210" width="520" height="88" rx="16" class="dia__box dia__box--sky"/>
-    <text x="664" y="242" class="dia__t">Salesforce</text>
-    <text x="664" y="266" class="dia__dim">contacts, accounts and leads</text>
-    <text x="664" y="286" class="dia__dim">production org or a sandbox first</text>
-
-    <rect x="640" y="292" width="520" height="88" rx="16" class="dia__box dia__box--mint"/>
-    <text x="664" y="324" class="dia__t">Google Sheets</text>
-    <text x="664" y="348" class="dia__dim">one workbook per team, grouped by account —</text>
-    <text x="664" y="368" class="dia__dim">for teams who would rather we did not touch the CRM</text>
-
-    <rect x="40" y="406" width="1120" height="94" rx="16" class="dia__box dia__box--yellow"/>
-    <text x="64" y="440" class="dia__t">Writing into someone else's CRM is a trust exercise.</text>
-    <text x="64" y="466" class="dia__dim">Only what actually changed is sent. A failure retries and shows up in the admin panel instead of going quiet.</text>
-    <text x="64" y="486" class="dia__dim">A record the customer deleted is never put back.</text>
-  </svg>
-          </div>
-          <figcaption>Where a filtered list ends up, and how carefully it is written.</figcaption>
-        </figure>
-        <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
-          <div class="shot__frame">
-            <img src="assets/work/huntd-integrations-v2.webp" width="834" height="292"
-                 alt="The Integrations tab of the dashboard settings: HubSpot and Salesforce connection cards"
-                 loading="lazy" decoding="async">
-          </div>
-          <figcaption>The Integrations settings page customers connect their CRM from.</figcaption>
-        </figure>
-        </div>
-        <div class="case__lead reveal" data-anim="rise" style="--d:1">
-          <p class="lede">The data was useful, but it lived in the wrong place. I built the bridge into customers' CRMs.</p>
-          <p class="case__out"><span>Outcome</span> Got Huntd's data into the tools customers already work in — live in HubSpot, Salesforce and Google Sheets — by building a sync that only writes what changed and never recreates what they deleted</p>
-        </div>
-        <div class="case__body reveal" data-anim="rise" style="--d:2">
-          <p>
-            Built and configured Salesforce integrations across Contacts, Accounts and Leads, enabling
-            customer data to sync between Huntd and Salesforce. Worked directly with customer teams to
-            configure field mappings, troubleshoot synchronisation issues and ensure existing CRM data
-            was preserved.
-          </p>
-          <p>
-            The HubSpot app does the same for contacts and companies, creating its own custom fields and
-            backfilling every existing record. Teams that would rather we didn't write to their CRM get
-            Google Sheets exports grouped by account instead.
-          </p>
-          <ul class="chips">
-            <li>HubSpot OAuth</li><li>Salesforce</li><li>Sheets API</li><li>Public API</li><li>Webhooks</li>
-          </ul>
-        </div>
-      </div>
-
-    </article>
-
-    <article class="case case--pair" id="case-04">
-      <header class="case__head reveal" data-anim="rise">
-        <span class="case__n" aria-hidden="true">04</span>
-        <h3 data-split="words" class="reveal">Signup &amp; churn signals</h3>
-      </header>
-      <div class="case__cols">
-        <div class="case__media">
-        <figure class="shot shot--flat reveal" data-anim="rise">
-          <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1200 640" role="img" aria-labelledby="sigTitle sigDesc">
-    <title id="sigTitle">Spotting the moment a lead becomes a user</title>
-    <desc id="sigDesc">A lead checked in March came back as not a user, and that answer was given to the customer. Asking every source about every lead again each day would cost far more than it is worth, so each night the system ranks who is worth asking again: companies that look like this customer's real users first, then whoever has been waiting longest for a fresh answer, all inside a fixed daily budget and whatever each source allows per day. Those leads are asked about again. When one comes back as a user, that flip becomes an entry in the just-signed-up feed, a line in the next morning's Slack digest and a webhook, while the sales team still has a reason to call. Run the same machinery in reverse and a user who has stopped counts as churn, on a slower cycle.</desc>
-    <defs>
-      <marker id="sigArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-    </defs>
-
-    <text x="40" y="46" class="dia__h">Spotting the moment a lead becomes a user</text>
-    <text x="40" y="70" class="dia__k">THE FLIP IS THE PRODUCT — A LEAD WHO WAS NOT A USER, AND NOW IS</text>
-
-    <!-- timeline -->
-    <line x1="80" y1="268" x2="1120" y2="268" class="dia__rule"/>
-    <g class="dia__sat">
-      <circle cx="210" cy="268" r="4"/><circle cx="420" cy="268" r="4"/><circle cx="630" cy="268" r="4"/><circle cx="840" cy="268" r="4"/>
-    </g>
-    <text x="210" y="300" class="dia__dim" text-anchor="middle">March</text>
-    <text x="630" y="300" class="dia__dim" text-anchor="middle">every night since</text>
-    <text x="840" y="300" class="dia__dim" text-anchor="middle">the day it changed</text>
-
-    <rect x="96" y="152" width="230" height="86" rx="14" class="dia__box dia__box--sky"/>
-    <text x="118" y="184" class="dia__t">Asked once, in March</text>
-    <text x="118" y="208" class="dia__dim">not a user — and that is</text>
-    <text x="118" y="226" class="dia__dim">the answer the customer got</text>
-    <path d="M210 242 L210 262" class="dia__arrow"/>
-
-    <!-- the nightly ranking -->
-    <rect x="372" y="330" width="520" height="190" rx="16" class="dia__card"/>
-    <circle cx="400" cy="362" r="8" class="dia__dot--yellow"/>
-    <text x="420" y="367" class="dia__k">EVERY NIGHT · WHO IS WORTH ASKING AGAIN?</text>
-    <g>
-      <circle cx="402" cy="404" r="6" class="dia__dot--mint"/>
-      <text x="422" y="400" class="dia__t">Companies that look like this customer's users</text>
-      <text x="422" y="420" class="dia__dim">learned from the ones who already are, and ranked A to D</text>
-      <circle cx="402" cy="450" r="6" class="dia__dot--sky"/>
-      <text x="422" y="446" class="dia__t">Whoever has waited longest for a fresh answer</text>
-      <text x="422" y="466" class="dia__dim">nobody is asked about twice in the same short window</text>
-      <circle cx="402" cy="496" r="6" class="dia__dot--pink"/>
-      <text x="422" y="492" class="dia__t">As many as the day's budget allows</text>
-      <text x="422" y="512" class="dia__dim">and no more than each source will answer in a day</text>
-    </g>
-    <path d="M630 326 L630 278" class="dia__arrow" marker-end="url(#sigArrow)"/>
-
-    <!-- the flip -->
-    <circle cx="840" cy="268" r="12" class="dia__champ"/>
-    <rect x="720" y="150" width="240" height="88" rx="14" class="dia__box dia__box--mint"/>
-    <text x="742" y="182" class="dia__t">Now a user</text>
-    <text x="742" y="206" class="dia__dim">the answer changed — and</text>
-    <text x="742" y="224" class="dia__dim">that is worth a phone call</text>
-    <path d="M840 242 L840 262" class="dia__arrow"/>
-
-    <!-- what the customer gets -->
-    <path d="M864 268 L1004 268" class="dia__arrow" marker-end="url(#sigArrow)"/>
-    <rect x="1012" y="150" width="148" height="196" rx="16" class="dia__card"/>
-    <text x="1032" y="182" class="dia__k">BY MORNING</text>
-    <circle cx="1040" cy="214" r="6" class="dia__dot--mint"/><text x="1058" y="219" class="dia__dim">the feed</text>
-    <circle cx="1040" cy="252" r="6" class="dia__dot--sky"/><text x="1058" y="257" class="dia__dim">Slack digest</text>
-    <circle cx="1040" cy="290" r="6" class="dia__dot--yellow"/><text x="1058" y="295" class="dia__dim">a webhook,</text>
-    <text x="1058" y="312" class="dia__dim">if they pull</text>
-
-    <rect x="40" y="552" width="1120" height="68" rx="16" class="dia__box dia__box--coral"/>
-    <text x="64" y="584" class="dia__t">Run the same thing backwards and you get churn.</text>
-    <text x="64" y="608" class="dia__dim">A user who stops being one is the same flip in the other direction, on a slower cycle and a smaller share of the budget.</text>
-  </svg>
-          </div>
-          <figcaption>How a signup gets spotted, and what the customer sees when it does.</figcaption>
-        </figure>
-        <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
-          <div class="shot__frame">
-            <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
-                 alt="Slack thread: a signup alert for a target account, met with thanks from the customer"
-                 loading="lazy" decoding="async">
-          </div>
-          <figcaption>The end of that pipeline: a new signup at one of a customer's target accounts, in their Slack.</figcaption>
-        </figure>
-        </div>
-        <div class="case__lead reveal" data-anim="rise" style="--d:1">
-          <p class="lede">The lead who wasn't a user last month might have signed up this week — the best moment for sales to call.</p>
-          <p class="case__out"><span>Outcome</span> Turned a quarterly re-upload into a daily “just signed up” feed sales teams act on, by re-checking only the leads most likely to have changed inside a fixed daily budget</p>
-        </div>
-        <div class="case__body reveal" data-anim="rise" style="--d:2">
-          <p>
-            Re-checking everyone daily costs too much, so the system chooses who to re-check: it learns
-            each org's ideal customer, tiers companies A to D, and spends a daily budget on the leads most
-            likely to have changed.
-          </p>
-          <p>
-            Customers get a "Just signed up" feed, a watchlist, trends and a Slack digest. Churn runs on
-            the same engine in reverse.
-          </p>
-          <ul class="chips">
-            <li>Postgres</li><li>Inngest</li><li>Azure OpenAI</li><li>Zyte</li><li>Recharts</li><li>Slack</li>
-          </ul>
-        </div>
-      </div>
-
-    </article>
-
-    <article class="case case--pair" id="case-05">
-      <header class="case__head reveal" data-anim="rise">
-        <span class="case__n" aria-hidden="true">05</span>
-        <h3 data-split="words" class="reveal">Detector &amp; Doctor</h3>
-      </header>
-      <div class="case__cols">
-        <div class="case__media">
-        <figure class="shot shot--flat reveal" data-anim="rise">
-          <div class="shot__frame shot__frame--dia">
-            <svg class="dia" viewBox="0 0 1200 640" role="img" aria-labelledby="detTitle detDesc">
-    <title id="detTitle">The pipeline watches itself</title>
-    <desc id="detDesc">Every stage of the pipeline is watched a few minutes apart: leads arriving, each source being asked, the classifier, the CRM and Sheets syncs, the dashboard and the customer digests. Four things are looked for: a queue that has stopped draining, a source that has gone quiet or started answering wrongly, a sync drifting out of date, and a customer digest that never went out. A source is proved by a daily known-answer test — ten leads whose real answer is already known, which the checker has to get right. When something is newly wrong, a message reaches Slack naming the thing, the real error and what to do about it; an explanation written by a model is checked against the facts first, and anything it invents is dropped. An agent then reads the codebase and comes back with a cause and a fix to approve, such as requeuing stuck work or a draft pull request. The rest of the time it says nothing but a daily summary.</desc>
-    <defs>
-      <marker id="detArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
-    </defs>
-
-    <text x="40" y="46" class="dia__h">The pipeline watches itself</text>
-    <text x="40" y="70" class="dia__k">A FAILURE USED TO BE SOMETHING THE CUSTOMER TOLD US ABOUT</text>
-
-    <!-- the pipeline -->
-    <text x="40" y="112" class="dia__k">CHECKED EVERY FEW MINUTES, END TO END</text>
-    <rect x="40" y="124" width="1120" height="84" rx="18" class="dia__box dia__box--sky"/>
-    <g>
-      <line x1="140" y1="166" x2="1070" y2="166" class="dia__net"/>
-      <circle cx="140" cy="166" r="9" class="dia__dot--mint"/><text x="140" y="232" class="dia__dim" text-anchor="middle">leads in</text>
-      <circle cx="326" cy="166" r="9" class="dia__dot--mint"/><text x="326" y="232" class="dia__dim" text-anchor="middle">each source asked</text>
-      <circle cx="512" cy="166" r="9" class="dia__dot--mint"/><text x="512" y="232" class="dia__dim" text-anchor="middle">classify</text>
-      <circle cx="698" cy="166" r="12" class="dia__champ"/><text x="698" y="232" class="dia__dim" text-anchor="middle">CRM &amp; Sheets sync</text>
-      <circle cx="884" cy="166" r="9" class="dia__dot--mint"/><text x="884" y="232" class="dia__dim" text-anchor="middle">dashboard</text>
-      <circle cx="1070" cy="166" r="9" class="dia__dot--mint"/><text x="1070" y="232" class="dia__dim" text-anchor="middle">digests</text>
-    </g>
-
-    <!-- what counts as wrong -->
-    <text x="40" y="282" class="dia__k">WHAT COUNTS AS WRONG</text>
-    <rect x="40" y="294" width="330" height="200" rx="16" class="dia__card"/>
-    <circle cx="68" cy="330" r="6" class="dia__dot--pink"/><text x="86" y="335" class="dia__dim">a queue that stopped draining</text>
-    <circle cx="68" cy="372" r="6" class="dia__dot--pink"/><text x="86" y="377" class="dia__dim">a source gone quiet, or newly</text>
-    <text x="86" y="394" class="dia__dim">answering wrongly</text>
-    <circle cx="68" cy="430" r="6" class="dia__dot--pink"/><text x="86" y="435" class="dia__dim">a sync drifting out of date</text>
-    <circle cx="68" cy="470" r="6" class="dia__dot--pink"/><text x="86" y="475" class="dia__dim">a customer digest that never went</text>
-
-    <!-- the known-answer test -->
-    <rect x="40" y="512" width="330" height="100" rx="16" class="dia__box dia__box--yellow"/>
-    <text x="64" y="544" class="dia__t">How a source is proved</text>
-    <text x="64" y="568" class="dia__dim">ten leads whose real answer we already</text>
-    <text x="64" y="586" class="dia__dim">know, asked daily — get those wrong and</text>
-    <text x="64" y="604" class="dia__dim">nothing else you say is trusted</text>
-
-    <path d="M698 246 C 698 270, 560 270, 560 292" class="dia__arrow" marker-end="url(#detArrow)"/>
-
-    <!-- the alert -->
-    <rect x="402" y="294" width="372" height="200" rx="16" class="dia__card"/>
-    <circle cx="430" cy="326" r="8" class="dia__dot--pink"/>
-    <text x="450" y="331" class="dia__k">IN SLACK, WITHIN MINUTES</text>
-    <text x="426" y="364" class="dia__t">The one that stopped, and why</text>
-    <text x="426" y="390" class="dia__dim">the thing, the real error, the step it died on</text>
-    <text x="426" y="412" class="dia__dim">only when it is new — an ongoing problem</text>
-    <text x="426" y="430" class="dia__dim">is not announced twice</text>
-    <line x1="426" y1="448" x2="750" y2="448" class="dia__rule"/>
-    <text x="426" y="472" class="dia__dim">the plain-English explanation is checked against</text>
-    <text x="426" y="488" class="dia__dim">the facts; anything invented is dropped</text>
-
-    <path d="M782 394 L812 394" class="dia__arrow" marker-end="url(#detArrow)"/>
-
-    <!-- the agent -->
-    <rect x="820" y="294" width="340" height="200" rx="16" class="dia__box dia__box--mint"/>
-    <text x="844" y="326" class="dia__k">THEN AN AGENT LOOKS FIRST</text>
-    <text x="844" y="358" class="dia__t">A cause, and a fix to approve</text>
-    <text x="844" y="384" class="dia__dim">it reads the codebase against the open</text>
-    <text x="844" y="402" class="dia__dim">case and works out what actually broke</text>
-    <circle cx="852" cy="432" r="5" class="dia__dot--mint"/><text x="868" y="437" class="dia__dim">requeue the stuck work</text>
-    <circle cx="852" cy="458" r="5" class="dia__dot--sky"/><text x="868" y="463" class="dia__dim">run a known runbook</text>
-    <circle cx="852" cy="484" r="5" class="dia__dot--yellow"/><text x="868" y="489" class="dia__dim">or a draft pull request to review</text>
-
-    <rect x="402" y="512" width="758" height="100" rx="16" class="dia__box dia__box--coral"/>
-    <text x="426" y="544" class="dia__t">The rest of the time it says nothing at all.</text>
-    <text x="426" y="570" class="dia__dim">Just a daily summary: every source still answering correctly, every queue draining, every sync fresh.</text>
-    <text x="426" y="592" class="dia__dim">That silence is the feature — a message from it means something.</text>
-  </svg>
-          </div>
-          <figcaption>From a failure nobody would have noticed to a message someone can act on, within minutes.</figcaption>
-        </figure>
-        <figure class="shot reveal" data-anim="rise">
-          <div class="shot__frame scrollshot" data-cursor="Zoom" tabindex="0" aria-label="The Detector's daily summary in Slack, scrollable">
-            <img src="assets/work/slack/detector-digest.webp" width="1323" height="461"
-                 alt="The Detector's daily summary in Slack: everything running, six all-clear lines covering the vendor checkers, the queue, the CRM sync, the Sheets export, the customer digests and the dashboard, and one watch item that needs no action"
-                 loading="lazy" decoding="async">
-          </div>
-          <figcaption>The daily summary it posts to Slack — the all-clear version, which is most mornings.</figcaption>
-        </figure>
-        </div>
-        <div class="case__lead reveal" data-anim="rise" style="--d:1">
-          <p class="lede">Failures were silent — one vendor produced nothing for weeks while its log said "ok".</p>
-          <p class="case__out"><span>Outcome</span> Took silent failures from “we find out from the customer” to a Slack message within minutes, by running 15+ checks every few minutes and having an agent investigate each one</p>
-        </div>
-        <div class="case__body reveal" data-anim="rise" style="--d:2">
-          <p>
-            Detector checks the pipeline, the integrations and every customer-facing surface every few
-            minutes, runs a daily known-answer test through each vendor, and posts to Slack only when
-            something newly breaks — with a model-written explanation that's checked so it can't invent details.
-          </p>
-          <p>
-            Doctor takes the first look at an open case: it reads the codebase, works out what actually
-            caused the failure, and comes back with a fix to approve — requeue the stuck work, run a
-            runbook, or a draft pull request waiting for review.
-          </p>
-          <ul class="chips">
-            <li>Claude Agent SDK</li><li>Azure OpenAI</li><li>Slack Bolt</li><li>Sentry</li><li>Postgres</li><li>Ofelia cron</li>
-          </ul>
-        </div>
-      </div>
-
-    </article>
-
-    <article class="case" id="case-06">
-      <header class="case__head reveal" data-anim="rise">
-        <span class="case__n" aria-hidden="true">06</span>
         <h3 data-split="words" class="reveal">Web research agent</h3>
       </header>
       <div class="case__cols">
@@ -805,16 +501,16 @@
             page ends the run.
           </p>
           <ul class="chips">
-            <li>TypeScript</li><li>Inngest → BullMQ</li><li>Firecrawl</li><li>Evomi</li><li>Zyte</li><li>Apify</li><li>Azure OpenAI</li><li>Gemini</li><li>Postgres</li>
+            <li>TypeScript</li><li>Inngest</li><li>BullMQ</li><li>Firecrawl</li><li>Zyte</li><li>Apify</li><li>Azure OpenAI</li><li>Gemini</li><li>PostgreSQL</li>
           </ul>
         </div>
       </div>
 
     </article>
 
-    <article class="case" id="case-07">
+    <article class="case" id="case-04">
       <header class="case__head reveal" data-anim="rise">
-        <span class="case__n" aria-hidden="true">07</span>
+        <span class="case__n" aria-hidden="true">04</span>
         <h3 data-split="words" class="reveal">Building Clay</h3>
       </header>
       <div class="case__cols">
@@ -899,15 +595,15 @@
             API so another system can run the same enrichment.
           </p>
           <ul class="chips">
-            <li>React</li><li>Vite</li><li>Tailwind</li><li>Express</li><li>Cloudflare R2</li><li>Supabase Postgres</li><li>Redis</li><li>Firecrawl</li><li>Zyte</li><li>Apify</li><li>GPT</li><li>Gemini</li>
+            <li>React</li><li>Vite</li><li>Tailwind</li><li>Express</li><li>Supabase</li><li>Redis</li><li>Cloudflare R2</li><li>Firecrawl</li><li>Zyte</li><li>Apify</li><li>OpenAI</li><li>Gemini</li>
           </ul>
         </div>
       </div>
     </article>
 
-    <article class="case" id="case-08">
+    <article class="case" id="case-05">
       <header class="case__head reveal" data-anim="rise">
-        <span class="case__n" aria-hidden="true">08</span>
+        <span class="case__n" aria-hidden="true">05</span>
         <h3 data-split="words" class="reveal">Warmest Path</h3>
       </header>
       <div class="case__cols">
@@ -1032,10 +728,340 @@
             That difference is the whole product.
           </p>
           <ul class="chips">
-            <li>TypeScript</li><li>Node</li><li>Postgres</li><li>Apify</li><li>vitest</li>
+            <li>TypeScript</li><li>Node</li><li>PostgreSQL</li><li>Apify</li><li>Vitest</li>
           </ul>
         </div>
       </div>
+    </article>
+
+    <article class="case case--pair" id="case-06">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">06</span>
+        <h3 data-split="words" class="reveal">CRM &amp; GTM integrations</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 540" role="img" aria-labelledby="crmTitle crmDesc">
+    <title id="crmTitle">Where a filtered list ends up</title>
+    <desc id="crmDesc">A customer filters people in the dashboard and exports them. The same list arrives in HubSpot as contacts and companies, with the fields it needs created for them; in Salesforce as contacts, accounts and leads; or in Google Sheets as one workbook per team, grouped by account. Only what changed is sent, a failure retries and shows up in the admin panel, and a record the customer deleted is never put back.</desc>
+    <defs>
+      <marker id="crmArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+    </defs>
+
+    <text x="40" y="46" class="dia__h">Where a filtered list ends up</text>
+    <text x="40" y="70" class="dia__k">THE DASHBOARD IS OURS · THE TOOLS ON THE RIGHT ARE THEIRS</text>
+
+    <!-- the dashboard -->
+    <text x="40" y="116" class="dia__k">IN THE DASHBOARD</text>
+    <rect x="40" y="128" width="360" height="252" rx="18" class="dia__card"/>
+    <rect x="40" y="128" width="360" height="40" rx="18" class="dia__box dia__box--sky"/>
+    <text x="64" y="154" class="dia__t">The people you filtered</text>
+    <g>
+      <line x1="64" y1="196" x2="376" y2="196" class="dia__rule"/>
+      <line x1="64" y1="232" x2="376" y2="232" class="dia__rule"/>
+      <line x1="64" y1="268" x2="376" y2="268" class="dia__rule"/>
+      <line x1="64" y1="304" x2="376" y2="304" class="dia__rule"/>
+      <circle cx="78" cy="214" r="6" class="dia__dot--mint"/><text x="96" y="219" class="dia__dim">name · company · title</text>
+      <circle cx="78" cy="250" r="6" class="dia__dot--sky"/><text x="96" y="255" class="dia__dim">seniority</text>
+      <circle cx="78" cy="286" r="6" class="dia__dot--yellow"/><text x="96" y="291" class="dia__dim">where they came from</text>
+    </g>
+    <rect x="64" y="322" width="110" height="34" rx="10" class="dia__box dia__box--coral"/>
+    <text x="84" y="344" class="dia__t">Export</text>
+
+    <!-- the three destinations -->
+    <text x="640" y="116" class="dia__k">IN THE CUSTOMER'S OWN TOOLS</text>
+    <g class="dia__arrow" marker-end="url(#crmArrow)">
+      <path d="M404 254 C 520 254, 520 172, 632 172"/>
+      <path d="M404 254 C 520 254, 520 254, 632 254"/>
+      <path d="M404 254 C 520 254, 520 336, 632 336"/>
+    </g>
+
+    <rect x="640" y="128" width="520" height="88" rx="16" class="dia__box dia__box--coral"/>
+    <text x="664" y="160" class="dia__t">HubSpot</text>
+    <text x="664" y="184" class="dia__dim">contacts and companies — and the custom fields</text>
+    <text x="664" y="204" class="dia__dim">it needs are created for you, then backfilled</text>
+
+    <rect x="640" y="210" width="520" height="88" rx="16" class="dia__box dia__box--sky"/>
+    <text x="664" y="242" class="dia__t">Salesforce</text>
+    <text x="664" y="266" class="dia__dim">contacts, accounts and leads</text>
+    <text x="664" y="286" class="dia__dim">production org or a sandbox first</text>
+
+    <rect x="640" y="292" width="520" height="88" rx="16" class="dia__box dia__box--mint"/>
+    <text x="664" y="324" class="dia__t">Google Sheets</text>
+    <text x="664" y="348" class="dia__dim">one workbook per team, grouped by account —</text>
+    <text x="664" y="368" class="dia__dim">for teams who would rather we did not touch the CRM</text>
+
+    <rect x="40" y="406" width="1120" height="94" rx="16" class="dia__box dia__box--yellow"/>
+    <text x="64" y="440" class="dia__t">Writing into someone else's CRM is a trust exercise.</text>
+    <text x="64" y="466" class="dia__dim">Only what actually changed is sent. A failure retries and shows up in the admin panel instead of going quiet.</text>
+    <text x="64" y="486" class="dia__dim">A record the customer deleted is never put back.</text>
+  </svg>
+          </div>
+          <figcaption>Where a filtered list ends up, and how carefully it is written.</figcaption>
+        </figure>
+        <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
+          <div class="shot__frame">
+            <img src="assets/work/huntd-integrations-v2.webp" width="834" height="292"
+                 alt="The Integrations tab of the dashboard settings: HubSpot and Salesforce connection cards"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption>The Integrations settings page customers connect their CRM from.</figcaption>
+        </figure>
+        </div>
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">The data was useful, but it lived in the wrong place. I built the bridge into customers' CRMs.</p>
+          <p class="case__out"><span>Outcome</span> Got Huntd's data into the tools customers already work in — live in HubSpot, Salesforce and Google Sheets — by building a sync that only writes what changed and never recreates what they deleted</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            Built and configured Salesforce integrations across Contacts, Accounts and Leads, enabling
+            customer data to sync between Huntd and Salesforce. Worked directly with customer teams to
+            configure field mappings, troubleshoot synchronisation issues and ensure existing CRM data
+            was preserved.
+          </p>
+          <p>
+            The HubSpot app does the same for contacts and companies, creating its own custom fields and
+            backfilling every existing record. Teams that would rather we didn't write to their CRM get
+            Google Sheets exports grouped by account instead.
+          </p>
+          <ul class="chips">
+            <li>HubSpot</li><li>Salesforce</li><li>Google Sheets API</li><li>Node</li><li>PostgreSQL</li>
+          </ul>
+        </div>
+      </div>
+
+    </article>
+
+    <article class="case case--pair" id="case-07">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">07</span>
+        <h3 data-split="words" class="reveal">Signup &amp; churn signals</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 640" role="img" aria-labelledby="sigTitle sigDesc">
+    <title id="sigTitle">Spotting the moment a lead becomes a user</title>
+    <desc id="sigDesc">A lead checked in March came back as not a user, and that answer was given to the customer. Asking every source about every lead again each day would cost far more than it is worth, so each night the system ranks who is worth asking again: companies that look like this customer's real users first, then whoever has been waiting longest for a fresh answer, all inside a fixed daily budget and whatever each source allows per day. Those leads are asked about again. When one comes back as a user, that flip becomes an entry in the just-signed-up feed, a line in the next morning's Slack digest and a webhook, while the sales team still has a reason to call. Run the same machinery in reverse and a user who has stopped counts as churn, on a slower cycle.</desc>
+    <defs>
+      <marker id="sigArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+    </defs>
+
+    <text x="40" y="46" class="dia__h">Spotting the moment a lead becomes a user</text>
+    <text x="40" y="70" class="dia__k">THE FLIP IS THE PRODUCT — A LEAD WHO WAS NOT A USER, AND NOW IS</text>
+
+    <!-- timeline -->
+    <line x1="80" y1="268" x2="1120" y2="268" class="dia__rule"/>
+    <g class="dia__sat">
+      <circle cx="210" cy="268" r="4"/><circle cx="420" cy="268" r="4"/><circle cx="630" cy="268" r="4"/><circle cx="840" cy="268" r="4"/>
+    </g>
+    <text x="210" y="300" class="dia__dim" text-anchor="middle">March</text>
+    <text x="630" y="300" class="dia__dim" text-anchor="middle">every night since</text>
+    <text x="840" y="300" class="dia__dim" text-anchor="middle">the day it changed</text>
+
+    <rect x="96" y="152" width="230" height="86" rx="14" class="dia__box dia__box--sky"/>
+    <text x="118" y="184" class="dia__t">Asked once, in March</text>
+    <text x="118" y="208" class="dia__dim">not a user — and that is</text>
+    <text x="118" y="226" class="dia__dim">the answer the customer got</text>
+    <path d="M210 242 L210 262" class="dia__arrow"/>
+
+    <!-- the nightly ranking -->
+    <rect x="372" y="330" width="520" height="190" rx="16" class="dia__card"/>
+    <circle cx="400" cy="362" r="8" class="dia__dot--yellow"/>
+    <text x="420" y="367" class="dia__k">EVERY NIGHT · WHO IS WORTH ASKING AGAIN?</text>
+    <g>
+      <circle cx="402" cy="404" r="6" class="dia__dot--mint"/>
+      <text x="422" y="400" class="dia__t">Companies that look like this customer's users</text>
+      <text x="422" y="420" class="dia__dim">learned from the ones who already are, and ranked A to D</text>
+      <circle cx="402" cy="450" r="6" class="dia__dot--sky"/>
+      <text x="422" y="446" class="dia__t">Whoever has waited longest for a fresh answer</text>
+      <text x="422" y="466" class="dia__dim">nobody is asked about twice in the same short window</text>
+      <circle cx="402" cy="496" r="6" class="dia__dot--pink"/>
+      <text x="422" y="492" class="dia__t">As many as the day's budget allows</text>
+      <text x="422" y="512" class="dia__dim">and no more than each source will answer in a day</text>
+    </g>
+    <path d="M630 326 L630 278" class="dia__arrow" marker-end="url(#sigArrow)"/>
+
+    <!-- the flip -->
+    <circle cx="840" cy="268" r="12" class="dia__champ"/>
+    <rect x="720" y="150" width="240" height="88" rx="14" class="dia__box dia__box--mint"/>
+    <text x="742" y="182" class="dia__t">Now a user</text>
+    <text x="742" y="206" class="dia__dim">the answer changed — and</text>
+    <text x="742" y="224" class="dia__dim">that is worth a phone call</text>
+    <path d="M840 242 L840 262" class="dia__arrow"/>
+
+    <!-- what the customer gets -->
+    <path d="M864 268 L1004 268" class="dia__arrow" marker-end="url(#sigArrow)"/>
+    <rect x="1012" y="150" width="148" height="196" rx="16" class="dia__card"/>
+    <text x="1032" y="182" class="dia__k">BY MORNING</text>
+    <circle cx="1040" cy="214" r="6" class="dia__dot--mint"/><text x="1058" y="219" class="dia__dim">the feed</text>
+    <circle cx="1040" cy="252" r="6" class="dia__dot--sky"/><text x="1058" y="257" class="dia__dim">Slack digest</text>
+    <circle cx="1040" cy="290" r="6" class="dia__dot--yellow"/><text x="1058" y="295" class="dia__dim">a webhook,</text>
+    <text x="1058" y="312" class="dia__dim">if they pull</text>
+
+    <rect x="40" y="552" width="1120" height="68" rx="16" class="dia__box dia__box--coral"/>
+    <text x="64" y="584" class="dia__t">Run the same thing backwards and you get churn.</text>
+    <text x="64" y="608" class="dia__dim">A user who stops being one is the same flip in the other direction, on a slower cycle and a smaller share of the budget.</text>
+  </svg>
+          </div>
+          <figcaption>How a signup gets spotted, and what the customer sees when it does.</figcaption>
+        </figure>
+        <figure class="shot shot--narrow reveal" data-anim="rise" data-shot data-cursor="Zoom">
+          <div class="shot__frame">
+            <img src="assets/work/slack/signup-signal.webp" width="1201" height="442"
+                 alt="Slack thread: a signup alert for a target account, met with thanks from the customer"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption>The end of that pipeline: a new signup at one of a customer's target accounts, in their Slack.</figcaption>
+        </figure>
+        </div>
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">The lead who wasn't a user last month might have signed up this week — the best moment for sales to call.</p>
+          <p class="case__out"><span>Outcome</span> Turned a quarterly re-upload into a daily “just signed up” feed sales teams act on, by re-checking only the leads most likely to have changed inside a fixed daily budget</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            Re-checking everyone daily costs too much, so the system chooses who to re-check, and the
+            tiering is how it chooses.
+          </p>
+          <p>
+            It starts from the people Huntd had already confirmed as each customer's real users, and
+            learns what they have in common — role, seniority, company size and industry. Every company
+            the customer is watching is then scored against that profile and tiered A to D: tier A looks
+            most like the accounts that already converted, tier D least. Each company carries a one-line
+            reason for its tier, so the customer can see why it landed there.
+          </p>
+          <p>
+            The daily budget is spent from the top tier down, on the leads most likely to have changed,
+            and only up to what each source allows per day.
+          </p>
+          <p>
+            Customers get a "Just signed up" feed, a watchlist, trends and a Slack digest. Churn runs on
+            the same engine in reverse.
+          </p>
+          <ul class="chips">
+            <li>PostgreSQL</li><li>Inngest</li><li>Azure OpenAI</li><li>Zyte</li><li>Recharts</li><li>Slack API</li>
+          </ul>
+        </div>
+      </div>
+
+    </article>
+
+    <article class="case case--pair" id="case-08">
+      <header class="case__head reveal" data-anim="rise">
+        <span class="case__n" aria-hidden="true">08</span>
+        <h3 data-split="words" class="reveal">Detector &amp; Doctor</h3>
+      </header>
+      <div class="case__cols">
+        <div class="case__media">
+        <figure class="shot shot--flat reveal" data-anim="rise">
+          <div class="shot__frame shot__frame--dia">
+            <svg class="dia" viewBox="0 0 1200 640" role="img" aria-labelledby="detTitle detDesc">
+    <title id="detTitle">The pipeline watches itself</title>
+    <desc id="detDesc">Every stage of the pipeline is watched a few minutes apart: leads arriving, each source being asked, the classifier, the CRM and Sheets syncs, the dashboard and the customer digests. Four things are looked for: a queue that has stopped draining, a source that has gone quiet or started answering wrongly, a sync drifting out of date, and a customer digest that never went out. A source is proved by a daily known-answer test — ten leads whose real answer is already known, which the checker has to get right. When something is newly wrong, a message reaches Slack naming the thing, the real error and what to do about it; an explanation written by a model is checked against the facts first, and anything it invents is dropped. An agent then reads the codebase and comes back with a cause and a fix to approve, such as requeuing stuck work or a draft pull request. The rest of the time it says nothing but a daily summary.</desc>
+    <defs>
+      <marker id="detArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dia__arrowhead"/></marker>
+    </defs>
+
+    <text x="40" y="46" class="dia__h">The pipeline watches itself</text>
+    <text x="40" y="70" class="dia__k">A FAILURE USED TO BE SOMETHING THE CUSTOMER TOLD US ABOUT</text>
+
+    <!-- the pipeline -->
+    <text x="40" y="112" class="dia__k">CHECKED EVERY FEW MINUTES, END TO END</text>
+    <rect x="40" y="124" width="1120" height="84" rx="18" class="dia__box dia__box--sky"/>
+    <g>
+      <line x1="140" y1="166" x2="1070" y2="166" class="dia__net"/>
+      <circle cx="140" cy="166" r="9" class="dia__dot--mint"/><text x="140" y="232" class="dia__dim" text-anchor="middle">leads in</text>
+      <circle cx="326" cy="166" r="9" class="dia__dot--mint"/><text x="326" y="232" class="dia__dim" text-anchor="middle">each source asked</text>
+      <circle cx="512" cy="166" r="9" class="dia__dot--mint"/><text x="512" y="232" class="dia__dim" text-anchor="middle">classify</text>
+      <circle cx="698" cy="166" r="12" class="dia__champ"/><text x="698" y="232" class="dia__dim" text-anchor="middle">CRM &amp; Sheets sync</text>
+      <circle cx="884" cy="166" r="9" class="dia__dot--mint"/><text x="884" y="232" class="dia__dim" text-anchor="middle">dashboard</text>
+      <circle cx="1070" cy="166" r="9" class="dia__dot--mint"/><text x="1070" y="232" class="dia__dim" text-anchor="middle">digests</text>
+    </g>
+
+    <!-- what counts as wrong -->
+    <text x="40" y="282" class="dia__k">WHAT COUNTS AS WRONG</text>
+    <rect x="40" y="294" width="330" height="200" rx="16" class="dia__card"/>
+    <circle cx="68" cy="330" r="6" class="dia__dot--pink"/><text x="86" y="335" class="dia__dim">a queue that stopped draining</text>
+    <circle cx="68" cy="372" r="6" class="dia__dot--pink"/><text x="86" y="377" class="dia__dim">a source gone quiet, or newly</text>
+    <text x="86" y="394" class="dia__dim">answering wrongly</text>
+    <circle cx="68" cy="430" r="6" class="dia__dot--pink"/><text x="86" y="435" class="dia__dim">a sync drifting out of date</text>
+    <circle cx="68" cy="470" r="6" class="dia__dot--pink"/><text x="86" y="475" class="dia__dim">a customer digest that never went</text>
+
+    <!-- the known-answer test -->
+    <rect x="40" y="512" width="330" height="100" rx="16" class="dia__box dia__box--yellow"/>
+    <text x="64" y="544" class="dia__t">How a source is proved</text>
+    <text x="64" y="568" class="dia__dim">ten leads whose real answer we already</text>
+    <text x="64" y="586" class="dia__dim">know, asked daily — get those wrong and</text>
+    <text x="64" y="604" class="dia__dim">nothing else you say is trusted</text>
+
+    <path d="M698 246 C 698 270, 560 270, 560 292" class="dia__arrow" marker-end="url(#detArrow)"/>
+
+    <!-- the alert -->
+    <rect x="402" y="294" width="372" height="200" rx="16" class="dia__card"/>
+    <circle cx="430" cy="326" r="8" class="dia__dot--pink"/>
+    <text x="450" y="331" class="dia__k">IN SLACK, WITHIN MINUTES</text>
+    <text x="426" y="364" class="dia__t">The one that stopped, and why</text>
+    <text x="426" y="390" class="dia__dim">the thing, the real error, the step it died on</text>
+    <text x="426" y="412" class="dia__dim">only when it is new — an ongoing problem</text>
+    <text x="426" y="430" class="dia__dim">is not announced twice</text>
+    <line x1="426" y1="448" x2="750" y2="448" class="dia__rule"/>
+    <text x="426" y="472" class="dia__dim">the plain-English explanation is checked against</text>
+    <text x="426" y="488" class="dia__dim">the facts; anything invented is dropped</text>
+
+    <path d="M782 394 L812 394" class="dia__arrow" marker-end="url(#detArrow)"/>
+
+    <!-- the agent -->
+    <rect x="820" y="294" width="340" height="200" rx="16" class="dia__box dia__box--mint"/>
+    <text x="844" y="326" class="dia__k">THEN AN AGENT LOOKS FIRST</text>
+    <text x="844" y="358" class="dia__t">A cause, and a fix to approve</text>
+    <text x="844" y="384" class="dia__dim">it reads the codebase against the open</text>
+    <text x="844" y="402" class="dia__dim">case and works out what actually broke</text>
+    <circle cx="852" cy="432" r="5" class="dia__dot--mint"/><text x="868" y="437" class="dia__dim">requeue the stuck work</text>
+    <circle cx="852" cy="458" r="5" class="dia__dot--sky"/><text x="868" y="463" class="dia__dim">run a known runbook</text>
+    <circle cx="852" cy="484" r="5" class="dia__dot--yellow"/><text x="868" y="489" class="dia__dim">or a draft pull request to review</text>
+
+    <rect x="402" y="512" width="758" height="100" rx="16" class="dia__box dia__box--coral"/>
+    <text x="426" y="544" class="dia__t">The rest of the time it says nothing at all.</text>
+    <text x="426" y="570" class="dia__dim">Just a daily summary: every source still answering correctly, every queue draining, every sync fresh.</text>
+    <text x="426" y="592" class="dia__dim">That silence is the feature — a message from it means something.</text>
+  </svg>
+          </div>
+          <figcaption>From a failure nobody would have noticed to a message someone can act on, within minutes.</figcaption>
+        </figure>
+        <figure class="shot reveal" data-anim="rise">
+          <div class="shot__frame scrollshot" data-cursor="Zoom" tabindex="0" aria-label="The Detector's daily summary in Slack, scrollable">
+            <img src="assets/work/slack/detector-digest.webp" width="1323" height="461"
+                 alt="The Detector's daily summary in Slack: everything running, six all-clear lines covering the vendor checkers, the queue, the CRM sync, the Sheets export, the customer digests and the dashboard, and one watch item that needs no action"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption>The daily summary it posts to Slack — the all-clear version, which is most mornings.</figcaption>
+        </figure>
+        </div>
+        <div class="case__lead reveal" data-anim="rise" style="--d:1">
+          <p class="lede">Failures were silent — one vendor produced nothing for weeks while its log said "ok".</p>
+          <p class="case__out"><span>Outcome</span> Took silent failures from “we find out from the customer” to a Slack message within minutes, by running 15+ checks every few minutes and having an agent investigate each one</p>
+        </div>
+        <div class="case__body reveal" data-anim="rise" style="--d:2">
+          <p>
+            Detector checks the pipeline, the integrations and every customer-facing surface every few
+            minutes, runs a daily known-answer test through each vendor, and posts to Slack only when
+            something newly breaks — with a model-written explanation that's checked so it can't invent details.
+          </p>
+          <p>
+            Doctor takes the first look at an open case: it reads the codebase, works out what actually
+            caused the failure, and comes back with a fix to approve — requeue the stuck work, run a
+            runbook, or a draft pull request waiting for review.
+          </p>
+          <ul class="chips">
+            <li>Claude Agent SDK</li><li>Azure OpenAI</li><li>Slack Bolt</li><li>Sentry</li><li>PostgreSQL</li><li>Docker</li>
+          </ul>
+        </div>
+      </div>
+
     </article>
   </div>
 </section>
@@ -1174,13 +1200,6 @@
         </p>
         <p>Outside work: dance, hackathons, and chess — which only I say I'm good at.</p>
       </div>
-    </div>
-
-    <div class="stack reveal" style="--d:3">
-      <div><h4>Interfaces</h4><p>React · TypeScript · Tailwind · Framer Motion</p></div>
-      <div><h4>Backend &amp; data</h4><p>Node · Python · FastAPI · PostgreSQL · Supabase · MongoDB · Kafka</p></div>
-      <div><h4>AI systems</h4><p>LLM orchestration · RAG · FAISS · CLIP · SDXL · YOLOv8 · Firecrawl</p></div>
-      <div><h4>Integrations</h4><p>HubSpot OAuth · Salesforce · Sheets API · Webhooks · Docker</p></div>
     </div>
   </div>
 </section>
